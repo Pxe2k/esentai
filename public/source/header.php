@@ -16,7 +16,6 @@
 <body>
     <div class="main">
 
-<<<<<<< HEAD
     <header>
         <div class="deskTop">
             <div class="container">
@@ -40,32 +39,6 @@
                         <span>Eng</span>
                         <img src="../img/icons/bottomarrow.png">
                     </a>
-=======
-        <header>
-            <div class="deskTop">
-                <div class="container">
-                    <div class="logo"><img src="../img/icons/logo.png"></div>
-                    <nav class="menu">
-                        <ul class="menu">
-                            <li><a href="/about.php">ABOUT US</a></li>
-                            <li><a href="/infrastructurepage.php">INFRASTRUCTURE</a></li>
-                            <li><a href="/projects.php">PROJECTS</a></li>
-                            <li><a href="/news.php">PRESS</a></li>
-                            <li><a href="/partners.php">PARTNERS</a></li>
-                            <li><a href="/vacancies.php">VACANCIES</a></li>
-                        </ul>
-                    </nav>
-                    <div class="btn-contact_us">
-                        <a href="#">CONTACT US</a>
-                    </div>
-                    <div class="language">
-                        <a class="lang" href="#">
-                            <img src="/img/icons/map.png">
-                            <span>Eng</span>
-                            <img src="../img/icons/bottomarrow.png">
-                        </a>
-                    </div>
->>>>>>> 3d985692e3b2c8a84f1cdba598002728e4c2b548
                 </div>
             </div>
 
