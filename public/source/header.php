@@ -16,32 +16,43 @@
 <body>
     <div class="main">
 
-    <header>
-        <div class="deskTop">
-            <div class="container">
-                <div class="logo"><a href="/"><img src="../img/icons/logo.png"></div></a>
-                <nav class="menu">
-                    <ul class="menu">
-                        <li><a href="/about.php">ABOUT US</a></li>
-                        <li><a href="/getInfrastructure">INFRASTRUCTURE</a></li>
-                        <li><a href="/getProject">PROJECTS</a></li>
-                        <li><a href="/news">NEWS</a></li>
-                        <li><a href="/partners.php">PARTNERS</a></li>
-                        <li><a href="/vacancies">VACANCIES</a></li>
-                    </ul>
-                </nav>
-                <div class="btn-contact_us">
-                    <a href="#">CONTACT US</a>
-                </div>
-                <div class="language">
-                    <a class="lang" href="#">
-                        <img src="/img/icons/map.png">
-                        <span>Eng</span>
-                        <img src="../img/icons/bottomarrow.png">
-                    </a>
+        <header>
+            <div class="deskTop">
+                <div class="container">
+                    <div class="logo"><a href="/"><img src="../img/icons/logo.png"></a></div>
+                    <nav>
+                        <ul class="menu">
+                            <li class="menu__item"><a href="/about.php">ABOUT US</a></li>
+                            <li class="menu__item"><a href="/getInfrastructure">INFRASTRUCTURE</a></li>
+                            <li class="menu__item"><a href="/getProject">PROJECTS</a></li>
+                            <li class="menu__item"><a href="/news">NEWS</a></li>
+                            <li class="menu__item"><a href="/partners.php">PARTNERS</a></li>
+                            <li class="menu__item"><a href="/vacancies">VACANCIES</a></li>
+                        </ul>
+                    </nav>
+                    <div class="btn-contact_us">
+                        <a href="#">CONTACT US</a>
+                    </div>
+                    <div class="language">
+                        <div class="language__header">
+                            <span class="language__current">
+                                    Eng
+                            </span>
+                        </div>
+                        <div class="language__body">
+                            <a class="lang" href="#">
+                                Ru
+                            </a>
+                            <a class="lang" href="#">
+                                Kz
+                            </a>
+                            <a class="lang" href="#">
+                                Eng
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-
             <div class="mobailTop">
                 <div class="container mobailTop_body">
                     <div class="menu_click">
