@@ -21,15 +21,15 @@
     <header>
         <div class="deskTop">
             <div class="container">
-                <div class="logo"><img src="../img/icons/logo.png"></div>
+                <div class="logo"><a href="/"><img src="../img/icons/logo.png"></div></a>
                 <nav class="menu">
                     <ul class="menu">
                         <li><a href="/about.php">ABOUT US</a></li>
-                        <li><a href="/infrastructurepage.php">INFRASTRUCTURE</a></li>
-                        <li><a href="/projects.php">PROJECTS</a></li>
-                        <li><a href="/news.php">PRESS</a></li>
+                        <li><a href="/getInfrastructure">INFRASTRUCTURE</a></li>
+                        <li><a href="/getProject">PROJECTS</a></li>
+                        <li><a href="/news">NEWS</a></li>
                         <li><a href="/partners.php">PARTNERS</a></li>
-                        <li><a href="/vacancies.php">VACANCIES</a></li>
+                        <li><a href="/vacancies">VACANCIES</a></li>
                     </ul>
                 </nav>
                 <div class="btn-contact_us">

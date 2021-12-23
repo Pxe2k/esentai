@@ -18,7 +18,7 @@ use App\Http\Controllers\MainController;
 Route::get('/', 'MainController@index');
 Route::get('/getInfrastructure', 'MainController@getInfrastructure');
 Route::get('/news', 'MainController@news');
-Route::get('/getNews', 'MainController@getNews');
+Route::get('/news/{id}', 'MainController@getNews');
 Route::get('/getProject', 'MainController@getProject');
 Route::get('/vacancies', 'MainController@vacancies');
 

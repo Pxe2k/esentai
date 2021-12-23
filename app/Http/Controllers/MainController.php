@@ -14,6 +14,7 @@ use App\Models\{
     Partner,
     Contact,
     Social,
+    NewsDetail,
 };
 
 class MainController extends Controller
@@ -50,12 +51,22 @@ class MainController extends Controller
 
     public function news()
     {
-        return view('news');
+        $news = News::all();
+        
+        return view('news', compact(
+            'news'
+        ));
     }
 
-    public function getNews()
+    public function getNews($id)
     {
-        return view('news_single');
+        $news = News::find($id);
+        $detail = NewsDetail::where('news_id', $id)->get();
+
+        return view('news_single', compact(
+            'news',
+            'detail',
+        ));
     }
 
     public function getProject()

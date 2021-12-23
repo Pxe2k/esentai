@@ -112,9 +112,9 @@ include('./source/header.php')
                 </div>
                 <div class="project-1-img animate__animated " data-in="animate__lightSpeedInLeft"
                      data-out="animate__lightSpeedOutLeft">
-                    <img src="../img/projects/hospitality.png">
-                    <img class="forte" src="../img/projects/forbes.png">
-                    <img src="../img/projects/village.png">
+                     @foreach ($presses as $press)
+                        <img src="/storage/{{ $press->image }}">
+                     @endforeach
                 </div>
             </div>
 
@@ -130,13 +130,12 @@ include('./source/header.php')
     <div class="container">
         <div class="slider-content animate__animated " data-in="animate__lightSpeedInLeft"
              data-out="animate__lightSpeedOutLeft">
-            <div class="slider-content__title"><h3>According to the<br/> most advanced</h3></div>
-            <div class="slider-content__data"><p>23 september</p></div>
-            <div class="slider-content__paragraf"><p>Built according to the most advanced standards,
-                    incorporating high tech solutions it offers
-                    flexible, cost efficient and inspiring work
-                    environment for small and medium sized companies.
+            <div class="slider-content__title">{{ $news->title }}</div>
+            <div class="slider-content__data"><p>{{ $news->date }}</p></div>
+            <div class="slider-content__paragraf"><p>
+                    {{ $news->text }}
                 </p>
+                <br>
                 <p>READ MORE</p></div>
 
         </div>
@@ -150,9 +149,9 @@ include('./source/header.php')
         </div>
         <div class="partner-img animate__animated " data-in="animate__lightSpeedInLeft"
              data-out="animate__lightSpeedOutLeft">
-            <img src="./img/icons/partners/partners.png">
-            <img src="./img/icons/partners/partners2.png">
-            <img src="./img/icons/partners/partners3.png">
+             @foreach ($partners as $partner) 
+                <img src="/storage/{{ $partner->image }}">
+             @endforeach
         </div>
     </div>
 </div>
