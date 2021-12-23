@@ -64,8 +64,11 @@
             ticking = true;
         }
     });
+    AOS.init({
+        delay: 200,
+        duration: 600,
+    });
 </script>
-
 </div>
 </body>
 </html>

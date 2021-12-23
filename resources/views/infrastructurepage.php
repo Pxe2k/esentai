@@ -5,15 +5,15 @@ include('./source/header.php')
     <div class="infrastpage">
         <div class="container">
             <div class="infrast1page">
-                <div class="infrastpage-abzac1">
-                    <h3>A-Class Offices in Almaty downtown. </h3>
+                <div class="infrastpage-abzac1 animate__fadeInDown">
+                    <h3 data-aos="fade-down">A-Class Offices in Almaty downtown.</h3>
 
 
-                    <P>Esentai Tower is located in the central business district of Almaty city, has a prestigious
+                    <P data-aos="fade-right">Esentai Tower is located in the central business district of Almaty city, has a prestigious
                         address to make your business noticeable. It is not only beautifully designed but, also,
                         packed with in-demand amenities and technological features. Offices in Esentai Tower offer
                         office rental space in Class A buildings to suit your professional needs.</P></div>
-                <div class="infrastpage-abzac2"><h4>The technological revolution is pushing the boundaries of the
+                <div class="infrastpage-abzac2" data-aos="fade-right"><h4>The technological revolution is pushing the boundaries of the
                         property management sphere. </h4>
                     <p>Esentai Tower is not an exception. Carrier water chillers well-known leading supplier of
                         high-technology heating, air-conditioning, and refrigeration solutions are installed in the
@@ -35,7 +35,7 @@ include('./source/header.php')
 
 
                     </p></div>
-                <div class="infrastpage-abzac3"><h4>Technically advanced parking systems to keep up with the times and
+                <div class="infrastpage-abzac3" data-aos="fade-right"><h4>Technically advanced parking systems to keep up with the times and
                         promptly respond to future needs.
                     </h4>
                     <p>For convenience, Esentai Tower has a secure 398-space car park which is located on the basement
@@ -43,7 +43,7 @@ include('./source/header.php')
                         provider of management and ticketing solution “SKIDATA” is integrated for a broad spectrum of
                         technical support and seamless parking experience.</p></div>
             </div>
-            <div class="infrast2page">
+            <div class="infrast2page" data-aos="fade-left">
                 <img class="infrastpageback" src="./img/inf/infrastpage.png">
             </div>
         </div>

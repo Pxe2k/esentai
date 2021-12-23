@@ -19,12 +19,10 @@ include('./source/header.php')
 </div>
 
 <div class="about">
-    <div class="container ">
+    <div class="container">
         <div>
-
-
             <div class="about-title text text-s34 animate__animated " data-in="animate__lightSpeedInLeft"
-                 data-out="animate__lightSpeedOutLeft">
+                     data-out="animate__zoomOut">
                 ABOUT
             </div>
             <div class="about-top">
