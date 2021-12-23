@@ -611,6 +611,12 @@ header .btn-contact_us a:hover:after {
   text-transform: uppercase;
 }
 
+.about-top__column {
+    max-width: 250px;
+    margin-bottom: 50px;
+}
+
+/*
 .about-top__column:nth-child(1) {
   max-width: 16.1111rem;
 }
@@ -626,6 +632,7 @@ header .btn-contact_us a:hover:after {
 .about-top__column:nth-child(4) {
   max-width: 14.4444rem;
 }
+*/
 
 @media screen and (max-width: 780px) {
   .about-top__column {
@@ -640,7 +647,7 @@ header .btn-contact_us a:hover:after {
 
 .about-bottom__title {
   font-size: 5.5rem;
-  margin-top: 6.1111rem;
+  margin-top: 5.5rem;
   padding-left: 1rem;
 }
 

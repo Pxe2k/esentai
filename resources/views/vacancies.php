@@ -7,18 +7,18 @@ include('./source/header.php')
         <div class="container">
             <div class="misson-block">
                 <div class="mission-block__column1">
-                    <h2>MISSION:</h2>
-                    <img src="./img/vacancy/icons/1.png">
-                    <p>High standards of property management to realize<br/> your ambitions</p>
+                    <h2 data-aos="fade-down">MISSION:</h2>
+                    <img src="./img/vacancy/icons/1.png" data-aos="fade-right">
+                    <p data-aos="fade-right">High standards of property management to realize<br/> your ambitions</p>
                 </div>
-                <div class="mission-block__column">
+                <div class="mission-block__column" data-aos="fade-left">
                      <img  src="./img/vacancy/img1.png">
                 </div>
             </div>
         </div>
-        <div class="values-block">
+        <div class="values-block" data-aos="fade-down-right">
             <div class="container">
-                <h2>VALUES:</h2>
+                <h2 data-aos="fade-down">VALUES:</h2>
                 <div class="values-column-top">
                     <div class="values-column">
                         <img src="./img/vacancy/icons/2.png">
@@ -33,14 +33,14 @@ include('./source/header.php')
                         <p><b>Taking care of employees:</b> We give<br/> opportunities for the constant<br/> development
                             and realization of our<br/> People's potential</p>
                     </div>
-                
-                
+
+
                     <div class="values-column">
                         <img src="./img/vacancy/icons/5.png">
                         <p><b>Unique business space:</b> We are constantly changing, following modern trends, creating
                             an inspiring environment and comfort for the development of a successful business</p>
                     </div>
-                
+
                     <div class="values-column">
                     <img src="./img/vacancy/icons/6.png">
                     <p><b>Sustainability:</b> We recognize our responsibility to the next generation by caring for the
@@ -53,8 +53,8 @@ include('./source/header.php')
         <div class="vacancy-block">
             <div class="container">
                 <div class="vacancy-column">
-                    <div class="vacancy-part1"><img src="./img/vacancy/img2.png"></div>
-                    <div class="vacancy-part2">
+                    <div class="vacancy-part1" data-aos="fade-right"><img src="./img/vacancy/img2.png"></div>
+                    <div class="vacancy-part2" data-aos="fade-left">
                         <h3>Responsibilities of<br/> <b>the accountant:</b></h3>
                         <p>Maintaining and reflecting primary documentation in the accounting records</p>
                         <p>Handle all bank current and currency accounts, treasury accounts</p>
@@ -72,8 +72,8 @@ include('./source/header.php')
 
                 </div>
                 <div class="vacancy-column2">
-                    <div class="vacancy-part1"><img src="./img/vacancy/img2.png"></div>
-                    <div class="vacancy-part2">
+                    <div class="vacancy-part1" data-aos="fade-left"><img src="./img/vacancy/img2.png"></div>
+                    <div class="vacancy-part2" data-aos="fade-right">
                         <h3>Responsibilities of<br/> <b>the financial manager:</b></h3>
                         <p>Company budget - preparation and follow-up after approval</p>
                         <p>Budget forecast - quarterly update of the company budget </p>
@@ -90,8 +90,8 @@ include('./source/header.php')
 
                 </div>
                 <div class="vacancy-column">
-                    <div class="vacancy-part1"><img src="./img/vacancy/img2.png"></div>
-                    <div class="vacancy-part2">
+                    <div class="vacancy-part1" data-aos="fade-right"><img src="./img/vacancy/img2.png"></div>
+                    <div class="vacancy-part2" data-aos="fade-left">
                         <h3>Responsibilities of<br/> <b>the building engineer:</b></h3>
                         <p>Coordinating meetings with tenants and tenant contractors </p>
                         <p>Review and approve tenant projects for compliance with building regulations </p>
@@ -114,7 +114,7 @@ include('./source/header.php')
             </div>
         </div>
     </div>
-    
+
 <?php
 include('./source/footer.php')
 ?>
