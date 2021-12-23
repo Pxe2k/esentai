@@ -15,6 +15,9 @@ class CreateInfrastructuresTable extends Migration
     {
         Schema::create('infrastructures', function (Blueprint $table) {
             $table->id();
+            $table->string('image');
+            $table->string('title');
+            $table->text('text');
             $table->timestamps();
         });
     }
