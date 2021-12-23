@@ -5,9 +5,9 @@ include('./source/header.php')
 
     <div class="newspage">
         <div class="container">
-            <h4 class="page-title">NEWS</h4>
+            <h4 class="page-title" data-aos="fade-down">NEWS</h4>
             <div>
-                <div class="news-column">
+                <div class="news-column" data-aos="fade-right">
                     <div class="news-column1">
                         <div class="column1-text">
                             <div class="column1-title">
@@ -29,7 +29,7 @@ include('./source/header.php')
                     </div>
                 </div>
 
-                <div class="news-column">
+                <div class="news-column" data-aos="fade-left">
                     <div class="news-column1">
                         <div class="column1-text">
                             <div class="column1-title">
@@ -48,7 +48,7 @@ include('./source/header.php')
                         </div>
                     </div>
                 </div>
-                <div class="news-column">
+                <div class="news-column" data-aos="fade-right">
                     <div class="news-column1">
                         <div class="column1-text">
                             <div class="column1-title">
@@ -56,8 +56,8 @@ include('./source/header.php')
                             </div>
                             <div class="avtor text text-while text-s15">Авто статьи: Карлс Виктор</div>
                             <div class="paragraf-news text text-while text-s15">
-                            Capital Partners is a development company founded in 2001. For 17 years Capital Partners 
-                            has realized large projects in Moscow, Istanbul and Bodrum. Capital Partners' major 
+                            Capital Partners is a development company founded in 2001. For 17 years Capital Partners
+                            has realized large projects in Moscow, Istanbul and Bodrum. Capital Partners' major
                             projects in Kazakhstan include Esentai Park, The Ritz-Carlton Hotel, Almaty, Esentai
                              Mall, Almaty Financial Center and Shymbulak ski resort.
 

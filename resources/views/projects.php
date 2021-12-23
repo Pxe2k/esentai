@@ -5,10 +5,10 @@ include('./source/header.php')
 
     <div class="page-projects">
         <div class="container">
-            <div class="projects1-title">
+            <div class="projects1-title" data-aos="fade-down">
                 <h1>LEVEL 8</h1>
             </div>
-            <p>Level 8 is a serviced office and a coworking area where customers can concentrate
+            <p data-aos="fade-right">Level 8 is a serviced office and a coworking area where customers can concentrate
                 on their work and only pay for occupied space and rental time. The offices are
                 fully equipped so that customers don't have to worry about their administration.<br/><br/>
 
@@ -25,11 +25,11 @@ include('./source/header.php')
                         <h5>PRIVATE </h5>
                         <p> OFFICE</p>
                     </div>
-                    <div class="contain2-column-img"><img src="./img/page2/image 14.png"></div>
+                    <div class="contain2-column-img" data-aos="fade-left"><img src="./img/page2/image 14.png"></div>
                 </div>
                 <div class="contain2-column2">
 
-                    <div class="contain2-column-img"><img src="./img/page2/image 15.png"></div>
+                    <div class="contain2-column-img" data-aos="fade-right"><img src="./img/page2/image 15.png"></div>
                     <div class="contain2-column-title">
                         <h5>DIRECTOR </h5>
                         <p> OFFICE</p>
@@ -40,7 +40,7 @@ include('./source/header.php')
                         <h5>CO-WORKING </h5>
                         <p> SPACE</p>
                     </div>
-                    <div class="contain2-column-img"><img src="./img/page2/image 16.png"></div>
+                    <div class="contain2-column-img" data-aos="fade-left"><img src="./img/page2/image 16.png"></div>
                 </div>
                 <div class="line"></div>
             </div>
