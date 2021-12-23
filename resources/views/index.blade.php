@@ -28,42 +28,16 @@ include('./source/header.php')
                 ABOUT
             </div>
             <div class="about-top">
-                <div class="about-top__column animate__animated " data-in="animate__lightSpeedInLeft"
-                     data-out="animate__zoomOut">
-                    <img src="../img/icons/about/1.png">
-                    <h4 class="text text-s15">Capital Tower Development</h4>
-                    <p class="text text-s15">Is the Kazakhstani leader in premium corporate real
-                        estate with the expertise of more than 15 years on
-                        the market. Our activities are geared to keep global
-                        standards in the corporate culture.
-
-                    </p>
-                </div>
-                <div class="about-top__column animate__animated " data-in="animate__lightSpeedInLeft"
-                     data-out="animate__lightSpeedOutLeft">
-                    <img src="../img/icons/about/2.png">
-                    <h4 class="text text-s15">Mission</h4>
-                    <p class="text text-s15">High standards of property management to realize your ambitions.
-
-                    </p>
-                </div>
-                <div class="about-top__column animate__animated " data-in="animate__lightSpeedInLeft"
-                     data-out="animate__lightSpeedOutLeft">
-                    <img src="../img/icons/about/3.png">
-                    <h4 class="text text-s15">VALUES</h4>
-                    <p class="text text-s15">We strive for excellence on every level
-                    </p>
-                </div>
-                <div class="about-top__column animate__animated " data-in="animate__lightSpeedInLeft"
-                     data-out="animate__lightSpeedOutLeft">
-                    <img src="../img/icons/about/4.png">
-                    <h4 class="text text-s15">The buildings are equipped</h4>
-                    <p class="text text-s15">With engineering heating systems operating on the principle
-                        of a thermal curtain. Known as central glycol-based IT
-                        cooling system.
-
-                    </p>
-                </div>
+                @foreach ($abouts as $about)
+                    <div class="about-top__column animate__animated " data-in="animate__lightSpeedInLeft"
+                        data-out="animate__lightSpeedOutLeft">
+                        <img src="/storage/{{ $about->icon }}">
+                        <h4 class="text text-s15">{{ $about->title }}</h4>
+                        <p class="text text-s15">
+                            {{ $about->text }}
+                        </p>
+                    </div>
+                @endforeach   
             </div>
         </div>
         <div class="about-bottom__title animate__animated " data-in="animate__lightSpeedInLeft"
@@ -72,38 +46,18 @@ include('./source/header.php')
             <h3 class="text text-s42">TOWERS</h3>
         </div>
         <div class="about-bottom">
-            <div class="about-bottom__column animate__animated " data-in="animate__lightSpeedInLeft"
-                 data-out="animate__lightSpeedOutLeft">
-                <div class="about-btm__title">
-                    <img src="../img/icons/about/5.png">
-                    <h5 class="text text-s34">MICROCLIMATE</h5>
+            @foreach ($advantages as $advantage)    
+                <div class="about-bottom__column animate__animated " data-in="animate__lightSpeedInLeft"
+                    data-out="animate__lightSpeedOutLeft">
+                    <div class="about-btm__title">
+                        <img src="/storage/{{ $advantage->icon }}">
+                        <h5 class="text text-s34">{{ $advantage->title }}</h5>
+                    </div>
+                    <p class="text text-s15">
+                        {{ $advantage->text }}
+                    </p>
                 </div>
-                <p class="text text-s15">Also, the Esentai Tower’s ventilation & air conditioning-Microclimate
-                    control system-center is zoned and is controlled by a single control
-                    panel BMS (Building Management System from Honeywell) the system gives
-                    opportunity to each zone to be controlled by its regulator installed
-                    in the tenant's premises.
-                </p>
-
-            </div>
-            <div class="about-bottom__column animate__animated " data-in="animate__lightSpeedInLeft"
-                 data-out="animate__lightSpeedOutLeft">
-                <div class="about-btm__title">
-                    <img src="../img/icons/about/6.png">
-                    <h5 class="text text-s34">LEED certification </h5>
-                </div>
-                <p class="text text-s15">Esentai Tower received Leadership in Energy and Environmental
-                    Design (LEED) silver green building certification in 2018.LEED
-                    certification is developed by the non-profit U.S. Green Building
-                    Council, it is a rating system for the design, construction,
-                    operation, and maintenance of green buildings which is aimed to
-                    help building owners and operators be environmentally responsible
-                    and use resources efficiently.
-                </p>
-
-            </div>
-
-
+            @endforeach
         </div>
         <div class="about-img">
             <img src="../img/icons/about/about.png">
@@ -147,20 +101,8 @@ include('./source/header.php')
                 </div>
                 <div class="project-1-p animate__animated " data-in="animate__lightSpeedInLeft"
                      data-out="animate__lightSpeedOutLeft">
-                    <h4 class="text text-s25">LEVEL 8</h4>
-                    <p class="text text-s15">is an alternative workspace with private offices and coworking located on
-                        the eighth floor of
-                        Esentai Tower. <br/><br/>
-
-                        Built according to the most advanced standards, incorporating high tech solutions it offers
-                        flexible, cost efficient and inspiring work environment for small and medium sized
-                        companies.<br/><br/>
-
-                        Coworking is a brilliant community for collaboration and building network, as it offers
-                        opportunities that are not usually found in traditional offices. <br/><br/>
-
-                        Moreover, we give the privilege of having an address at Esentai Tower, which has become a
-                        synonym of trust and reputation.</p>
+                    <h4 class="text text-s25">{{ $projects->title }}</h4>
+                    {!! $projects->text !!}
                 </div>
             </div>
             <div class="projects-1__column">

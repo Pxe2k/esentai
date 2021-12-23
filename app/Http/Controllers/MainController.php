@@ -4,11 +4,43 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\{
+    About,
+    Advantage,
+    Infrastructure,
+    Project,
+    Press,
+    News,
+    Partner,
+    Contact,
+    Social,
+};
+
 class MainController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $abouts = About::all();
+        $advantages = Advantage::all();
+        $infrastructures = Infrastructure::all();
+        $projects = Project::first();
+        $presses = Press::all();
+        $news = News::first();
+        $partners = Partner::all();
+        $contact = Contact::first();
+        $socials = Social::all();
+
+        return view('index', compact(
+            'abouts', 
+            'advantages',
+            'infrastructures',
+            'projects',
+            'presses',
+            'news',
+            'partners',
+            'contact',
+            'socials',
+        ));
     }
 
     public function getInfrastructure()
@@ -31,7 +63,7 @@ class MainController extends Controller
         return view('projects');
     }
 
-    public function vacancy()
+    public function vacancies()
     {
         return view('vacancies');
     }
