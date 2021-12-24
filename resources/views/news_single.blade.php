@@ -6,7 +6,7 @@ include('./source/header.php')
         <div class="container">
             <h2>{!! $news->title !!}</h2>
             <p class="awtor">Авто статьи: {{ $news->author }}</p>
-            {{-- @dd($detail); --}}
+            {{-- @dd($detail) --}}
             @if ($detail->banner != null)
                 <img class="news1back" src="/storage/{{ $detail->banner }}">    
             @else

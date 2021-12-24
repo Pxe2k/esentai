@@ -12,12 +12,21 @@ include('./source/header.php')
             {!! $detail->text !!}
             <div class="contain2">
                 @foreach ($photos as $photo)
-                    <div class="contain2-column">
-                        <div class="contain2-column-title">
-                            {!! $photo->title !!}
+                    @if($loop -> index % 2)
+                        <div class="contain2-column">
+                            <div class="contain2-column-title">
+                                {!! $photo->title !!}
+                            </div>
+                            <div class="contain2-column-img" data-aos="fade-left"><img src="/storage/{{ $photo->image }}"></div>
                         </div>
-                        <div class="contain2-column-img" data-aos="fade-left"><img src="/storage/{{ $photo->image }}"></div>
-                    </div>
+                    @else
+                        <div class="contain2-column2">
+                            <div class="contain2-column-img" data-aos="fade-left"><img src="/storage/{{ $photo->image }}"></div>
+                            <div class="contain2-column-title">
+                                {!! $photo->title !!}
+                            </div>
+                        </div>
+                    @endif
                     <div class="line"></div>
                 @endforeach
             </div>

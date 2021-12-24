@@ -16,7 +16,7 @@
         <div class="logo"><img src="../img/logowhite.png"></div>
         <nav class="menu">
             <ul class="menu">
-                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="/infrastructure">ABOUT US</a></li>
                 <li><a href="infrastructurepage.html">INFRASTRUCTURE</a></li>
                 <li><a href="projects1.html">PROJECTS</a></li>
                 <li><a href="news.html">PRESS</a></li>

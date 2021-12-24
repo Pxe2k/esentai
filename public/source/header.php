@@ -22,7 +22,7 @@
                     <div class="logo"><a href="/"><img src="../img/icons/logo.png"></a></div>
                     <nav>
                         <ul class="menu">
-                            <li class="menu__item"><a href="/about.php">ABOUT US</a></li>
+                            <li class="menu__item"><a href="/getInfrastructure">ABOUT US</a></li>
                             <li class="menu__item"><a href="/getInfrastructure">INFRASTRUCTURE</a></li>
                             <li class="menu__item"><a href="/getProject">PROJECTS</a></li>
                             <li class="menu__item"><a href="/news">NEWS</a></li>

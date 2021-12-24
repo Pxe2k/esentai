@@ -30,7 +30,7 @@ include('./source/header.php')
     <div class="container">
         <div>
             <div class="about-title text text-s34 animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__zoomOut">
-                ABOUT
+                <a style="color: black" href="/getInfrastructure">ABOUT</a>
             </div>
             <div class="about-top">
                 @foreach ($abouts as $about)
@@ -53,7 +53,11 @@ include('./source/header.php')
             <div class="about-bottom__column animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
                 <div class="about-btm__title">
                     <img src="/storage/{{ $advantage->icon }}">
-                    <h5 class="text text-s34">{{ $advantage->title }}</h5>
+                    <h5 class="text text-s34">
+                        <a style="color: black" href="">
+                            {{ $advantage->title }}
+                        </a>
+                    </h5>
                 </div>
                 <p class="text text-s15">
                     {{ $advantage->text }}
@@ -71,7 +75,7 @@ include('./source/header.php')
 <div class="infrast">
     <div class="container">
         <div class="infr-title animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
-            <h3>INFRASTRUCTURE</h3>
+            INFRASTRUCTURE
         </div>
         <div class="slider animate__animated " data-in="animate__lightSpeedInRight" data-out="animate__lightSpeedOutRight">
             <div class="slider_src">
@@ -125,7 +129,7 @@ include('./source/header.php')
 <div class="slider-page">
     <div class="container">
         <div class="slider-content animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
-            <div class="slider-content__title">{{ $news->title }}</div>
+            <div class="slider-content__title">{!! $news->title !!}</div>
             <div class="slider-content__data">
                 <p>{{ $news->date }}</p>
             </div>
@@ -134,7 +138,7 @@ include('./source/header.php')
                     {{ $news->text }}
                 </p>
                 <br>
-                <p>READ MORE</p>
+                <a href="/news" style="color:white" >READ MORE</a>
             </div>
 
         </div>

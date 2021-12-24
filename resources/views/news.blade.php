@@ -14,7 +14,7 @@ include('./source/header.php')
                                 <div class="column1-title">
                                     <h4 class="text text-while text-s34">{!! $news->title !!}</h4>
                                 </div>
-                                <div class="avtor text text-while text-s15">Авто статьи: {{ $news->author }}</div>
+                                <div class="avtor text text-while text-s15">Автор статьи: {{ $news->author }}</div>
                                 <div class="paragraf-news text text-while text-s15">
                                 {{ $news->text }}
                                 </div>

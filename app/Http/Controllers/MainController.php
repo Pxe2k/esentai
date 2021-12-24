@@ -66,7 +66,7 @@ class MainController extends Controller
     public function getNews($id)
     {
         $news = News::find($id);
-        $detail = NewsDetail::where('news_id', $id)->get();
+        $detail = NewsDetail::where('news_id', $id)->first();
 
         return view('news_single', compact(
             'news',
