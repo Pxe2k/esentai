@@ -83,12 +83,10 @@
         let selectItem = $('.lang');
 
         selectHeader.on('click', function(even) {
-            event.stopPropagation();
             $(this).toggleClass('is-active');
         });
 
         selectItem.on('click', function(even) {
-            event.stopPropagation();
             let text = this.innerText,
                 select = this.closest('.language'),
                 currentText = select.querySelector('.language__current');
