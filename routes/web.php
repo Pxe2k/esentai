@@ -19,7 +19,7 @@ Route::get('/', 'MainController@index');
 Route::get('/getInfrastructure', 'MainController@getInfrastructure');
 Route::get('/news', 'MainController@news');
 Route::get('/news/{id}', 'MainController@getNews');
-Route::get('/getProject', 'MainController@getProject');
+Route::get('/project/{id}', 'MainController@getProject');
 Route::get('/vacancies', 'MainController@vacancies');
 
 Route::group(['prefix' => 'admin'], function () {

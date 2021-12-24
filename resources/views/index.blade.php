@@ -101,6 +101,7 @@ include('./source/header.php')
                      data-out="animate__lightSpeedOutLeft">
                     <h4 class="text text-s25">{{ $projects->title }}</h4>
                     {!! $projects->text !!}
+                    <br><a href="/project/{{ $projects->id }}">READ MORE</a>
                 </div>
             </div>
             <div class="projects-1__column">
@@ -120,7 +121,7 @@ include('./source/header.php')
         </div>
         <div class="projects-2 animate__animated " data-in="animate__lightSpeedInRight"
              data-out="animate__lightSpeedOutRight">
-            <div class="slider_project_1"><img src="../img/projects/project2.png"></div>
+            <div class="slider_project_1"><img src="/storage/{{ $projects->image }}"></div>
         </div>
     </div>
 </div>
@@ -128,7 +129,7 @@ include('./source/header.php')
     <div class="container">
         <div class="slider-content animate__animated " data-in="animate__lightSpeedInLeft"
              data-out="animate__lightSpeedOutLeft">
-            <div class="slider-content__title">{{ $news->title }}</div>
+            <div class="slider-content__title">{!! $news->title !!}</div>
             <div class="slider-content__data"><p>{{ $news->date }}</p></div>
             <div class="slider-content__paragraf"><p>
                     {{ $news->text }}

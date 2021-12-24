@@ -9,12 +9,17 @@ use App\Models\{
     Advantage,
     Infrastructure,
     Project,
+    ProjectDetail,
+    ProjectPhoto,
     Press,
     News,
+    NewsDetail,
     Partner,
     Contact,
     Social,
-    NewsDetail,
+    Vacancy,
+    VacancyMission,
+    VacancyValue,
 };
 
 class MainController extends Controller
@@ -69,14 +74,30 @@ class MainController extends Controller
         ));
     }
 
-    public function getProject()
+    public function getProject($id)
     {
-        return view('projects');
+        $project = Project::find($id);
+        $detail = ProjectDetail::where('project_id', $id)->first();
+        $photos = ProjectPhoto::where('project_id', $id)->get();
+
+        return view('projects', compact( 
+            'project',
+            'detail',
+            'photos',
+        ));
     }
 
     public function vacancies()
     {
-        return view('vacancies');
+        $mission = VacancyMission::first();
+        $values = VacancyValue::all();
+        $vacancies = Vacancy::all();
+
+        return view('vacancies', compact(
+            'mission',
+            'values',
+            'vacancies',
+        ));
     }
 
 }
