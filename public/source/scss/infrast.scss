@@ -52,9 +52,10 @@
 
   width: 37.6111rem;
   height: 20.9444rem;
-  border: 0.0556rem solid white;
+  border: 2px solid rgba(255, 255, 255, 0.69);
   @include rem(padding, 9px);
   display: flex;
+  z-index: 15;
 
   &_src {
     background: url(/img/inf/cafe.png) no-repeat;
@@ -82,35 +83,108 @@
   width: 2.5rem;
   height: 2.5rem;
 
+  &:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    height: 8rem;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.69);
+    bottom: calc(100% + 0.7rem);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    height: 1px;
+    //@include rem(width, 815px);
+    background-color: #fff;
+    bottom: calc(100% + 8.7rem);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+  }
+
+  &.active {
+    &:before {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &:after {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
 
   &-page1 {
     top: 44.27rem;
     left: 8.6rem;
+
+    &:after {
+      @include rem(width, 815px);
+      bottom: calc(100% + 16.7rem);
+    }
+    &:before{
+      height: 16rem;
+    }
   }
 
   &-page2 {
     @include rem(top, 827px);
     @include rem(left, 271px);
+
+    &:after {
+      @include rem(width, 700px);
+      bottom: calc(100% + 16.7rem);
+    }
+    &:before{
+      height: 16rem;
+    }
   }
 
   &-page3 {
     @include rem(top, 574px);
     @include rem(left, 452px);
+
+    &:after {
+      @include rem(width, 518px);
+    }
   }
 
   &-page4 {
     @include rem(top, 842px);
     @include rem(left, 655px);
+
+    &:after {
+      @include rem(width, 315px);
+    }
   }
 
   &-page5 {
     @include rem(top, 631px);
     @include rem(left, 722px);
+
+    &:after {
+      @include rem(width, 250px);
+    }
   }
 
   &-page6 {
     @include rem(top, 865px);
     @include rem(left, 1028px);
+
+    &:before {
+      @include rem(height, 127px);
+    }
+
+    &:after {
+      display: none;
+    }
   }
 
   @include sm-block() {

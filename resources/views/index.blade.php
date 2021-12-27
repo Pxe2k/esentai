@@ -85,13 +85,13 @@ include('./source/header.php')
 
     </div>
 
-    <div class="container_pagi   ">
-        <a class="button-slider button-slider-page1" href="#"></a>
-        <a class="button-slider button-slider-page2" href="#"></a>
-        <a class="button-slider button-slider-page3" href="#"></a>
-        <a class="button-slider button-slider-page4" href="#"></a>
-        <a class="button-slider button-slider-page5" href="#"></a>
-        <a class="button-slider button-slider-page6" href="#"></a>
+    <div class="container_pagi">
+        <a class="button-slider button-slider-page1 active" href="javascript:void(false)"></a>
+        <a class="button-slider button-slider-page2" href="javascript:void(false)"></a>
+        <a class="button-slider button-slider-page3" href="javascript:void(false)"></a>
+        <a class="button-slider button-slider-page4" href="javascript:void(false)"></a>
+        <a class="button-slider button-slider-page5" href="javascript:void(false)"></a>
+        <a class="button-slider button-slider-page6" href="javascript:void(false)"></a>
     </div>
 </div>
 

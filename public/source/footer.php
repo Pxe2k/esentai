@@ -16,7 +16,7 @@
         <div class="logo"><img src="../img/logowhite.png"></div>
         <nav class="menu">
             <ul class="menu">
-                <li><a href="/infrastructure">ABOUT US</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
                 <li><a href="infrastructurepage.html">INFRASTRUCTURE</a></li>
                 <li><a href="projects1.html">PROJECTS</a></li>
                 <li><a href="news.html">PRESS</a></li>
@@ -35,9 +35,6 @@
 
 </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-
 <script>
     let last_known_scroll_position = 0;
     let ticking = false;
@@ -55,11 +52,11 @@
         });
     }
 
-    window.addEventListener('scroll', function(e) {
+    window.addEventListener('scroll', function (e) {
         last_known_scroll_position = window.scrollY;
 
         if (!ticking) {
-            window.requestAnimationFrame(function() {
+            window.requestAnimationFrame(function () {
                 doSomething(last_known_scroll_position);
                 ticking = false;
             });
@@ -73,33 +70,17 @@
         duration: 600,
     });
 
-    $('.mobailTop').on('click', function() {
-        $(this).toggleClass('active');
-        $('.deskTop').toggleClass('active');
-    });
-
-    let select = function() {
-        let selectHeader = $('.language');
-        let selectItem = $('.lang');
-
-        selectHeader.on('click', function(even) {
-            $(this).toggleClass('is-active');
-        });
-
-        selectItem.on('click', function(even) {
-            let text = this.innerText,
-                select = this.closest('.language'),
-                currentText = select.querySelector('.language__current');
-            currentText.innerText = text;
-            selectHeader.removeClass('is-active');
-        });
-
-    };
-
-    select();
-
+    let sliderBtn = document.querySelectorAll(".button-slider");
+    sliderBtn.forEach((item) => {
+        item.addEventListener("click", (event) => {
+            sliderBtn.forEach((item2) => {
+                item2.classList.remove("active");
+            });
+            event.target.classList.add("active");
+        })
+    })
 </script>
+
 </div>
 </body>
-
 </html>
