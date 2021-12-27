@@ -22,18 +22,28 @@ use App\Models\{
     VacancyValue,
 };
 
+use App;
+
 class MainController extends Controller
 {
     public function index()
     {
-        $abouts = About::all();
-        $advantages = Advantage::all();
-        $infrastructures = Infrastructure::all();
-        $projects = Project::first();
+        if (session()->has('locale')) {
+            $locale = session('locale');
+            App::setLocale($locale);
+        } else {            
+        $locale = session(['locale' => 'fr']);
+            App::setLocale('fr');
+        }
+
+        $abouts = About::all()->translate(session('locale'));
+        $advantages = Advantage::all()->translate(session('locale'));
+        $infrastructures = Infrastructure::all()->translate(session('locale'));
+        $projects = Project::first()->translate(session('locale'));
         $presses = Press::all();
-        $news = News::first();
+        $news = News::first()->translate(session('locale'));
         $partners = Partner::all();
-        $contact = Contact::first();
+        $contact = Contact::first()->translate(session('locale'));
         $socials = Social::all();
 
         return view('index', compact(
@@ -55,8 +65,16 @@ class MainController extends Controller
     }
 
     public function news()
-    {
-        $news = News::all();
+    {       
+        if (session()->has('locale')) {
+            $locale = session('locale');
+            App::setLocale($locale);
+        } else {            
+            $locale = session(['locale' => 'fr']);
+            App::setLocale('fr');
+        }
+
+        $news = News::all()->translate(session('locale'));
         
         return view('news', compact(
             'news'
@@ -65,8 +83,16 @@ class MainController extends Controller
 
     public function getNews($id)
     {
-        $news = News::find($id);
-        $detail = NewsDetail::where('news_id', $id)->first();
+        if (session()->has('locale')) {
+            $locale = session('locale');
+            App::setLocale($locale);
+        } else {            
+            $locale = session(['locale' => 'fr']);
+            App::setLocale('fr');
+        }
+
+        $news = News::find($id)->translate(session('locale'));
+        $detail = NewsDetail::where('news_id', $id)->first()->translate(session('locale'));
 
         return view('news_single', compact(
             'news',
@@ -76,9 +102,17 @@ class MainController extends Controller
 
     public function getProject($id)
     {
-        $project = Project::find($id);
-        $detail = ProjectDetail::where('project_id', $id)->first();
-        $photos = ProjectPhoto::where('project_id', $id)->get();
+        if (session()->has('locale')) {
+            $locale = session('locale');
+            App::setLocale($locale);
+        } else {            
+            $locale = session(['locale' => 'fr']);
+            App::setLocale('fr');
+        }
+
+        $project = Project::find($id)->translate(session('locale'));
+        $detail = ProjectDetail::where('project_id', $id)->first()->translate(session('locale'));
+        $photos = ProjectPhoto::where('project_id', $id)->get()->translate(session('locale'));
 
         return view('projects', compact( 
             'project',
@@ -89,9 +123,17 @@ class MainController extends Controller
 
     public function vacancies()
     {
-        $mission = VacancyMission::first();
-        $values = VacancyValue::all();
-        $vacancies = Vacancy::all();
+        if (session()->has('locale')) {
+            $locale = session('locale');
+            App::setLocale($locale);
+        } else {            
+            $locale = session(['locale' => 'fr']);
+            App::setLocale('fr');
+        }
+
+        $mission = VacancyMission::first()->translate(session('locale'));
+        $values = VacancyValue::all()->translate(session('locale'));
+        $vacancies = Vacancy::all()->translate(session('locale'));
 
         return view('vacancies', compact(
             'mission',

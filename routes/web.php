@@ -16,11 +16,16 @@ use App\Http\Controllers\MainController;
 */
 
 Route::get('/', 'MainController@index');
-Route::get('/getInfrastructure', 'MainController@getInfrastructure');
+Route::get('/infrastructure', 'MainController@getInfrastructure');
 Route::get('/news', 'MainController@news');
 Route::get('/news/{id}', 'MainController@getNews');
 Route::get('/project/{id}', 'MainController@getProject');
 Route::get('/vacancies', 'MainController@vacancies');
+
+Route::get('/setlocale/{locale}', function($locale) {
+    session(['locale' => $locale]);
+    return redirect()->back();
+ });
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
