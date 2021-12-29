@@ -26,6 +26,8 @@ include('./source/header.php')
     </div>
 </div>
 
+<a href="#about" class="mouse" style="background-image: url('/img/mouse.png')"></a>
+
 <div class="about">
     <div class="container">
         <div>
@@ -79,7 +81,13 @@ include('./source/header.php')
         </div>
         <div class="slider animate__animated " data-in="animate__lightSpeedInRight" data-out="animate__lightSpeedOutRight">
             <div class="slider_src">
-
+                <div class="slider_src_text">
+                    <h3 class="text text-while text-bold  text-s25">Restaurants & Cafes zone </h3>
+                    <p class="text text-while text-s15">
+                        has an exciting offering flavours of the different cuisines. The venue is immersed in
+                        contemporary, urban architecture with spectacular views of Esentai Square.
+                    </p>
+                </div>
             </div>
         </div>
 
@@ -122,7 +130,28 @@ include('./source/header.php')
 
         </div>
         <div class="projects-2 animate__animated " data-in="animate__lightSpeedInRight" data-out="animate__lightSpeedOutRight">
-            <div class="slider_project_1"><img src="/storage/{{ $projects->image }}"></div>
+            <div class="slider_project_1">
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <?php
+                        for ($i = 0; $i < 3; $i++) {
+                            ?>
+                            <div class="swiper-slide">
+                                <img src="../img/projects/project2.png">
+                            </div>
+                            <?php
+                        }
+                        ?>
+                    </div>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
