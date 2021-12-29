@@ -160,7 +160,7 @@ include('./source/header.php')
         <div class="slider-content animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
             <div class="slider-content__title">{!! $news->title !!}</div>
             <div class="slider-content__data">
-                <p>{{ $news->date }}</p>
+                <p>{{ $news->author }}</p>
             </div>
             <div class="slider-content__paragraf">
                 <p>

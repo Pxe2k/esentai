@@ -36,6 +36,7 @@ include('./source/header.php')
                     <div class="vacancy-column">
                         <div class="vacancy-part1" data-aos="fade-right"><img src="/storage/{{ $vacancy->image }}"></div>
                         <div class="vacancy-part2" data-aos="fade-left">
+                            <h3>{{ $vacancy->title }}</h3>
                             {!! $vacancy->text !!}
                             <a href="#"><b>hr@esentaitower.com</b></a>
 

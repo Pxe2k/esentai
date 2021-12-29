@@ -12,5 +12,5 @@ class News extends Model
     use HasFactory;
     use Translatable;
 
-    protected $translatable = ['title', 'text', 'date']; 
+    protected $translatable = ['title', 'text', 'date', 'author']; 
 }
