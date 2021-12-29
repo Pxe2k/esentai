@@ -142,4 +142,15 @@ class MainController extends Controller
         ));
     }
 
+    public function infrastructures(Request $request)
+    {
+        $language = $request->header('accept-language');
+
+        $infrastructures = Infrastructure::all()->translate($language);
+
+        return response([
+            'infrastructures' => $infrastructures
+        ]);
+    }
+
 }
