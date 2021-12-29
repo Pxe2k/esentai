@@ -38,7 +38,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <script>
-    let last_known_scroll_position = 0;
+ let last_known_scroll_position = 0;
     let ticking = false;
 
     function doSomething(scroll_pos) {
@@ -67,11 +67,6 @@
         }
     });
 
-    AOS.init({
-        delay: 200,
-        duration: 600,
-    });
-
     let sliderBtn = document.querySelectorAll(".button-slider");
     sliderBtn.forEach((item) => {
         item.addEventListener("click", (event) => {
@@ -82,25 +77,25 @@
         })
     })
 
-    $('.mobailTop').on('click', function() {
-        $(this).toggleClass('active');
-        $('.deskTop').toggleClass('active');
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        loop: true,
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
     });
-    let select = function() {
-        let selectHeader = $('.language');
-        let selectItem = $('.lang');
-        selectHeader.on('click', function(even) {
-            $(this).toggleClass('is-active');
-        });
-        selectItem.on('click', function(even) {
-            let text = this.innerText,
-                select = this.closest('.language'),
-                currentText = select.querySelector('.language__current');
-            currentText.innerText = text;
-            selectHeader.removeClass('is-active');
-        });
-    };
-    select();
 </script>
 
 </div>
