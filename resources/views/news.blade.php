@@ -8,8 +8,8 @@
             <h4 class="page-title">{{  __('content.news')  }}</h4>
             <div>
                 @foreach ($news as $news)
-                    <div class="news-column">
-                        <div class="news-column1">
+                    <div class="news-column" style="background-image: url(здесь ссылка)">
+                        <div class="news-column1" style="background-image: url(здесь ссылка)">
                             <div class="column1-text">
                                 <div class="column1-title">
                                     <h4 class="text text-while text-s34">{!! $news->title !!}</h4>

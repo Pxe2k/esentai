@@ -176,7 +176,7 @@
             delay: 200,
             duration: 600,
         });
-        document.querySelector('.language__header > img').addEventListener('click', ()=>{
+        document.querySelector('.language__header').addEventListener('click', ()=>{
             let dropdown = document.querySelector('.language__body')
             let arrow = document.querySelector('.language__header > img')
             if(dropdown.style.display == 'none' || dropdown.style.display == ''){

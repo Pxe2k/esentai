@@ -49,7 +49,7 @@ a:active {
 .modal-contact p input,.modal-contact p textarea {
   margin-top: 1rem;
     border-radius: 10px;
-    padding: 0.7rem;
+    padding: 0.2rem;
     background: #e7e7e7;
 }
 .modal-contact{
@@ -58,8 +58,8 @@ a:active {
   display: none;
   flex-direction: column;
   padding: 2rem;
-  width: 400px;
-  height: 550px;
+  width: 300px;
+  height: 350px;
   background: white;
   border-radius: 10px;
   z-index: 10000000000000000000;
@@ -432,16 +432,30 @@ header .btn-contact_us a:hover:after {
   font-size: 1.1111rem;
   color: #252c42;
 }
+.language__body > a{
+  font-size: 14px;
+}
 .language__body{
+  padding: 1rem;
   position: absolute;
-  bottom: 0;
+  bottom: -25px;
+  border-radius: 4px;
+  display: block;
+  background: white;
 }
 .language__header > img{
   width: 10px;
   margin-left: 0.5rem;
-  cursor: pointer;
+
+}
+.menu__item a{
+  white-space: nowrap;
+}
+.language__current{
+  font-size: 14px;
 }
 .language__header{
+  cursor: pointer;
   display: flex;
   align-items: flex-end;
 }
@@ -2137,7 +2151,7 @@ footer .container {
   left: 12.7778rem;
   right: 0;
   bottom: 0;
-  background: linear-gradient(258.52deg, #192038 62.17%, rgba(25, 32, 56, 0) 86.73%);
+  background: linear-gradient(270deg, #192038 62.17%, rgba(25, 32, 56, 0) 86.73%);
   background-position: center center;
 }
 
@@ -2251,7 +2265,7 @@ footer .container {
 }
 
 .news-column .news-column1 {
-  background: url(/img/news/newsback1.png) no-repeat;
+  /* background: url(/img/news/newsback1.png) no-repeat; */
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
