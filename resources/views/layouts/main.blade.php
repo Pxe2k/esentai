@@ -51,7 +51,6 @@
                         {{  __('content.comment')  }}
                     </label>
                     <input type="text" name="comment">
-                    <textarea type="text"></textarea>
                 </p>
                 <button class="send-contact-btn">{{  __('content.send')  }}</button>
             </form>
