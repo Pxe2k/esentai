@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateInfrastructuresTable extends Migration
+class CreateCallbacksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateInfrastructuresTable extends Migration
      */
     public function up()
     {
-        Schema::create('infrastructures', function (Blueprint $table) {
+        Schema::create('callbacks', function (Blueprint $table) {
             $table->id();
-            $table->string('image');
-            $table->string('title');
-            $table->text('text');
-            $table->text('link')->nullable();
+            $table->string('name');
+            $table->string('phone');
+            $table->string('email');
+            $table->text('comment')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateInfrastructuresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('infrastructures');
+        Schema::dropIfExists('callbacks');
     }
 }

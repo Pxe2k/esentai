@@ -14,6 +14,7 @@
 
         'contactUs' => 'CONTACT US',
         'readMore' => 'READ MORE',
+        'send' => 'Send',
 
         // Index
 
@@ -28,5 +29,11 @@
 
         'mission' => 'MISSION',
         'values' => 'VALUES',
+
+        // Form 
+
+        'name' => 'Fullname',
+        'phone' => 'Phone number',
+        'comment' => 'Your question',
 
     ];
