@@ -174,9 +174,9 @@
                 let response = await fetch(url);
 
                 commits = await response.json()
-                            text.children[0].textContent = commits.infrastructures[0].title
-            text.children[1].textContent = commits.infrastructures[0].text
-            image.style.background = `url(/storage/infrastructures/${commits.infrastructures[0].image.split('\\')[1] + '/' + commits.infrastructures[0].image.split('\\')[2]}) no-repeat`
+                text.children[0].textContent = commits.infrastructures[0].title
+                text.children[1].textContent = commits.infrastructures[0].text
+                image.style.background = `url(/storage/infrastructures/${commits[0].image}) no-repeat`
             });
 
                 btns.forEach(item => {
@@ -187,7 +187,7 @@
                             
                             text.children[0].textContent = current.title
                             text.children[1].textContent = current.text
-                            image.style.background = `url(/storage/infrastructures/${current.image.split('\\')[1] + '/' + current.image.split('\\')[2]}) no-repeat`
+                            image.style.background = `url(/storage/infrastructures/${current.image}) no-repeat`
                             if(current.link){
                                 item.addEventListener('click', ()=>{
                                     window.location.replace(current.link)
