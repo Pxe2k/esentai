@@ -74,7 +74,7 @@
 <div class="infrast">
     <div class="container">
         <div class="infr-title animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
-            INFRASTRUCTURE
+            {{  __('content.infrastructure')  }}
         </div>
         <div class="slider animate__animated " data-in="animate__lightSpeedInRight" data-out="animate__lightSpeedOutRight">
             <div class="slider_src">
@@ -105,17 +105,17 @@
         <div class="projects-1">
             <div class="projects-1__column">
                 <div class="project-1-title animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
-                    <h3 class="text text-s34">PROJECTS</h3>
+                    <h3 class="text text-s34">{{  __('content.projects')  }}</h3>
                 </div>
                 <div class="project-1-p animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
                     <h4 class="text text-s25">{{ $projects->title }}</h4>
                     {!! $projects->text !!}
-                    <br><a href="/project/{{ $projects->id }}">READ MORE</a>
+                    <br><a href="/project/{{ $projects->id }}">{{  __('content.readMore')  }}</a>
                 </div>
             </div>
             <div class="projects-1__column">
                 <div class="project-1-title animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
-                    <h3 class="press-project text text-s34">PRESS</h3>
+                    <h3 class="press-project text text-s34">{{  __('content.press')  }}</h3>
                 </div>
                 <div class="project-1-img animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
                     @foreach ($presses as $press)
@@ -157,14 +157,14 @@
         <div class="slider-content animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
             <div class="slider-content__title">{!! $news->title !!}</div>
             <div class="slider-content__data">
-                <p>{{ $news->author }}</p>
+                <p>{{  __('content.author')  }}: {{ $news->author }}</p>
             </div>
             <div class="slider-content__paragraf">
                 <p>
                     {{ $news->text }}
                 </p>
                 <br>
-                <a href="/news" style="color:white" >READ MORE</a>
+                <a href="/news" style="color:white" >{{  __('content.readMore')  }}</a>
             </div>
 
         </div>
@@ -173,7 +173,7 @@
 <div class="partners">
     <div class="container">
         <div class="partners-title animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
-            <h4 class="press-project text text-s34">PARTNERS</h4>
+            <h4 class="press-project text text-s34">{{  __('content.partners')  }}</h4>
         </div>
         <div class="partner-img animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
             @foreach ($partners as $partner)

@@ -31,16 +31,16 @@
                     <div class="logo"><a href="/"><img src="../img/icons/logo.png"></a></div>
                     <nav>
                         <ul class="menu">
-                            <li class="menu__item"><a href="/infrastructure">ABOUT US</a></li>
-                            <li class="menu__item"><a href="/infrastructure">INFRASTRUCTURE</a></li>
-                            <li class="menu__item"><a href="/project/1">PROJECTS</a></li>
-                            <li class="menu__item"><a href="/news">NEWS</a></li>
-                            <li class="menu__item"><a href="/">PARTNERS</a></li>
-                            <li class="menu__item"><a href="/vacancies">VACANCIES</a></li>
+                            <li class="menu__item"><a href="/infrastructure">{{  __('content.aboutUs')  }}</a></li>
+                            <li class="menu__item"><a href="/infrastructure">{{  __('content.infrastructure')  }}</a></li>
+                            <li class="menu__item"><a href="/project/1">{{  __('content.projects')  }}</a></li>
+                            <li class="menu__item"><a href="/news">{{  __('content.news')  }}</a></li>
+                            <li class="menu__item"><a href="/">{{  __('content.partners')  }}</a></li>
+                            <li class="menu__item"><a href="/vacancies">{{  __('content.vacancies')  }}</a></li>
                         </ul>
                     </nav>
                     <div class="btn-contact_us">
-                        <a href="#">CONTACT US</a>
+                        <a href="#">{{  __('content.contactUs')  }}</a>
                     </div>
                     <div class="language">
                         <div class="language__header">
@@ -85,7 +85,7 @@
             <div class="container">
                 <div class="contact-us__content">
                     <div class="contact-us__column">
-                        <h2>CONTACT US</h2>
+                        <h2>{{  __('content.contactUs')  }}</h2>
                         <a class="link1" href="#">{{ $contact->phoneNumber }}</a>
                         <a class="link2" href="#">{{ $contact->email }}</a>
                         <a class="link3" href="#">{{ $contact->address }}</a>
@@ -99,16 +99,16 @@
                 <div class="logo"><img src="../img/logowhite.png"></div>
                 <nav class="menu">
                     <ul class="menu">
-                        <li><a href="about.html">ABOUT US</a></li>
-                        <li><a href="infrastructurepage.html">INFRASTRUCTURE</a></li>
-                        <li><a href="projects1.html">PROJECTS</a></li>
-                        <li><a href="news.html">PRESS</a></li>
-                        <li><a href="partners.html">PARTNERS</a></li>
-                        <li><a href="vacancy.html">VACANCIES</a></li>
+                        <li class="menu__item"><a href="/infrastructure">{{  __('content.aboutUs')  }}</a></li>
+                            <li class="menu__item"><a href="/infrastructure">{{  __('content.infrastructure')  }}</a></li>
+                            <li class="menu__item"><a href="/project/1">{{  __('content.projects')  }}</a></li>
+                            <li class="menu__item"><a href="/news">{{  __('content.news')  }}</a></li>
+                            <li class="menu__item"><a href="/">{{  __('content.partners')  }}</a></li>
+                            <li class="menu__item"><a href="/vacancies">{{  __('content.vacancies')  }}</a></li>
                     </ul>
                 </nav>
                 <div class="btn-contact_us">
-                    <a href="#">CONTACT US</a>
+                    <a href="#">{{  __('content.contactUs')  }}</a>
                 </div>
             </div>
             <div class="container2">

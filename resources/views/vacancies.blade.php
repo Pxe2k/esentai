@@ -7,7 +7,7 @@
         <div class="container">
             <div class="misson-block">
                 <div class="mission-block__column1">
-                    <h2 data-aos="fade-down">MISSION:</h2>
+                    <h2 data-aos="fade-down">{{  __('content.mission')  }}:</h2>
                     <img src="/storage/{{ $mission->icon }}" data-aos="fade-right">
                     <p data-aos="fade-right">{{ $mission->text }}</p>
                 </div>
@@ -18,7 +18,7 @@
         </div>
         <div class="values-block" data-aos="fade-down-right">
             <div class="container">
-                <h2 data-aos="fade-down">VALUES:</h2>
+                <h2 data-aos="fade-down">{{  __('content.values')  }}:</h2>
                 <div class="values-column-top">
                     @foreach ($values as $value)    
                         <div class="values-column">
