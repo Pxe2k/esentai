@@ -77,16 +77,13 @@
             {{  __('content.infrastructure')  }}
         </div>
         <div class="slider animate__animated " data-in="animate__lightSpeedInRight" data-out="animate__lightSpeedOutRight">
-            @foreach ($infrastructures as $infrastructure)
-                <div class="slider_src" style='background-image: url("/storage/{{ $infrastructure->image }}") no-repeat;'>
+                <div class="slider_src">
                     <div class="slider_src_text">
-                        <h3 class="text text-while text-bold  text-s25">{{ $infrastructure->title }}</h3>
+                        <h3 class="text text-while text-bold  text-s25"></h3>
                         <p class="text text-while text-s15">
-                            {{ $infrastructure->text }}
                         </p>
                     </div>
                 </div>
-            @endforeach
         </div>
 
     </div>

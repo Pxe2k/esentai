@@ -161,9 +161,42 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         
         <script>
-        let btn = document.querySelector('.btn-contact_us')
-        let formBg = document.querySelector('.modal-contact-bg')
-        let form = document.querySelector('.modal-contact')
+            let commits
+            let btns = document.querySelectorAll('.button-slider')
+            let btn = document.querySelector('.btn-contact_us')
+            let formBg = document.querySelector('.modal-contact-bg')
+            let form = document.querySelector('.modal-contact')
+            let image = document.querySelector('.slider_src')
+            let text = document.querySelector('.slider_src_text')
+            document.addEventListener('DOMContentLoaded', async function(){
+    
+                let url = '/api/infrastructures';
+                let response = await fetch(url);
+
+                commits = await response.json()
+                            text.children[0].textContent = commits.infrastructures[0].title
+            text.children[1].textContent = commits.infrastructures[0].text
+            image.style.background = `url(/storage/infrastructures/${commits.infrastructures[0].image.split('\\')[1] + '/' + commits.infrastructures[0].image.split('\\')[2]}) no-repeat`
+            });
+
+                btns.forEach(item => {
+                    item.addEventListener('mouseenter', ()=>{
+                        let id = parseInt(item.classList[1].split('-')[2].split('')[4])
+                        let current = commits.infrastructures.filter(item => {return item.id == id})[0]
+                        if(current){
+                            
+                            text.children[0].textContent = current.title
+                            text.children[1].textContent = current.text
+                            image.style.background = `url(/storage/infrastructures/${current.image.split('\\')[1] + '/' + current.image.split('\\')[2]}) no-repeat`
+                            if(current.link){
+                                item.addEventListener('click', ()=>{
+                                    window.location.replace(current.link)
+                                })
+                            }
+                        }
+                    })
+                })
+            
         btn.addEventListener('click', () => {
             formBg.style.display = 'flex'
             form.style.display = 'flex'
