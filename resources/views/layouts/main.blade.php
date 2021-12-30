@@ -24,7 +24,35 @@
 
 <body>
     <div class="main">
-
+        <div class="modal-contact-bg">
+            </div>
+            <form class="modal-contact">
+                <p>
+                    <label for="">
+                        ФИО
+                    </label>
+                    <input type="text">
+                </p>
+                <p>
+                    <label for="">
+                        Номер телефона
+                    </label>
+                    <input type="text">
+                </p>
+                <p>
+                    <label for="">
+                        Почта
+                    </label>
+                    <input type="text">
+                </p>
+                <p>
+                    <label for="">
+                        Комментарий
+                    </label>
+                    <textarea type="text"></textarea>
+                </p>
+                <button class="send-contact-btn">Отправить</button>
+            </form>
         <header>
             <div class="deskTop">
                 <div class="container">
@@ -47,6 +75,7 @@
                             <span class="language__current">
                                     Eng
                             </span>
+                            <img style="transition: 0.2s" src="../img/arrow-down.png" alt="">
                         </div>
                         <div class="language__body">
                             <a class="lang" href="#">
@@ -121,6 +150,35 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         
         <script>
+        let btn = document.querySelector('.btn-contact_us')
+        let formBg = document.querySelector('.modal-contact-bg')
+        let form = document.querySelector('.modal-contact')
+        btn.addEventListener('click', () => {
+            formBg.style.display = 'flex'
+            form.style.display = 'flex'
+        })
+        formBg.addEventListener('click', () => {
+            formBg.style.display = 'none'
+            form.style.display = 'none'
+        })
+        AOS.init({
+            delay: 200,
+            duration: 600,
+        });
+        document.querySelector('.language__header > img').addEventListener('click', ()=>{
+            let dropdown = document.querySelector('.language__body')
+            let arrow = document.querySelector('.language__header > img')
+            if(dropdown.style.display == 'none' || dropdown.style.display == ''){
+                dropdown.style.display = 'block'
+                arrow.style.transform = 'rotate(180deg)'
+                return
+            }
+            else if(dropdown.style.display == 'block'){
+                dropdown.style.display = 'none'
+                arrow.style.transform = 'rotate(0deg)'
+                return
+            }
+        })
          let last_known_scroll_position = 0;
             let ticking = false;
         
