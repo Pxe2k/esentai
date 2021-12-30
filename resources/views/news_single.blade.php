@@ -1,6 +1,6 @@
-<?php
-include('./source/header.php')
-?>
+@extends('layouts.main')
+@section('content')
+
 <div class="projects1">
     <div class="news1">
         <div class="container">
@@ -17,7 +17,4 @@ include('./source/header.php')
     </div>
 </div>
 
-<?php
-include('./source/footer.php')
-?>
-
+@endsection

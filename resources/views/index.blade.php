@@ -1,6 +1,6 @@
-<?php
-include('./source/header.php')
-?>
+@extends('layouts.main')
+@section('content')
+
 <div class="wrap animate__animated " data-in="animate__zoomIn" data-out="animate__zoomOut">
     <div class="soc">
         <div class="youtube">
@@ -13,7 +13,7 @@ include('./source/header.php')
                 <img src="../img/icons/facebook.png">
             </a>
         </div>
-        <div class="mail">support@esentaitower.com</div>
+        <div class="mail">{{ $contact->email }}</div>
         <div class="message"><img src="../img/icons/message.png"></div>
     </div>
     <div class="wrap-title">
@@ -185,6 +185,4 @@ include('./source/header.php')
         </div>
     </div>
 </div>
-<?php
-include('./source/footer.php')
-?>
+@endsection

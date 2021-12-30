@@ -4,7 +4,7 @@
             <div class="contact-us__column">
                 <h2>CONTACT US</h2>
                 <a class="link1" href="#">+7 (727) 330-22-22</a>
-                <a class="link2" href="#">Info@esentaitower.com</a>
+                <a class="link2" href="#">{{ $contact->email }}</a>
                 <a class="link3" href="#">Almaty "Al-Farabi avenue 77/7"</a>
             </div>
         </div>

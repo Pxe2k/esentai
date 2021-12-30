@@ -1,6 +1,6 @@
-<?php
-include('./source/header.php')
-?>
+@extends('layouts.main')
+@section('content')
+
 <div class="projects1">
 
     <div class="vacancy-page">
@@ -48,6 +48,4 @@ include('./source/header.php')
         </div>
     </div>
 
-<?php
-include('./source/footer.php')
-?>
+@endsection

@@ -61,7 +61,11 @@ class MainController extends Controller
 
     public function getInfrastructure()
     {
-        return view('infrastructurepage');
+        $contact = Contact::first()->translate(session('locale'));
+
+        return view('infrastructurepage', compact(
+            'contact'
+        ));
     }
 
     public function news()
@@ -75,9 +79,11 @@ class MainController extends Controller
         }
 
         $news = News::all()->translate(session('locale'));
+        $contact = Contact::first()->translate(session('locale'));
         
         return view('news', compact(
-            'news'
+            'news',
+            'contact'
         ));
     }
 
@@ -93,10 +99,12 @@ class MainController extends Controller
 
         $news = News::find($id)->translate(session('locale'));
         $detail = NewsDetail::where('news_id', $id)->first()->translate(session('locale'));
+        $contact = Contact::first()->translate(session('locale'));
 
         return view('news_single', compact(
             'news',
             'detail',
+            'contact',
         ));
     }
 
@@ -113,11 +121,13 @@ class MainController extends Controller
         $project = Project::find($id)->translate(session('locale'));
         $detail = ProjectDetail::where('project_id', $id)->first()->translate(session('locale'));
         $photos = ProjectPhoto::where('project_id', $id)->get()->translate(session('locale'));
+        $contact = Contact::first()->translate(session('locale'));
 
         return view('projects', compact( 
             'project',
             'detail',
             'photos',
+            'contact'
         ));
     }
 
@@ -134,11 +144,13 @@ class MainController extends Controller
         $mission = VacancyMission::first()->translate(session('locale'));
         $values = VacancyValue::all()->translate(session('locale'));
         $vacancies = Vacancy::all()->translate(session('locale'));
+        $contact = Contact::first()->translate(session('locale'));
 
         return view('vacancies', compact(
             'mission',
             'values',
             'vacancies',
+            'contact'
         ));
     }
 
