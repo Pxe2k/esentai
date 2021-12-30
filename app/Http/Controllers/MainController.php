@@ -8,6 +8,7 @@ use App\Models\{
     About,
     Advantage,
     Infrastructure,
+    InfrastructureDetail,
     Project,
     ProjectDetail,
     ProjectPhoto,
@@ -63,10 +64,21 @@ class MainController extends Controller
 
     public function getInfrastructure()
     {
+        if (session()->has('locale')) {
+            $locale = session('locale');
+            App::setLocale($locale);
+        } else {            
+        $locale = session(['locale' => 'ru']);
+            App::setLocale('ru');
+        }
+        
+        $infrastructureDetail = InfrastructureDetail::first()->translate(session('locale'));
         $contact = Contact::first()->translate(session('locale'));
 
         return view('infrastructurepage', compact(
-            'contact'
+            'infrastructureDetail',
+            'contact',
+            'locale',
         ));
     }
 
