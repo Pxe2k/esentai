@@ -176,7 +176,7 @@
                     commits = res.data
                     text.children[0].textContent = commits.infrastructures[0].title
                     text.children[1].textContent = commits.infrastructures[0].text
-                    image.style.background = `url(/storage/infrastructures/${commits.infrastructures[0].image.split('\\')[1] + '/' + commits.infrastructures[0].image.split('\\')[2]}) no-repeat`
+                    image.style.background = `url(/storage/infrastructures/${commits.infrastructures[0].image}) no-repeat`
                     btns.forEach(item => {
                         item.addEventListener('mouseenter', ()=>{
                             let id = parseInt(item.classList[1].split('-')[2].split('')[4])
