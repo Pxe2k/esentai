@@ -26,32 +26,34 @@
     <div class="main">
         <div class="modal-contact-bg">
             </div>
-            <form class="modal-contact">
+            <form class="modal-contact" action="/callback" method="POST">
+                @csrf
                 <p>
                     <label for="">
-                        ФИО
+                        {{  __('content.name')  }}
                     </label>
-                    <input type="text">
+                    <input type="text" name="name">
                 </p>
                 <p>
                     <label for="">
-                        Номер телефона
+                        {{  __('content.phone')  }}
                     </label>
-                    <input type="text">
+                    <input type="text" name="phone">
                 </p>
                 <p>
                     <label for="">
-                        Почта
+                        E-Mail
                     </label>
-                    <input type="text">
+                    <input type="text" name="email">
                 </p>
                 <p>
                     <label for="">
-                        Комментарий
+                        {{  __('content.comment')  }}
                     </label>
+                    <input type="text" name="comment">
                     <textarea type="text"></textarea>
                 </p>
-                <button class="send-contact-btn">Отправить</button>
+                <button class="send-contact-btn">{{  __('content.send')  }}</button>
             </form>
         <header>
             <div class="deskTop">
@@ -72,19 +74,29 @@
                     </div>
                     <div class="language">
                         <div class="language__header">
-                            <span class="language__current">
-                                    Eng
-                            </span>
+                            @if ($locale == 'ru')
+                                <span class="language__current">
+                                    RU
+                                </span>
+                            @elseif ($locale == 'kz')
+                                <span class="language__current">
+                                    KZ
+                                </span>
+                            @else
+                                <span class="language__current">
+                                    EN
+                                </span>
+                            @endif
                             <img style="transition: 0.2s" src="../img/arrow-down.png" alt="">
                         </div>
                         <div class="language__body">
-                            <a class="lang" href="#">
+                            <a class="lang" href="/setlocale/ru">
                                 Ru
                             </a>
-                            <a class="lang" href="#">
+                            <a class="lang" href="/setlocale/kz">
                                 Kz
                             </a>
-                            <a class="lang" href="#">
+                            <a class="lang" href="/setlocale/eng">
                                 Eng
                             </a>
                         </div>

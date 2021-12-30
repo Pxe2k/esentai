@@ -3,17 +3,14 @@
 
 <div class="wrap animate__animated " data-in="animate__zoomIn" data-out="animate__zoomOut">
     <div class="soc">
-        <div class="youtube">
-            <a href="#?" target="_blank">
-                <img src="../img/icons/youtube.png">
-            </a>
-        </div>
-        <div class="facebook">
-            <a href="#?" target="_blank">
-                <img src="../img/icons/facebook.png">
-            </a>
-        </div>
-        <div class="mail">support@esentaitower.com</div>
+        @foreach ($socials as $social)    
+            <div class="facebook">
+                <a href="{{ $social->link }}" target="_blank">
+                    <img src="/storage/{{ $social->icon }}">
+                </a>
+            </div>
+        @endforeach
+        <div class="mail">{{ $contact->email }}</div>
         <div class="message"><img src="../img/icons/message.png"></div>
     </div>
     <div class="wrap-title">
@@ -32,7 +29,7 @@
     <div class="container">
         <div>
             <div class="about-title text text-s34 animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__zoomOut">
-                <a style="color: black" href="/getInfrastructure">ABOUT</a>
+                <a style="color: black" href="/getInfrastructure">{{  __('content.about')  }}</a>
             </div>
             <div class="about-top">
                 @foreach ($abouts as $about)
@@ -77,7 +74,7 @@
 <div class="infrast">
     <div class="container">
         <div class="infr-title animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
-            INFRASTRUCTURE
+            {{  __('content.infrastructure')  }}
         </div>
         <div class="slider animate__animated " data-in="animate__lightSpeedInRight" data-out="animate__lightSpeedOutRight">
             @foreach ($infrastructures as $infrastructure)
@@ -104,36 +101,12 @@
     </div>
 </div>
 
-<!-- <div class="projects">
-    <h3 class="text text-s34">PROJECTS</h3>
-    <div class="project-1-title animate__animated animate__lightSpeedInLeft" data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
-    </div>
-    <div class="projects">
-        <div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events">
-            @foreach ($projects as $project)
-                <div class="project-1-p animate__animated swiper-slide" data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
-                    <div class="project-1-text">
-                        <h4 class="text text-s25">{{ $project->title }}</h4>
-                        <p class="text text-s15">{!! $project->text !!}</p>
-                        <br><a href="/project/{{$project->id}}">READ MORE</a>
-                    </div>
-                    <div class="slider_project_1">
-                        <img src="/storage/{{$project->image}}" alt="">
-                    </div>
-                </div>
-            @endforeach
-            @foreach ($presses as $press)
-                <img src="/storage/{{ $press->image }}"> 
-            @endforeach
-        </div>
-    </div>
-</div> -->
 <div class="projects"> 
     <div class="container projects_box"> 
         <div class="projects-1"> 
             <div class="projects-1__column"> 
                 <div class="project-1-title animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft"> 
-                    <h3 class="text text-s34">PROJECTS</h3> 
+                    <h3 class="text text-s34">{{  __('content.projects')  }}</h3> 
                 </div> 
                 <div class="swiper"> 
                     <!-- Additional required wrapper --> 
@@ -143,7 +116,7 @@
                     <div class="swiper-text">                        
                         <h4 class="text text-s25">{{ $project->title }}</h4> 
                         {!! $project->text !!} 
-                        <br><a href="/project/{{ $project->id }}">READ MORE</a> 
+                        <br><a href="/project/{{ $project->id }}">{{  __('content.readMore')  }}</a> 
                     </div>   
                         <div class="slider_project_1">
                             <img class="slider-1-img" src="/storage/{{ $project->image }}"> 
@@ -158,7 +131,7 @@
             </div> 
             <div class="projects-1__column"> 
                 <div class="project-1-title animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft"> 
-                    <h3 class="press-project text text-s34">PRESS</h3> 
+                    <h3 class="press-project text text-s34">{{  __('content.press')  }}</h3> 
                 </div> 
                 <div class="project-1-img animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft"> 
                     @foreach ($presses as $press) 
@@ -190,7 +163,7 @@
                                 {{ $news->text }}
                             </p>
                             <br>
-                            <a href="/news" style="color:white" >READ MORE</a>
+                            <a href="/news" style="color:white" >{{  __('content.readMore')  }}</a>
                         </div>
                     </div>
                 @endforeach
@@ -203,7 +176,7 @@
 <div class="partners">
     <div class="container">
         <div class="partners-title animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
-            <h4 class="press-project text text-s34">PARTNERS</h4>
+            <h4 class="press-project text text-s34">{{  __('content.partners')  }}</h4>
         </div>
         <div class="partner-img animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
             @foreach ($partners as $partner)

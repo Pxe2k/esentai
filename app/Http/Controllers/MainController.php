@@ -20,6 +20,7 @@ use App\Models\{
     Vacancy,
     VacancyMission,
     VacancyValue,
+    Callback,
 };
 
 use App;
@@ -32,8 +33,8 @@ class MainController extends Controller
             $locale = session('locale');
             App::setLocale($locale);
         } else {            
-        $locale = session(['locale' => 'fr']);
-            App::setLocale('fr');
+        $locale = session(['locale' => 'ru']);
+            App::setLocale('ru');
         }
 
         $abouts = About::all()->translate(session('locale'));
@@ -56,6 +57,7 @@ class MainController extends Controller
             'partners',
             'contact',
             'socials',
+            'locale'
         ));
     }
 
@@ -74,8 +76,8 @@ class MainController extends Controller
             $locale = session('locale');
             App::setLocale($locale);
         } else {            
-            $locale = session(['locale' => 'fr']);
-            App::setLocale('fr');
+            $locale = session(['locale' => 'ru']);
+            App::setLocale('ru');
         }
 
         $news = News::all()->translate(session('locale'));
@@ -83,7 +85,9 @@ class MainController extends Controller
         
         return view('news', compact(
             'news',
-            'contact'
+            'contact',
+            'locale'
+
         ));
     }
 
@@ -93,8 +97,8 @@ class MainController extends Controller
             $locale = session('locale');
             App::setLocale($locale);
         } else {            
-            $locale = session(['locale' => 'fr']);
-            App::setLocale('fr');
+            $locale = session(['locale' => 'ru']);
+            App::setLocale('ru');
         }
 
         $news = News::find($id)->translate(session('locale'));
@@ -105,6 +109,7 @@ class MainController extends Controller
             'news',
             'detail',
             'contact',
+            'locale'
         ));
     }
 
@@ -114,8 +119,8 @@ class MainController extends Controller
             $locale = session('locale');
             App::setLocale($locale);
         } else {            
-            $locale = session(['locale' => 'fr']);
-            App::setLocale('fr');
+            $locale = session(['locale' => 'ru']);
+            App::setLocale('ru');
         }
 
         $project = Project::find($id)->translate(session('locale'));
@@ -127,7 +132,8 @@ class MainController extends Controller
             'project',
             'detail',
             'photos',
-            'contact'
+            'contact',
+            'locale'
         ));
     }
 
@@ -137,8 +143,8 @@ class MainController extends Controller
             $locale = session('locale');
             App::setLocale($locale);
         } else {            
-            $locale = session(['locale' => 'fr']);
-            App::setLocale('fr');
+            $locale = session(['locale' => 'ru']);
+            App::setLocale('ru');
         }
 
         $mission = VacancyMission::first()->translate(session('locale'));
@@ -150,8 +156,22 @@ class MainController extends Controller
             'mission',
             'values',
             'vacancies',
-            'contact'
+            'contact',
+            'locale'
         ));
+    }
+
+    public function callback(Request $request)
+    {
+        $callback = Callback::create([
+            'name' => $request -> name,
+            'phone' => $request -> phone,
+            'email' => $request -> email,
+            'comment' => $request -> comment,
+        ]);
+
+        // \Mail::to('abu.cleaning21@gmail.com')->send(new \App\Mail\CallBack($callback));
+        return redirect()->back();
     }
 
     public function infrastructures(Request $request)

@@ -22,6 +22,8 @@ Route::get('/news/{id}', 'MainController@getNews');
 Route::get('/project/{id}', 'MainController@getProject');
 Route::get('/vacancies', 'MainController@vacancies');
 
+Route::post('/callback', 'MainController@callback');
+
 Route::get('/setlocale/{locale}', function($locale) {
     session(['locale' => $locale]);
     return redirect()->back();
