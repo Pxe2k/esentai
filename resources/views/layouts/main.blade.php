@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -171,31 +172,31 @@
             document.addEventListener('DOMContentLoaded', async function(){
     
                 let url = '/api/infrastructures';
-                let response = await fetch(url);
-
-                commits = await response.json()
-                text.children[0].textContent = commits.infrastructures[0].title
-                text.children[1].textContent = commits.infrastructures[0].text
-                image.style.background = `url(/storage/infrastructures/${commits[0].image}) no-repeat`
-            });
-
-                btns.forEach(item => {
-                    item.addEventListener('mouseenter', ()=>{
-                        let id = parseInt(item.classList[1].split('-')[2].split('')[4])
-                        let current = commits.infrastructures.filter(item => {return item.id == id})[0]
-                        if(current){
-                            
-                            text.children[0].textContent = current.title
-                            text.children[1].textContent = current.text
-                            image.style.background = `url(/storage/infrastructures/${current.image}) no-repeat`
-                            if(current.link){
-                                item.addEventListener('click', ()=>{
-                                    window.location.replace(current.link)
-                                })
+                axios.get(url).then(res => {
+                    commits = res.data
+                    text.children[0].textContent = commits.infrastructures[0].title
+                    text.children[1].textContent = commits.infrastructures[0].text
+                    image.style.background = `url(/storage/infrastructures/${commits.infrastructures[0].image.split('\\')[1] + '/' + commits.infrastructures[0].image.split('\\')[2]}) no-repeat`
+                    btns.forEach(item => {
+                        item.addEventListener('mouseenter', ()=>{
+                            let id = parseInt(item.classList[1].split('-')[2].split('')[4])
+                            let current = commits.infrastructures.filter(item => {return item.id == id})[0]
+                            if(current){
+                                
+                                text.children[0].textContent = current.title
+                                text.children[1].textContent = current.text
+                                image.style.background = `url(/storage/infrastructures/${current.image.split('\\')[1] + '/' + current.image.split('\\')[2]}) no-repeat`
+                                if(current.link){
+                                    item.addEventListener('click', ()=>{
+                                        window.location.replace(current.link)
+                                    })
+                                }
                             }
-                        }
+                        })
                     })
                 })
+            });
+
             
         btn.addEventListener('click', () => {
             formBg.style.display = 'flex'
