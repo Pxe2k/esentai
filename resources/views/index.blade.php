@@ -3,16 +3,13 @@
 
 <div class="wrap animate__animated " data-in="animate__zoomIn" data-out="animate__zoomOut">
     <div class="soc">
-        <div class="youtube">
-            <a href="#?" target="_blank">
-                <img src="../img/icons/youtube.png">
-            </a>
-        </div>
-        <div class="facebook">
-            <a href="#?" target="_blank">
-                <img src="../img/icons/facebook.png">
-            </a>
-        </div>
+        @foreach ($socials as $social)
+            <div class="youtube">
+                <a href="{{ $social->link }}" target="_blank">
+                    <img src="/storage/{{ $social->icon }}">
+                </a>
+            </div>
+        @endforeach
         <div class="mail">{{ $contact->email }}</div>
         <div class="message"><img src="../img/icons/message.png"></div>
     </div>
