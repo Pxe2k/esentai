@@ -169,14 +169,16 @@
             let form = document.querySelector('.modal-contact')
             let image = document.querySelector('.slider_src')
             let text = document.querySelector('.slider_src_text')
+            let firstImage = ''
             document.addEventListener('DOMContentLoaded', async function(){
     
                 let url = '/api/infrastructures';
                 axios.get(url).then(res => {
                     commits = res.data
                     text.children[0].textContent = commits.infrastructures[0].title
+                    firstImage = commits.infrastructures[0].image.includes('//') ? commits.infrastructures[0].image.split('\\')[1] + '/' + commits.infrastructures[0].image.split('\\')[2] : commits.infrastructures[0].image
                     text.children[1].textContent = commits.infrastructures[0].text
-                    image.style.background = `url(/storage/infrastructures/${commits.infrastructures[0].image}) no-repeat`
+                    image.style.background = `url(/storage/${firstImage}) no-repeat`
                     btns.forEach(item => {
                         item.addEventListener('mouseenter', ()=>{
                             let id = parseInt(item.classList[1].split('-')[2].split('')[4])
@@ -185,7 +187,7 @@
                                 
                                 text.children[0].textContent = current.title
                                 text.children[1].textContent = current.text
-                                image.style.background = `url(/storage/infrastructures/${current.image.split('\\')[1] + '/' + current.image.split('\\')[2]}) no-repeat`
+                                image.style.background = `url(/storage/${current.image.includes('//') ? current.image.split('\\')[1] + '/' + current.image.split('\\')[2] : current.image}) no-repeat`
                                 if(current.link){
                                     item.addEventListener('click', ()=>{
                                         window.location.replace(current.link)
