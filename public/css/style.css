@@ -2354,9 +2354,9 @@ footer .container {
   content: '';
   top: 0;
   left: 0;
-  right: 19.4444rem;
+  right: 12.4444rem;
   bottom: 0;
-  background: linear-gradient(258.52deg, #192038 62.17%, rgba(25, 32, 56, 0) 86.73%);
+  background: linear-gradient(270deg, #192038 62.17%, rgba(25, 32, 56, 0) 86.73%);
   -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
           transform: matrix(-1, 0, 0, 1, 0, 0);
 }
