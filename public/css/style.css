@@ -560,7 +560,6 @@ header .btn-contact_us a:hover:after {
 
 .wrap .soc {
   position: absolute;
-  top: 30%;
   left: 0;
   bottom: 0;
   right: 0;
@@ -958,7 +957,9 @@ header .btn-contact_us a:hover:after {
   display: flex;
   z-index: 15;
 }
-
+.social > a >img{
+  width:30px;
+}
 .slider_src {
   /* background: url(/img/inf/cafe.png) no-repeat; */
   width: 100%;

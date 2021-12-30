@@ -4,7 +4,7 @@
 <div class="wrap animate__animated " data-in="animate__zoomIn" data-out="animate__zoomOut">
     <div class="soc">
         @foreach ($socials as $social)    
-            <div class="facebook">
+            <div class="social">
                 <a href="{{ $social->link }}" target="_blank">
                     <img src="/storage/{{ $social->icon }}">
                 </a>
