@@ -176,9 +176,11 @@
                 axios.get(url).then(res => {
                     commits = res.data
                     text.children[0].textContent = commits.infrastructures[0].title
-                    firstImage = commits.infrastructures[0].image.includes('//') ? commits.infrastructures[0].image.split('\\')[1] + '/' + commits.infrastructures[0].image.split('\\')[2] : commits.infrastructures[0].image
+                    console.log(commits.infrastructures[0].image)
+                    firstImage = commits.infrastructures[0].image.includes("\\") ? commits.infrastructures[0].image.split('\\')[1] + '/' + commits.infrastructures[0].image.split('\\')[2] : commits.infrastructures[0].image
+                    console.log(firstImage)
                     text.children[1].textContent = commits.infrastructures[0].text
-                    image.style.background = `url(/storage/${firstImage}) no-repeat`
+                    image.style.background = commits.infrastructures[0].image.includes("\\") ? `url(/storage/infrastructures/${firstImage}) no-repeat` : `url(/storage/${firstImage}) no-repeat`
                     btns.forEach(item => {
                         item.addEventListener('mouseenter', ()=>{
                             let id = parseInt(item.classList[1].split('-')[2].split('')[4])
@@ -187,7 +189,7 @@
                                 
                                 text.children[0].textContent = current.title
                                 text.children[1].textContent = current.text
-                                image.style.background = `url(/storage/${current.image.includes('//') ? current.image.split('\\')[1] + '/' + current.image.split('\\')[2] : current.image}) no-repeat`
+                                image.style.background = current.image.includes("\\") ? `url(/storage/infrastructures/${current.image.includes("\\") ? current.image.split('\\')[1] + '/' + current.image.split('\\')[2] : current.image}) no-repeat` : `url(/storage/${current.image}) no-repeat`
                                 if(current.link){
                                     item.addEventListener('click', ()=>{
                                         window.location.replace(current.link)
