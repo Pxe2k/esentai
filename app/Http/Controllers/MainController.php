@@ -190,7 +190,7 @@ class MainController extends Controller
     {
         $language = $request->header('accept-language');
 
-        $infrastructures = Infrastructure::all()->translate($language);
+        $infrastructures = Infrastructure::orderBy('order', 'asc')->get()->translate($language);
 
         return response([
             'infrastructures' => $infrastructures
