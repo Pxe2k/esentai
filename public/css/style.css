@@ -868,6 +868,7 @@ header .btn-contact_us a:hover:after {
         position: relative;
         width: 100%;
         bottom: 0;
+        margin-bottom: 30px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -3466,7 +3467,7 @@ footer .container {
 
 @media(max-width: 780px) {
     .swiper-button-next, .swiper-button-prev {
-        top: 55%;
+        bottom: 55%;
     }
 
     .swiper-wrapper div {

@@ -86,13 +86,13 @@
                             <img style="transition: 0.2s" src="../img/arrow-down.png" alt="">
                         </div>
                         <div class="language__body">
-                            <a class="lang" href="/setlocale/ru">
+                            <a class="lang" id="ru" href="/setlocale/ru">
                                 Ru
                             </a>
-                            <a class="lang" href="/setlocale/kz">
+                            <a class="lang" id="kz" href="/setlocale/kz">
                                 Kz
                             </a>
-                            <a class="lang" href="/setlocale/eng">
+                            <a class="lang" id="en" href="/setlocale/eng">
                                 Eng
                             </a>
                         </div>
@@ -164,41 +164,54 @@
             let firstImage = ''
             document.addEventListener('DOMContentLoaded', async function() {
 
-                let url = '/api/infrastructures';
-                axios.get(url).then(res => {
-                    commits = res.data
-                    text.children[0].textContent = commits.infrastructures[0].title
-                    console.log(commits.infrastructures[0].image)
-                    firstImage = commits.infrastructures[0].image.includes("\\") ? commits.infrastructures[0].image.split('\\')[1] + '/' + commits.infrastructures[0].image.split('\\')[2] : commits.infrastructures[0].image
-                    console.log(firstImage)
-                    text.children[1].textContent = commits.infrastructures[0].text
-                    image.style.background = commits.infrastructures[0].image.includes("\\") ? `url(/storage/infrastructures/${firstImage}) no-repeat` : `url(/storage/${firstImage}) no-repeat`
-                    btns.forEach(item => {
-                        item.addEventListener('mouseenter', () => {
-                            let id = parseInt(item.classList[1].split('-')[2].split('')[4])
-                            let current = commits.infrastructures.filter(item => {
-                                return item.id == id
-                            })[0]
-                            if (current) {
 
-                                text.children[0].textContent = current.title
-                                text.children[1].textContent = current.text
-                                image.style.background = current.image.includes("\\") ? `url(/storage/infrastructures/${current.image.includes("\\") ? current.image.split('\\')[1] + '/' + current.image.split('\\')[2] : current.image}) no-repeat` : `url(/storage/${current.image}) no-repeat`
-                                if (current.link) {
-                                    item.addEventListener('click', () => {
-                                        window.location.replace(current.link)
-                                    })
+                function languageChange() {
+                    let url = '/api/infrastructures';
+                    axios.get(url, {headers:{'Accept-language': langChange}}).then(res => {
+                        commits = res.data
+                        text.children[0].textContent = commits.infrastructures[0].title
+                        console.log(commits.infrastructures[0].image)
+                        firstImage = commits.infrastructures[0].image.includes("\\") ? commits.infrastructures[0].image.split('\\')[1] + '/' + commits.infrastructures[0].image.split('\\')[2] : commits.infrastructures[0].image
+                        console.log(firstImage)
+                        text.children[1].textContent = commits.infrastructures[0].text
+                        image.style.background = commits.infrastructures[0].image.includes("\\") ? `url(/storage/infrastructures/${firstImage}) no-repeat` : `url(/storage/${firstImage}) no-repeat`
+                        btns.forEach(item => {
+                            item.addEventListener('mouseenter', () => {
+                                let id = parseInt(item.classList[1].split('-')[2].split('')[4])
+                                let current = commits.infrastructures.filter(item => {
+                                    return item.id == id
+                                })[0]
+                                if (current) {
+
+                                    text.children[0].textContent = current.title
+                                    text.children[1].textContent = current.text
+                                    image.style.background = current.image.includes("\\") ? `url(/storage/infrastructures/${current.image.includes("\\") ? current.image.split('\\')[1] + '/' + current.image.split('\\')[2] : current.image}) no-repeat` : `url(/storage/${current.image}) no-repeat`
+                                    if (current.link) {
+                                        item.addEventListener('click', () => {
+                                            window.location.replace(current.link)
+                                        })
+                                    }
                                 }
-                            }
+                            })
                         })
                     })
-                })
+                }
+
+                $('.lang').click(function() {
+                    let langChange = $(this).attr('id');
+                    languageChange();
+                });
+            });
+
+            $('.lol').click(function() {
+                    let clickId = $(this).attr('id');
+                    console.log(clickId)
             });
 
             let header = $('header');
             let scrollOffset = 0;
 
-            $(window).on('scroll', function () {
+            $(window).on('scroll', function() {
                 scrollOffset = $(this).scrollTop();
 
                 if (scrollOffset >= 20) {

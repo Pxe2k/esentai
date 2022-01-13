@@ -16,8 +16,8 @@
     <div class="wrap-title">
         <div class="container">
             <div class="wrap_slid">
-                <h2 class="text text-while text-s88">ESENTAI </h2>
-                <h3 class="text text-while text-s133">TOWERS</h3>
+                <h2 class="text text-while text-s88 lol" id="lol">ESENTAI </h2>
+                <h3 class="text text-while text-s133 lol" id="wow">TOWERS</h3>
             </div>
         </div>
     </div>
