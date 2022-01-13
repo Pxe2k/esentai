@@ -28,7 +28,7 @@
     <div class="container">
         <div>
             <div class="about-title text text-s34 animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__zoomOut">
-                <a style="color: black" href="/getInfrastructure">{{ __('content.about')  }}</a>
+                <a style="color: black" href="/infrastructure">{{ __('content.about')  }}</a>
             </div>
             <div class="about-top">
                 @foreach ($abouts as $about)
@@ -52,7 +52,7 @@
                 <div class="about-btm__title">
                     <img src="/storage/{{ $advantage->icon }}">
                     <h5 class="text text-s34">
-                        <a style="color: black" href="">
+                        <a style="color: black" href="/infrastructure">
                             {{ $advantage->title }}
                         </a>
                     </h5>
@@ -84,7 +84,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
     <div class="container_pagi">
@@ -121,8 +120,8 @@
                         @endforeach
 
                     </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev button-prev"></div>
+                    <div class="swiper-button-next button-next"></div>
                 </div>
             </div>
             <div class="projects-1__column">
@@ -147,7 +146,7 @@
 <div class="slider-page">
     <div class="container">
         <div class="swiper">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper swiper-wrapper-bottom">
                 @foreach ($news as $news)
                 <div class="project-1-p animate__animated swiper-slide" style="flex-direction: column;padding: 0 5rem;" data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
                     <div class="slider-content__title">{!! $news->title !!}</div>

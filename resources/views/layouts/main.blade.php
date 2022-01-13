@@ -61,7 +61,7 @@
                             <li class="menu__item"><a href="/infrastructure">{{ __('content.infrastructure')  }}</a></li>
                             <li class="menu__item"><a href="/project/1">{{ __('content.projects')  }}</a></li>
                             <li class="menu__item"><a href="/news">{{ __('content.news')  }}</a></li>
-                            <li class="menu__item"><a href="#partners">{{ __('content.partners')  }}</a></li>
+                            <li class="menu__item"><a href="/#partners">{{ __('content.partners')  }}</a></li>
                             <li class="menu__item"><a href="/vacancies">{{ __('content.vacancies')  }}</a></li>
                         </ul>
                     </nav>
@@ -138,7 +138,7 @@
                     </ul>
                 </nav>
                 <div class="btn-contact_us">
-                    <a href="#">{{ __('content.contactUs')  }}</a>
+                    <a href="#?">{{ __('content.contactUs')  }}</a>
                 </div>
             </div>
             <div class="container2">
@@ -156,18 +156,22 @@
         <script>
             let commits
             let btns = document.querySelectorAll('.button-slider')
-            let btn = document.querySelector('.btn-contact_us')
+            let btn = document.querySelectorAll('.btn-contact_us')
             let formBg = document.querySelector('.modal-contact-bg')
             let form = document.querySelector('.modal-contact')
+            let langChange = 'ru'
             let image = document.querySelector('.slider_src')
             let text = document.querySelector('.slider_src_text')
             let firstImage = ''
+            if(!localStorage.getItem('lang')){
+                localStorage.setItem('lang', 'ru')
+            }
             document.addEventListener('DOMContentLoaded', async function() {
 
 
                 function languageChange() {
                     let url = '/api/infrastructures';
-                    axios.get(url, {headers:{'Accept-language': langChange}}).then(res => {
+                    axios.get(url, {headers:{'Accept-language': localStorage.getItem('lang')}}).then(res => {
                         commits = res.data
                         text.children[0].textContent = commits.infrastructures[0].title
                         console.log(commits.infrastructures[0].image)
@@ -176,13 +180,12 @@
                         text.children[1].textContent = commits.infrastructures[0].text
                         image.style.background = commits.infrastructures[0].image.includes("\\") ? `url(/storage/infrastructures/${firstImage}) no-repeat` : `url(/storage/${firstImage}) no-repeat`
                         btns.forEach(item => {
-                            item.addEventListener('mouseenter', () => {
+                            item.addEventListener('click', () => {
                                 let id = parseInt(item.classList[1].split('-')[2].split('')[4])
                                 let current = commits.infrastructures.filter(item => {
-                                    return item.id == id
+                                    return item.order == id
                                 })[0]
                                 if (current) {
-
                                     text.children[0].textContent = current.title
                                     text.children[1].textContent = current.text
                                     image.style.background = current.image.includes("\\") ? `url(/storage/infrastructures/${current.image.includes("\\") ? current.image.split('\\')[1] + '/' + current.image.split('\\')[2] : current.image}) no-repeat` : `url(/storage/${current.image}) no-repeat`
@@ -197,8 +200,10 @@
                     })
                 }
 
+                languageChange();
                 $('.lang').click(function() {
-                    let langChange = $(this).attr('id');
+                    langChange = $(this).attr('id');
+                    localStorage.setItem('lang', langChange)
                     languageChange();
                 });
             });
@@ -227,11 +232,12 @@
                 $('body').toggleClass('no-scroll')
             });
 
-
-            btn.addEventListener('click', () => {
+            $(btn).on('click', function() {
+                event.preventDefault();
                 formBg.style.display = 'flex'
                 form.style.display = 'flex'
             })
+
             formBg.addEventListener('click', () => {
                 formBg.style.display = 'none'
                 form.style.display = 'none'

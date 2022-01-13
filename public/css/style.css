@@ -8,9 +8,6 @@
     font-style: normal;
 }
 
-
-
-
 * {
     padding: 0;
     margin: 0;
@@ -422,6 +419,10 @@ header .btn-contact_us a:hover:after {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+    }
+
+    header.active .language__body {
+        bottom: -21%;
     }
 }
 
@@ -1708,11 +1709,15 @@ header .btn-contact_us a:hover:after {
     .contact-us {
         background-size: cover;
     }
+
+    .slider-page a {
+        margin-top: 3px;
+    }
 }
 
 .contact-us .contact-us__content {
     background-image: url(/img/contacts.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: left center;
     margin-top: 3.3889rem;
@@ -2524,6 +2529,7 @@ footer .container {
     display: block;
     margin-top: 1rem;
     margin-bottom: 1.9444rem;
+    width: 100%;
     object-fit: cover;
     object-position: center;
 }
@@ -2598,7 +2604,7 @@ footer .container {
 }
 
 .infrastpage .infrast1page .infrastpage-abzac1 {
-    margin-bottom: 2.8333rem;
+    margin-bottom: 0.0333rem;
 }
 
 .infrastpage .infrast1page .infrastpage-abzac1 strong {
@@ -2609,7 +2615,12 @@ footer .container {
 }
 
 .infrastpage .infrast1page .infrastpage-abzac1 p {
-    line-height: 1.0556rem;
+    line-height: 1.2556rem;
+}
+
+.infrastpage-abzac3 p {
+        line-height: 1.2556rem;
+
 }
 
 .infrastpage .infrast1page .infrastpage-abzac1 h3 {
@@ -2634,6 +2645,15 @@ footer .container {
         padding-bottom: 2rem;
         margin: 0 auto;
     }
+
+    .news1 .news1back {
+        height: auto;
+    }
+
+}
+
+.news1 p{
+    line-height: 1.2rem;
 }
 
 .infrastpage .infrast2page img {
@@ -2842,8 +2862,9 @@ footer .container {
 
 @media screen and (max-width: 780px) {
     .values-block .values-column-top {
-        width: 100%;
-        max-width: 100% !important;
+        display: grid;
+        grid-row-gap: 30px;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -3133,7 +3154,7 @@ footer .container {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    background-position: center;
+    background-position: left;
     background-size: cover;
 }
 
@@ -3466,8 +3487,44 @@ footer .container {
 }
 
 @media(max-width: 780px) {
-    .swiper-button-next, .swiper-button-prev {
-        bottom: 55%;
+
+    .infrastpage p {
+        margin-bottom: 10px;
+        line-height: 12.5px;
+    }
+
+    .infrastpage .infrast1page .infrastpage-abzac1 {
+        margin-bottom: 10px;
+    }
+
+    .infrastpage strong {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .infrastpage .infrast1page .infrastpage-abzac1 strong {
+        font-size: 18px;
+        line-height: 20px;
+        margin-bottom: 0;
+    }
+
+    .button-next,
+    .button-prev {
+        top: 30px;
+    }
+
+    .contact-us__column {
+        max-width: 245px
+    }
+
+    .contact-us .contact-us__column h2 {
+        margin-left: 3rem;
+    }
+
+    .contact-us .contact-us__column .link1,
+    .contact-us .contact-us__column .link2,
+    .contact-us .contact-us__column .link3 {
+        margin-left: 3rem;
     }
 
     .swiper-wrapper div {
@@ -3477,12 +3534,17 @@ footer .container {
         width: auto;
     }
 
+    .swiper-wrapper-bottom div {
+        align-items: flex-start;
+
+    }
+
     .slider_project_1 {
         margin-top: 20px;
     }
 
     .projects .project-1-p {
-        padding-top: 10px;
+        padding-top: 30px;
     }
 
     .swiper-text {
@@ -3490,7 +3552,9 @@ footer .container {
     }
 
     .slider-page a::after {
-        top: 2px;
+        top: -3px;
+        right: auto;
+        left: 65px;
     }
 
     header .deskTop > div {
