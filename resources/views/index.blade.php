@@ -96,12 +96,12 @@
         <a class="button-slider button-slider-page6" href="javascript:void(false)"></a>
     </div>
     <div class="container_pagi container_pagi-mobile">
-        <button class="button-slider button-slider-page1 active"></button>
-        <button class="button-slider button-slider-page2"></button>
-        <button class="button-slider button-slider-page3"></button>
-        <button class="button-slider button-slider-page4"></button>
-        <button class="button-slider button-slider-page5"></button>
-        <button class="button-slider button-slider-page6"></button>
+        <button class="button-slider-second button-slider-page1 active"></button>
+        <button class="button-slider-second button-slider-page2"></button>
+        <button class="button-slider-second button-slider-page3"></button>
+        <button class="button-slider-second button-slider-page4"></button>
+        <button class="button-slider-second button-slider-page5"></button>
+        <button class="button-slider-second button-slider-page6"></button>
     </div>
 </div>
 

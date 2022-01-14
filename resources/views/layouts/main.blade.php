@@ -156,6 +156,7 @@
         <script>
             let commits
             let btns = document.querySelectorAll('.button-slider')
+            let btnsSecond = document.querySelectorAll('.button-slider-second')
             let btn = document.querySelectorAll('.btn-contact_us')
             let formBg = document.querySelector('.modal-contact-bg')
             let form = document.querySelector('.modal-contact')
@@ -199,6 +200,25 @@
                                             window.location.replace(current.link)
                                         })
                                     }
+                                }
+                            })
+                        })
+                        btnsSecond.forEach(item => {
+                            item.addEventListener('mouseover', () => {
+                                event.preventDefault();
+                                let id = parseInt(item.classList[1].split('-')[2].split('')[4])
+                                let current = commits.infrastructures.filter(item => {
+                                    return item.order == id
+                                })[0]
+                                if (current) {
+                                    text.children[0].textContent = current.title
+                                    text.children[1].textContent = current.text
+                                    image.style.background = current.image.includes("\\") ? `url(/storage/infrastructures/${current.image.includes("\\") ? current.image.split('\\')[1] + '/' + current.image.split('\\')[2] : current.image}) no-repeat` : `url(/storage/${current.image}) no-repeat`
+//                                    if (current.link) {
+//                                        item.addEventListener('click', () => {
+//                                            window.location.replace(current.link)
+//                                        })
+//                                    }
                                 }
                             })
                         })
@@ -303,6 +323,16 @@
             sliderBtn.forEach((item) => {
                 item.addEventListener("mouseover", (event) => {
                     sliderBtn.forEach((item2) => {
+                        item2.classList.remove("active");
+                    });
+                    event.target.classList.add("active");
+                })
+            })
+
+            let sliderBtnSecond = document.querySelectorAll(".button-slider-second");
+            sliderBtnSecond.forEach((item) => {
+                item.addEventListener("mouseover", (event) => {
+                    sliderBtnSecond.forEach((item2) => {
                         item2.classList.remove("active");
                     });
                     event.target.classList.add("active");

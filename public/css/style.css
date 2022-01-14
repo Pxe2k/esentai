@@ -1102,7 +1102,8 @@ header .btn-contact_us a:hover:after {
     }
 }
 
-.button-slider {
+.button-slider,
+.button-slider-second{
     display: block;
     border: 0.1111rem solid white;
     position: absolute;
@@ -1121,7 +1122,8 @@ button.button-slider::after {
 */
 
 
-.button-slider::before {
+.button-slider::before,
+.button-slider-second::before{
     content: '';
     position: absolute;
     left: 50%;
@@ -1133,6 +1135,10 @@ button.button-slider::after {
     opacity: 0;
     -webkit-transition: 0.3s;
     transition: 0.3s;
+}
+
+.button-slider-second::before {
+    transition: none !important;
 }
 
 .button-slider:after {
@@ -1148,7 +1154,10 @@ button.button-slider::after {
     transition: 0.3s;
 }
 
-.button-slider.active:before {
+
+
+.button-slider.active:before,
+.button-slider-second.active::before{
     visibility: visible;
     opacity: 1;
 }
@@ -1371,7 +1380,8 @@ button.button-slider::after {
 }
 
 @media screen and (max-width: 780px) {
-    .button-slider {
+    .button-slider,
+    .button-slider-second{
         position: relative;
         top: 0;
         left: 0;
@@ -1381,13 +1391,15 @@ button.button-slider::after {
         margin-left: 2rem;
     }
 
-    .button-slider:before {
+    .button-slider-second + .button-slider-second {
+        margin-left: 2rem;
+    }
+
+    .button-slider:before,
+    .button-slider-second.active::before{
         height: 20px;
         top: -20px;
     }
-
-
-
 }
 
 @media screen and (max-width: 780px) {
