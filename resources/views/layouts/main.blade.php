@@ -163,7 +163,7 @@
             let image = document.querySelector('.slider_src')
             let text = document.querySelector('.slider_src_text')
             let firstImage = ''
-            if(!localStorage.getItem('lang')){
+            if (!localStorage.getItem('lang')) {
                 localStorage.setItem('lang', 'ru')
             }
             document.addEventListener('DOMContentLoaded', async function() {
@@ -171,7 +171,11 @@
 
                 function languageChange() {
                     let url = '/api/infrastructures';
-                    axios.get(url, {headers:{'Accept-language': localStorage.getItem('lang')}}).then(res => {
+                    axios.get(url, {
+                        headers: {
+                            'Accept-language': localStorage.getItem('lang')
+                        }
+                    }).then(res => {
                         commits = res.data
                         text.children[0].textContent = commits.infrastructures[0].title
                         console.log(commits.infrastructures[0].image)
@@ -180,7 +184,8 @@
                         text.children[1].textContent = commits.infrastructures[0].text
                         image.style.background = commits.infrastructures[0].image.includes("\\") ? `url(/storage/infrastructures/${firstImage}) no-repeat` : `url(/storage/${firstImage}) no-repeat`
                         btns.forEach(item => {
-                            item.addEventListener('click', () => {
+                            item.addEventListener('mouseover', () => {
+                                event.preventDefault();
                                 let id = parseInt(item.classList[1].split('-')[2].split('')[4])
                                 let current = commits.infrastructures.filter(item => {
                                     return item.order == id
@@ -209,8 +214,8 @@
             });
 
             $('.lol').click(function() {
-                    let clickId = $(this).attr('id');
-                    console.log(clickId)
+                let clickId = $(this).attr('id');
+                console.log(clickId)
             });
 
             let header = $('header');
@@ -230,6 +235,12 @@
                 $(this).toggleClass('burger--active');
                 $('.deskTop').toggleClass('active');
                 $('body').toggleClass('no-scroll')
+            });
+
+            $('.menu__item').on('click', function() {
+                $('.burger').removeClass('burger--active');
+                $('.deskTop').removeClass('active');
+                $('body').removeClass('no-scroll')
             });
 
             $(btn).on('click', function() {
@@ -290,13 +301,48 @@
 
             let sliderBtn = document.querySelectorAll(".button-slider");
             sliderBtn.forEach((item) => {
-                item.addEventListener("click", (event) => {
+                item.addEventListener("mouseover", (event) => {
                     sliderBtn.forEach((item2) => {
                         item2.classList.remove("active");
                     });
                     event.target.classList.add("active");
                 })
             })
+
+            $('button.button-slider-page1').on('mouseover', function(){
+               $('a.button-slider').removeClass('active');
+               $('a.button-slider-page1').addClass('active');
+            });
+
+            $('button.button-slider-page2').on('mouseover', function(){
+               $('a.button-slider').removeClass('active');
+               $('a.button-slider-page2').addClass('active');
+            });
+
+            $('button.button-slider-page3').on('mouseover', function(){
+               $('a.button-slider').removeClass('active');
+               $('a.button-slider-page3').addClass('active');
+            });
+
+            $('button.button-slider-page4').on('mouseover', function(){
+               $('a.button-slider').removeClass('active');
+               $('a.button-slider-page4').addClass('active');
+            });
+
+            $('button.button-slider-page5').on('mouseover', function(){
+               $('a.button-slider').removeClass('active');
+               $('a.button-slider-page5').addClass('active');
+            });
+
+            $('button.button-slider-page6').on('mouseover', function(){
+               $('a.button-slider').removeClass('active');
+               $('a.button-slider-page6').addClass('active');
+            });
+
+            $('button.button-slider-page7').on('mouseover', function(){
+               $('a.button-slider').removeClass('active');
+               $('a.button-slider-page7').addClass('active');
+            });
 
             const swiper = new Swiper('.swiper', {
                 // Optional parameters

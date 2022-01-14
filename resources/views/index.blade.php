@@ -78,6 +78,7 @@
         <div class="slider animate__animated " data-in="animate__lightSpeedInRight" data-out="animate__lightSpeedOutRight">
             <div class="slider_src">
                 <div class="slider_src_text">
+<!--                <a class="text text-while text-bold  text-s25 button-slider" href=""></a> -->
                     <h3 class="text text-while text-bold  text-s25"></h3>
                     <p class="text text-while text-s15">
                     </p>
@@ -86,13 +87,21 @@
         </div>
     </div>
 
-    <div class="container_pagi">
+    <div class="container_pagi container_pagi-desktop">
         <a class="button-slider button-slider-page1 active" href="javascript:void(false)"></a>
         <a class="button-slider button-slider-page2" href="javascript:void(false)"></a>
         <a class="button-slider button-slider-page3" href="javascript:void(false)"></a>
         <a class="button-slider button-slider-page4" href="javascript:void(false)"></a>
         <a class="button-slider button-slider-page5" href="javascript:void(false)"></a>
         <a class="button-slider button-slider-page6" href="javascript:void(false)"></a>
+    </div>
+    <div class="container_pagi container_pagi-mobile">
+        <button class="button-slider button-slider-page1 active"></button>
+        <button class="button-slider button-slider-page2"></button>
+        <button class="button-slider button-slider-page3"></button>
+        <button class="button-slider button-slider-page4"></button>
+        <button class="button-slider button-slider-page5"></button>
+        <button class="button-slider button-slider-page6"></button>
     </div>
 </div>
 
@@ -148,7 +157,7 @@
         <div class="swiper">
             <div class="swiper-wrapper swiper-wrapper-bottom">
                 @foreach ($news as $news)
-                <div class="project-1-p animate__animated swiper-slide" style="flex-direction: column;padding: 0 5rem;" data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
+                <div class="project-1-p animate__animated swiper-slide swiper-slide-second" style="flex-direction: column;padding: 0 5rem;" data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
                     <div class="slider-content__title">{!! $news->title !!}</div>
                     <div class="slider-content__data">
                         <p>{{ $news->author }}</p>
@@ -163,8 +172,8 @@
                 </div>
                 @endforeach
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next swiper-slide-next"></div>
+            <div class="swiper-button-prev swiper-slide-prev"></div>
         </div>
     </div>
 </div>
