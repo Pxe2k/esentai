@@ -68,7 +68,7 @@ a:active {
 }
 
 .modal-contact {
-    left: 37%;
+    /*    left: 37%;*/
     position: fixed;
     display: none;
     flex-direction: column;
@@ -78,8 +78,11 @@ a:active {
     border-radius: 10px;
     z-index: 10000000000000000000;
     top: 20%;
+    transform: translateX(-50%);
+    left: 50%;
 }
 
+/*
 @media (min-width:300px) and (max-width: 400px) {
     .modal-contact {
         left: 0%;
@@ -97,6 +100,7 @@ a:active {
         left: 30%;
     }
 }
+*/
 
 nav,
 footer,
@@ -1102,7 +1106,7 @@ header .btn-contact_us a:hover:after {
 }
 
 .button-slider,
-.button-slider-second{
+.button-slider-second {
     display: block;
     border: 0.1111rem solid white;
     position: absolute;
@@ -1122,7 +1126,7 @@ button.button-slider::after {
 
 
 .button-slider::before,
-.button-slider-second::before{
+.button-slider-second::before {
     content: '';
     position: absolute;
     left: 50%;
@@ -1156,7 +1160,7 @@ button.button-slider::after {
 
 
 .button-slider.active:before,
-.button-slider-second.active::before{
+.button-slider-second.active::before {
     visibility: visible;
     opacity: 1;
 }
@@ -1379,8 +1383,9 @@ button.button-slider::after {
 }
 
 @media screen and (max-width: 780px) {
+
     .button-slider,
-    .button-slider-second{
+    .button-slider-second {
         position: relative;
         top: 0;
         left: 0;
@@ -1395,7 +1400,7 @@ button.button-slider::after {
     }
 
     .button-slider:before,
-    .button-slider-second.active::before{
+    .button-slider-second.active::before {
         height: 20px;
         top: -20px;
     }
@@ -2421,6 +2426,7 @@ footer .container {
     -ms-flex-pack: end;
     justify-content: flex-end;
     background-size: contain;
+    background-repeat: no-repeat;
     /* 3 */
     /* 3 */
     /* 4 */
@@ -2464,9 +2470,6 @@ footer .container {
         /* 6 */
         /* 6 */
         /* 7 */
-        background-size: auto 450px;
-        /* 9 */
-        background-size: auto 25rem;
         /* 9 */
         background-position: top center;
         background-color: #dbdbdb;
@@ -2501,9 +2504,7 @@ footer .container {
         /* 6 */
         /* 6 */
         /* 7 */
-        background-size: auto 450px;
-        /* 9 */
-        background-size: auto 25rem;
+        background-size: contain;
         /* 9 */
         background-position: top center;
         background-color: #dbdbdb;
@@ -2539,6 +2540,10 @@ footer .container {
     /* 9 */
     margin-bottom: 4.11111111rem;
     /* 9 */
+}
+
+.news1 h2 p {
+    line-height: 2rem;
 }
 
 .news1 .container {
@@ -2653,7 +2658,7 @@ footer .container {
 }
 
 .infrastpage-abzac3 p {
-        line-height: 1.2556rem;
+    line-height: 1.2556rem;
 
 }
 
@@ -2686,7 +2691,7 @@ footer .container {
 
 }
 
-.news1 p{
+.news1 p {
     line-height: 1.2rem;
 }
 
@@ -3518,7 +3523,7 @@ footer .container {
     transition: opacity 0.7s;
 }
 
-.container_pagi-mobile{
+.container_pagi-mobile {
     display: none;
 }
 
@@ -3633,9 +3638,9 @@ footer .container {
     }
 
     .slider-page a::after {
-        top: -3px;
+        top: 0px;
         right: auto;
-        left: 65px;
+        left: 100%;
     }
 
     header .deskTop > div {
@@ -3756,6 +3761,14 @@ footer .container {
     a.button-slider.active {
         top: -230px;
         height: 230px;
+    }
+}
+
+@media(max-width: 500px) {
+    .slider-page a::after {
+        top: -1px;
+        right: auto;
+        left: 100%;
     }
 }
 
