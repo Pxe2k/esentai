@@ -110,7 +110,7 @@
         <div class="projects-1">
             <div class="projects-1__column">
                 <div class="project-1-title animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
-                    <h3 class="text text-s34">{{ __('content.projects')  }}</h3>
+                    <a href="/project/1"><h3 class="text text-s34">{{ __('content.projects')  }}</h3></a>
                 </div>
                 <div class="swiper">
                     <!-- Additional required wrapper -->
@@ -135,7 +135,7 @@
             </div>
             <div class="projects-1__column">
                 <div class="project-1-title animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
-                    <h3 class="press-project text text-s34">{{ __('content.press')  }}</h3>
+                   <a href="/news"><h3 class="press-project text text-s34">{{ __('content.press')  }}</h3></a> 
                 </div>
                 <div class="project-1-img animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
                     @foreach ($presses as $press)
