@@ -36,4 +36,6 @@
         'phone' => 'Phone number',
         'comment' => 'Your question',
 
+        'alux'  => 'Developed in'
+
     ];

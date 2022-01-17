@@ -158,8 +158,8 @@
                 <p>© 2019-2021 Esentai tower</p>
             </div>
             <div class="a-lux">
-                <p>Разработано в</p>
-                <a href="https://www.a-lux.kz"><img src="img/logo-alux.png" alt=""></a>
+                <p>{{ __('content.alux')  }}</p>
+                <a href="https://www.a-lux.kz"><img src="/img/logo-alux.png" alt=""></a>
             </div>
 
         </footer>

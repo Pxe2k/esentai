@@ -25,15 +25,17 @@
 
         'author' => 'Автор',
 
-        // Vacancies 
+        // Vacancies
 
         'mission' => 'НАША МИССИЯ',
         'values' => 'НАШИ ЦЕННОСТИ',
 
-        // Form 
+        // Form
 
         'name' => 'ФИО',
         'phone' => 'Номер телефона',
         'comment' => 'Ваш вопрос',
+
+        'alux'  => 'Разработано в '
 
     ];
