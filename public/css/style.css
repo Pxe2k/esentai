@@ -1500,7 +1500,7 @@ button.button-slider::after {
 }
 
 .swiper-text * {
-    font-size: 0.938rem !important;
+    font-size: 1rem !important;
 }
 
 .swiper-text {
@@ -3606,7 +3606,7 @@ footer .container {
 
 @media(max-width: 900px) {
     .swiper-text * {
-        font-size: 0.813rem !important;
+        font-size: 1.6rem !important;
     }
 
     .contact-us .contact-us__column .link2::before {
