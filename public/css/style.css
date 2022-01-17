@@ -244,16 +244,51 @@ header {
 
 header.active {
     box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.3);
-    max-height: 6.0556rem;
+    max-height: 5.0556rem;
 }
 
 header.active .language__body {
-    bottom: -20px;
+    bottom: -26px;
 }
 
-header .logo img {
-    width: 9.2778rem;
-    height: 5.1667rem;
+header.active .logo a:first-child img {
+    display: none;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo a:first-child img{
+    width: 20px;
+    height: 93px;
+    margin-right: 14px;
+}
+
+header .logo a:last-child img{
+    width: 133px;
+    height: 40px;
+}
+
+@media(max-width: 1080px) {
+    header .logo a:first-child img {
+        width: 17px;
+    }
+
+    header .logo a:last-child img {
+        width: 120px;
+    }
+}
+
+@media(max-width: 920px) {
+    header .logo a:first-child img {
+        width: 13px;
+    }
+
+    header .logo a:last-child img {
+        width: 100px;
+    }
 }
 
 header .container {
@@ -577,8 +612,8 @@ header .btn-contact_us a:hover:after {
     display: flex;
     background-size: 120rem;
     background-position: center center;
-    -webkit-animation-duration: 45s;
-    animation-duration: 45s;
+    -webkit-animation-duration: 25s;
+    animation-duration: 25s;
     -webkit-animation-name: zoomBackIn;
     animation-name: zoomBackIn;
     -webkit-animation-iteration-count: infinite;
@@ -587,14 +622,14 @@ header .btn-contact_us a:hover:after {
 
 .wrap::after {
     content: "";
-    top: 8.0556rem;
+    top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     position: absolute;
     z-index: 2;
     background: linear-gradient(336.94deg, rgba(13, 22, 52, 0.5) 6.01%, rgba(13, 22, 52, 0) 48.9%, rgba(13, 22, 52, 0.5) 87.86%);
-    max-height: 36.3889rem;
+    max-height: 47.3889rem;
 }
 
 .wrap::before {
@@ -1010,6 +1045,10 @@ header .btn-contact_us a:hover:after {
     display: -ms-flexbox;
     display: flex;
     z-index: 15;
+}
+
+.social + .social {
+    margin-top: 20px;
 }
 
 .social > a > img {
@@ -1760,17 +1799,17 @@ button.button-slider::after {
     background-repeat: no-repeat;
     background-position: left center;
     margin-top: 3.3889rem;
-    width: 30.8333rem;
+    width: 20.8333rem;
     margin-bottom: 3.3889rem;
     z-index: 1000;
-    margin-left: 3rem;
+    padding: 0 10px;
 }
 
 .contact-us .contact-us__column h2 {
-    font-size: 1.5556rem;
-    padding-bottom: 2.2778rem;
-    padding-top: 2.2778rem;
-    margin-left: 4.111rem;
+    font-size: 1.3rem;
+    padding-bottom: 1.2778rem;
+    padding-top: 1.2778rem;
+    margin-left: 1.111rem;
 }
 
 .contact-us .contact-us__column a {
@@ -1787,27 +1826,28 @@ button.button-slider::after {
 
 .contact-us .contact-us__column .link1 {
     font-weight: bold;
-    background: url(/img/contact_us/call.png) left no-repeat;
-    line-height: 2.556rem;
-    padding-left: 2.6667rem;
-    margin-bottom: 2.1111rem;
-    margin-left: 4.111rem;
+    background: url(/img/contact_us/call.png) 10px no-repeat;
+    background-size: contain !important;
+    line-height: 1.3rem;
+    padding-left: 1.6667rem;
+    margin-bottom: 1.1111rem;
+    margin-left: 1.111rem;
 }
 
 .contact-us .contact-us__column .link2 {
     background: url(/img/contact_us/maiil.png) left no-repeat;
-    line-height: 1.5556rem;
-    padding-left: 2.6667rem;
+    line-height: 1.3rem;
+    padding-left: 1.6667rem;
     margin-bottom: 2.1111rem;
-    margin-left: 4.111rem;
+    margin-left: 1.111rem;
 }
 
 .contact-us .contact-us__column .link3 {
-    background: url(/img/contact_us/mestopolijenie.png) left no-repeat;
-    line-height: 2.5556rem;
-    padding-left: 2.6667rem;
-    margin-bottom: 3.444rem;
-    margin-left: 4.111rem;
+    background: url(/img/contact_us/mestopolijenie.png) 10px no-repeat;
+    line-height: 1.3rem;
+    padding-left: 1.6667rem;
+    margin-bottom: 2.444rem;
+    margin-left: 1.111rem;
 }
 
 footer {
@@ -3205,11 +3245,11 @@ footer .container {
 
 .contact-us .contact-us__content {
     background-image: url(/img/contacts.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: left center;
     margin-top: 3.3889rem;
-    width: 30.8333rem;
+    width: 20.8333rem;
     margin-bottom: 3.3889rem;
     z-index: 1000;
     margin-left: 3rem;
@@ -3217,9 +3257,9 @@ footer .container {
 
 .contact-us .contact-us__column h2 {
     font-size: 1.5556rem;
-    padding-bottom: 2.2778rem;
-    padding-top: 2.2778rem;
-    margin-left: 4.111rem;
+    padding-bottom: 1.2778rem;
+    padding-top: 1.2778rem;
+    margin-left: 1.111rem;
 }
 
 .contact-us .contact-us__column a {
@@ -3236,27 +3276,30 @@ footer .container {
 
 .contact-us .contact-us__column .link1 {
     font-weight: bold;
+    background-size: contain !important;
     background: url(/img/contact_us/call.png) left no-repeat;
-    line-height: 2.556rem;
+    line-height: 1.3rem;
     padding-left: 2.6667rem;
-    margin-bottom: 2.1111rem;
-    margin-left: 4.111rem;
+    margin-bottom: 1.1111rem;
+    margin-left: 1.111rem;
 }
 
 .contact-us .contact-us__column .link2 {
     background: url(/img/contact_us/maiil.png) left no-repeat;
-    line-height: 1.5556rem;
+    background-size: contain !important;
+    line-height: 1.3rem;
     padding-left: 2.6667rem;
-    margin-bottom: 2.1111rem;
-    margin-left: 4.111rem;
+    margin-bottom: 1.1111rem;
+    margin-left: 1.111rem;
 }
 
 .contact-us .contact-us__column .link3 {
     background: url(/img/contact_us/mestopolijenie.png) left no-repeat;
-    line-height: 2.5556rem;
+    background-size: contain !important;
+    line-height: 1.3rem;
     padding-left: 2.6667rem;
-    margin-bottom: 3.444rem;
-    margin-left: 4.111rem;
+    margin-bottom: 1.444rem;
+    margin-left: 1.111rem;
 }
 
 .text {
@@ -3600,17 +3643,21 @@ footer .container {
     }
 
     .contact-us__column {
-        max-width: 245px
+        max-width: 330px
+    }
+
+    .contact-us .contact-us__content {
+        width: 22rem;
     }
 
     .contact-us .contact-us__column h2 {
-        margin-left: 3rem;
+        margin-left: 1rem;
     }
 
     .contact-us .contact-us__column .link1,
     .contact-us .contact-us__column .link2,
     .contact-us .contact-us__column .link3 {
-        margin-left: 3rem;
+        margin-left: 1rem;
     }
 
     .swiper-wrapper div {
@@ -3739,7 +3786,48 @@ footer .container {
         right: 0;
         margin-left: 0;
         opacity: 0;
+        z-index: 100000000;
     }
+
+    .wrap::after {
+        top: 0;
+        max-height: 47rem;
+    }
+
+    header .logo a:last-child img {
+        width: 130px;
+    }
+
+    header .logo a:first-child img {
+        width: 20px;
+    }
+
+
+    .contain2-column-img {
+        margin-right: 2.3rem;
+    }
+
+    .contain2-column-img:nth-child(2) {
+        margin-right: 0;
+        margin-left: 1rem;
+    }
+
+    .wrap::before {
+        background-size: cover;
+    }
+
+    .burger-line {
+        width: 44px;
+    }
+
+    .burger.burger--active::after {
+        width: 44px;
+    }
+
+    .burger::before, .burger::after {
+        width: 44px;
+    }
+
 }
 
 @media(max-width: 660px) {
@@ -3753,6 +3841,14 @@ footer .container {
     a.button-slider.active {
         top: -275px;
         height: 275px;
+    }
+
+    header .logo a:first-child img {
+        width: 13px;
+    }
+
+    header .logo a:last-child img {
+        width: 100px;
     }
 }
 

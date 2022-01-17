@@ -54,7 +54,14 @@
             <div class="deskTop">
                 <div class="container">
 
-                    <div class="logo"><a href="/"><img src="../img/icons/logo.png"></a></div>
+                    <div class="logo">
+                        <a href="/">
+                            <img src="../img/tower-logo.svg">
+                        </a>
+                        <a href="/">
+                            <img src="../img/esentai-tower.svg">
+                        </a>
+                    </div>
                     <nav>
                         <ul class="menu">
                             <li class="menu__item"><a href="/infrastructure">{{ __('content.aboutUs')  }}</a></li>
@@ -101,7 +108,14 @@
             </div>
             <div class="mobailTop">
                 <div class="container mobailTop_body">
-                    <div class="logo"><a href="/"><img src="../img/icons/logo.png"></a></div>
+                    <div class="logo">
+                        <a href="/">
+                            <img src="../img/tower-logo.svg">
+                        </a>
+                        <a href="/">
+                            <img src="../img/esentai-tower.svg">
+                        </a>
+                    </div>
                     <button class="burger">
                         <span class="burger-line"></span>
                     </button>
@@ -214,11 +228,11 @@
                                     text.children[0].textContent = current.title
                                     text.children[1].textContent = current.text
                                     image.style.background = current.image.includes("\\") ? `url(/storage/infrastructures/${current.image.includes("\\") ? current.image.split('\\')[1] + '/' + current.image.split('\\')[2] : current.image}) no-repeat` : `url(/storage/${current.image}) no-repeat`
-//                                    if (current.link) {
-//                                        item.addEventListener('click', () => {
-//                                            window.location.replace(current.link)
-//                                        })
-//                                    }
+                                    //                                    if (current.link) {
+                                    //                                        item.addEventListener('click', () => {
+                                    //                                            window.location.replace(current.link)
+                                    //                                        })
+                                    //                                    }
                                 }
                             })
                         })
@@ -339,39 +353,39 @@
                 })
             })
 
-            $('button.button-slider-page1').on('mouseover', function(){
-               $('a.button-slider').removeClass('active');
-               $('a.button-slider-page1').addClass('active');
+            $('button.button-slider-page1').on('mouseover', function() {
+                $('a.button-slider').removeClass('active');
+                $('a.button-slider-page1').addClass('active');
             });
 
-            $('button.button-slider-page2').on('mouseover', function(){
-               $('a.button-slider').removeClass('active');
-               $('a.button-slider-page2').addClass('active');
+            $('button.button-slider-page2').on('mouseover', function() {
+                $('a.button-slider').removeClass('active');
+                $('a.button-slider-page2').addClass('active');
             });
 
-            $('button.button-slider-page3').on('mouseover', function(){
-               $('a.button-slider').removeClass('active');
-               $('a.button-slider-page3').addClass('active');
+            $('button.button-slider-page3').on('mouseover', function() {
+                $('a.button-slider').removeClass('active');
+                $('a.button-slider-page3').addClass('active');
             });
 
-            $('button.button-slider-page4').on('mouseover', function(){
-               $('a.button-slider').removeClass('active');
-               $('a.button-slider-page4').addClass('active');
+            $('button.button-slider-page4').on('mouseover', function() {
+                $('a.button-slider').removeClass('active');
+                $('a.button-slider-page4').addClass('active');
             });
 
-            $('button.button-slider-page5').on('mouseover', function(){
-               $('a.button-slider').removeClass('active');
-               $('a.button-slider-page5').addClass('active');
+            $('button.button-slider-page5').on('mouseover', function() {
+                $('a.button-slider').removeClass('active');
+                $('a.button-slider-page5').addClass('active');
             });
 
-            $('button.button-slider-page6').on('mouseover', function(){
-               $('a.button-slider').removeClass('active');
-               $('a.button-slider-page6').addClass('active');
+            $('button.button-slider-page6').on('mouseover', function() {
+                $('a.button-slider').removeClass('active');
+                $('a.button-slider-page6').addClass('active');
             });
 
-            $('button.button-slider-page7').on('mouseover', function(){
-               $('a.button-slider').removeClass('active');
-               $('a.button-slider-page7').addClass('active');
+            $('button.button-slider-page7').on('mouseover', function() {
+                $('a.button-slider').removeClass('active');
+                $('a.button-slider-page7').addClass('active');
             });
 
             const swiper = new Swiper('.swiper', {
