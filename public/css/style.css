@@ -260,13 +260,13 @@ header .logo {
     align-items: center;
 }
 
-header .logo a:first-child img{
+header .logo a:first-child img {
     width: 20px;
     height: 93px;
     margin-right: 14px;
 }
 
-header .logo a:last-child img{
+header .logo a:last-child img {
     width: 133px;
     height: 40px;
 }
@@ -640,10 +640,7 @@ header .btn-contact_us a:hover:after {
     right: 0;
     position: absolute;
     z-index: 1000;
-    background-image: url(/img/aboutgradient.png);
-    background-size: contain;
-    background-position: center bottom;
-    background-repeat-y: no-repeat;
+    background: linear-gradient(360deg, #F1F3FA 51.03%, rgba(244, 246, 253, 0) 62.95%)
 }
 
 .wrap .soc {
@@ -1824,28 +1821,59 @@ button.button-slider::after {
     }
 }
 
+.contact-us .contact-us__column a {
+    position: relative;
+}
+
+.contact-us .contact-us__column a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.contact-us .contact-us__column .link1::before {
+    background-image: url(../img/contact-phone.svg);
+    width: 14px;
+    height: 15px;
+    left: 5px;
+}
+
 .contact-us .contact-us__column .link1 {
     font-weight: bold;
-    background: url(/img/contact_us/call.png) 10px no-repeat;
-    background-size: contain !important;
     line-height: 1.3rem;
-    padding-left: 1.6667rem;
+    padding-left: 2rem;
     margin-bottom: 1.1111rem;
     margin-left: 1.111rem;
 }
 
+.contact-us .contact-us__column .link2::before {
+    background-image: url(../img/contact-sms.svg);
+    width: 19px;
+    height: 14px;
+    top: 2px;
+}
+
 .contact-us .contact-us__column .link2 {
-    background: url(/img/contact_us/maiil.png) left no-repeat;
     line-height: 1.3rem;
-    padding-left: 1.6667rem;
+    padding-left: 2rem;
     margin-bottom: 2.1111rem;
     margin-left: 1.111rem;
 }
 
+.contact-us .contact-us__column .link3::before {
+    background-image: url(../img/contact-location.svg);
+    width: 12px;
+    left: 5px;
+    height: 16px;
+}
+
 .contact-us .contact-us__column .link3 {
-    background: url(/img/contact_us/mestopolijenie.png) 10px no-repeat;
     line-height: 1.3rem;
-    padding-left: 1.6667rem;
+    padding-left: 2rem;
     margin-bottom: 2.444rem;
     margin-left: 1.111rem;
 }
@@ -2167,7 +2195,7 @@ footer .container {
 }
 
 .contain2 .contain2-column .contain2-column-title {
-    width: 33.1111rem;
+    width: 33.2111rem;
     height: 20.5556rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3249,7 +3277,7 @@ footer .container {
     background-repeat: no-repeat;
     background-position: left center;
     margin-top: 3.3889rem;
-    width: 20.8333rem;
+    width: 22.8333rem;
     margin-bottom: 3.3889rem;
     z-index: 1000;
     margin-left: 3rem;
@@ -3276,28 +3304,22 @@ footer .container {
 
 .contact-us .contact-us__column .link1 {
     font-weight: bold;
-    background-size: contain !important;
-    background: url(/img/contact_us/call.png) left no-repeat;
     line-height: 1.3rem;
-    padding-left: 2.6667rem;
+    padding-left: 2rem;
     margin-bottom: 1.1111rem;
     margin-left: 1.111rem;
 }
 
 .contact-us .contact-us__column .link2 {
-    background: url(/img/contact_us/maiil.png) left no-repeat;
-    background-size: contain !important;
     line-height: 1.3rem;
-    padding-left: 2.6667rem;
+    padding-left: 2rem;
     margin-bottom: 1.1111rem;
     margin-left: 1.111rem;
 }
 
 .contact-us .contact-us__column .link3 {
-    background: url(/img/contact_us/mestopolijenie.png) left no-repeat;
-    background-size: contain !important;
     line-height: 1.3rem;
-    padding-left: 2.6667rem;
+    padding-left: 2rem;
     margin-bottom: 1.444rem;
     margin-left: 1.111rem;
 }
@@ -3570,9 +3592,37 @@ footer .container {
     display: none;
 }
 
+@media(max-width: 1000px) {
+    .contact-us .contact-us__column .link2::before {
+        top: 0;
+    }
+
+    .contact-us .contact-us__column .link1,
+    .contact-us .contact-us__column .link2,
+    .contact-us .contact-us__column .link3 {
+        padding-left: 2.5rem;
+    }
+}
+
 @media(max-width: 900px) {
     .swiper-text * {
         font-size: 13px !important;
+    }
+
+    .contact-us .contact-us__column .link2::before {
+        width: 15px;
+        height: 12px;
+        top: 1px;
+    }
+
+    .contact-us .contact-us__column .link1::before {
+        left: 0;
+        width: 16px;
+        height: 12px;
+    }
+
+    .contact-us .contact-us__column .link3::before {
+        left: 0;
     }
 }
 
@@ -3824,8 +3874,17 @@ footer .container {
         width: 44px;
     }
 
-    .burger::before, .burger::after {
+    .burger::before,
+    .burger::after {
         width: 44px;
+    }
+
+    .contain2 .contain2-column .contain2-column-title {
+        width: 31.3111rem;
+    }
+
+    .contact-us {
+        background-position: -75px;
     }
 
 }
@@ -3873,12 +3932,32 @@ footer .container {
         top: -200px;
         height: 200px;
     }
+
+    .contact-us .contact-us__column .link1::before {
+        width: 14px;
+        height: 13px;
+    }
+
+    .contact-us .contact-us__column .link2::before {
+        width: 15px;
+        height: 10px;
+    }
+}
+
+@media(max-width: 400px) {
+    .contain2 .contain2-column .contain2-column-title {
+        width: 31.3111rem;
+    }
 }
 
 @media(max-width: 380px) {
     a.button-slider.active {
         top: -175px;
         height: 175px;
+    }
+
+    .contact-us .contact-us__column a::before {
+        top: -2px;
     }
 }
 

@@ -25,12 +25,12 @@
 
         'author' => 'Author',
 
-        // Vacancies 
+        // Vacancies
 
         'mission' => 'MISSION',
         'values' => 'VALUES',
 
-        // Form 
+        // Form
 
         'name' => 'Fullname',
         'phone' => 'Phone number',
