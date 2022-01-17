@@ -22,8 +22,7 @@
     <div class="main">
         <div class="modal-contact-bg">
         </div>
-        <form class="modal-contact" action="/callback" method="POST">
-            @csrf
+        <form class="modal-contact" action="/callback" method="POST"> @csrf
             <p>
                 <label for="">
                     {{ __('content.name')  }}
