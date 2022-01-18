@@ -144,7 +144,9 @@
                     <ul class="menu">
                         <li class="menu__item"><a href="/infrastructure">{{ __('content.aboutUs')  }}</a></li>
                         <li class="menu__item"><a href="/infrastructure">{{ __('content.infrastructure')  }}</a></li>
-                        <li class="menu__item"><a href="/project/1">{{ __('content.projects')  }}</a></li>
+                        @if ($projects != null)
+                            <li class="menu__item"><a href="/project/1">{{ __('content.projects')  }}</a></li>
+                        @endif
                         <li class="menu__item"><a href="/news">{{ __('content.news')  }}</a></li>
                         <li class="menu__item"><a href="#partners">{{ __('content.partners')  }}</a></li>
                         <li class="menu__item"><a href="/vacancies">{{ __('content.vacancies')  }}</a></li>

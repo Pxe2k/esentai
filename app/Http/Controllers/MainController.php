@@ -41,7 +41,7 @@ class MainController extends Controller
         $abouts = About::all()->translate(session('locale'));
         $advantages = Advantage::all()->translate(session('locale'));
         $infrastructures = Infrastructure::all()->translate(session('locale'));
-        $projects = Project::all()->translate(session('locale'));
+        $projects = Project::where('approved', 1)->get()->translate(session('locale'));
         $presses = Press::all();
         $news = News::all()->translate(session('locale'));
         $partners = Partner::all();

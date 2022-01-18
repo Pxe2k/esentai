@@ -105,6 +105,7 @@
     </div>
 </div>
 
+@if ($projects != null)
 <div class="projects">
     <div class="container projects_box">
         <div class="projects-1">
@@ -143,7 +144,7 @@
                     @endforeach
                 </div>
             </div>
-
+@endif
 
         </div>
         <!-- <div class="projects-2 animate__animated " data-in="animate__lightSpeedInRight" data-out="animate__lightSpeedOutRight">  -->
