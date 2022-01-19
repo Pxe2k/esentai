@@ -118,7 +118,12 @@
     </div>
 </div>
 
+<<<<<<< HEAD
 <div class="projects" id="projects">
+=======
+@if ($projects != null)
+<div class="projects">
+>>>>>>> 02a0378e942b8d33e8deeae7a8427e4a2b9f3814
     <div class="container projects_box">
         <div class="projects-1">
             <div class="projects-1__column">
@@ -157,7 +162,7 @@
                     @endforeach
                 </div>
             </div>
-
+@endif
 
         </div>
         <!-- <div class="projects-2 animate__animated " data-in="animate__lightSpeedInRight" data-out="animate__lightSpeedOutRight">  -->

@@ -143,11 +143,21 @@
                 <div class="logo"><img src="../img/logowhite.png"></div>
                 <nav class="menu">
                     <ul class="menu">
+<<<<<<< HEAD
                         <li class="menu__item"><a href="/#about">{{ __('content.aboutUs')  }}</a></li>
                         <li class="menu__item"><a href="/#infrast">{{ __('content.infrastructure')  }}</a></li>
                         <li class="menu__item"><a href="/#project">{{ __('content.projects')  }}</a></li>
                         <li class="menu__item"><a href="/#news">{{ __('content.news')  }}</a></li>
                         <li class="menu__item"><a href="/#partners">{{ __('content.partners')  }}</a></li>
+=======
+                        <li class="menu__item"><a href="/infrastructure">{{ __('content.aboutUs')  }}</a></li>
+                        <li class="menu__item"><a href="/infrastructure">{{ __('content.infrastructure')  }}</a></li>
+                        @if ($projects != null)
+                            <li class="menu__item"><a href="/project/1">{{ __('content.projects')  }}</a></li>
+                        @endif
+                        <li class="menu__item"><a href="/news">{{ __('content.news')  }}</a></li>
+                        <li class="menu__item"><a href="#partners">{{ __('content.partners')  }}</a></li>
+>>>>>>> 02a0378e942b8d33e8deeae7a8427e4a2b9f3814
                         <li class="menu__item"><a href="/vacancies">{{ __('content.vacancies')  }}</a></li>
                     </ul>
                 </nav>
