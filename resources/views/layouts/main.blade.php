@@ -154,13 +154,15 @@
                 <div class="btn-contact_us">
                     <a href="#?">{{ __('content.contactUs')  }}</a>
                 </div>
-                @foreach ($socials as $social)
-                <div class="social">
-                    <a href="{{ $social->link }}" target="_blank">
-                        <img src="/storage/{{ $social->icon }}">
-                    </a>
+                <div class="footer__social">
+                    @foreach ($socials as $social)
+                    <div class="social">
+                        <a href="{{ $social->link }}" target="_blank">
+                            <img src="/storage/{{ $social->icon }}">
+                        </a>
+                    </div>
+                    @endforeach
                 </div>
-                @endforeach
             </div>
             <div class="container2">
                 <p>© 2019-2021 Esentai tower</p>

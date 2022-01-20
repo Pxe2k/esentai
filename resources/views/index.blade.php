@@ -21,7 +21,7 @@
             </div>
         </div>
     </div>
-    <video autoplay loop muted  class="bgvideo" id="bgvideo">
+    <video autoplay loop muted playsinline class="bgvideo" id="bgvideo">
         <source src="img/almaty_sunset.mp4" type="video/mp4">
     </video>
 </div>
@@ -90,13 +90,13 @@
             <a class="infrast-btn infrast-btn-1 active" href="{{$infrastructures[0]->link}}" target="_blank">
                 <img src="img/arrau.png" alt="">
             </a>
-            <a class="infrast-btn infrast-btn-3" href="{{$infrastructures[2]->link}}" target="_blank">
+            <a class="infrast-btn infrast-btn-3" href="{{$infrastructures[5]->link}}" target="_blank">
                 <img src="img/arrau.png" alt="">
             </a>
-            <a class="infrast-btn infrast-btn-4" href="{{$infrastructures[3]->link}}" target="_blank">
+            <a class="infrast-btn infrast-btn-4" href="{{$infrastructures[7]->link}}" target="_blank">
                 <img src="img/arrau.png" alt="">
             </a>
-            <a class="infrast-btn infrast-btn-5" href="{{$infrastructures[5]->link}}" target="_blank">
+            <a class="infrast-btn infrast-btn-5" href="{{$infrastructures[4]->link}}" target="_blank">
                 <img src="img/arrau.png" alt="">
             </a>
         </div>

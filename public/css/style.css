@@ -1988,21 +1988,23 @@ footer {
     z-index: 10;
 }
 
-footer .container .social {
+.footer__social {
     display: none !important;
 }
 
-footer .container .social a img {
+.footer__social .social a img {
     width: 20px;
     object-fit: cover;
 }
 
-footer .container .social a:first-child {
+.footer__social .social:first-child {
+    margin-top: 0;
     margin-right: 20px;
 }
 
+
 @media(max-width: 780px) {
-    footer .container .social {
+    .footer__social {
         display: flex !important;
         justify-content: center;
         text-align: center;
