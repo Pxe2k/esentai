@@ -71,7 +71,7 @@
                             <li class="menu__item header-menu__item"><a href="/vacancies">{{ __('content.vacancies')  }}</a></li>
                         </ul>
                     </nav>
-                    <div class="btn-contact_us">
+                    <div class="btn-contact_us header-btn-contact_us">
                         <a href="#">{{ __('content.contactUs')  }}</a>
                     </div>
                     <div class="language">
@@ -153,6 +153,14 @@
                 </nav>
                 <div class="btn-contact_us">
                     <a href="#?">{{ __('content.contactUs')  }}</a>
+                </div>
+                <div class="footer-social">
+                    <a class="footer-soc" href="">
+                        <img src="img/in.png" alt="">
+                    </a>
+                    <a class="footer-soc" href="">
+                        <img src="img/insta.png" alt="">
+                    </a>
                 </div>
             </div>
             <div class="container2">

@@ -21,8 +21,8 @@
             </div>
         </div>
     </div>
-    <video autoplay loop muted class="bgvideo" id="bgvideo">
-        <source src="img/almaty_sunset.webm" type="video/mp4">
+    <video autoplay loop muted  class="bgvideo" id="bgvideo">
+        <source src="img/almaty_sunset.webm" type="video/webm">
     </video>
 </div>
 
