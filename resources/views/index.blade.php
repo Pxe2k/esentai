@@ -87,18 +87,11 @@
                     </p>
                 </div>
             </div>
-            <a class="infrast-btn infrast-btn-1 active" href="{{$infrastructures[0]->link}}" target="_blank">
-                <img src="img/arrau.png" alt="">
-            </a>
-            <a class="infrast-btn infrast-btn-3" href="{{$infrastructures[5]->link}}" target="_blank">
-                <img src="img/arrau.png" alt="">
-            </a>
-            <a class="infrast-btn infrast-btn-4" href="{{$infrastructures[7]->link}}" target="_blank">
-                <img src="img/arrau.png" alt="">
-            </a>
-            <a class="infrast-btn infrast-btn-5" href="{{$infrastructures[4]->link}}" target="_blank">
-                <img src="img/arrau.png" alt="">
-            </a>
+            @foreach ($infrastructures as $infrastructure)
+                <a class="infrast-btn infrast-btn-1 active" href="{{$infrastructure->link}}" target="_blank">
+                    <img src="img/arrau.png" alt="">
+                </a>
+            @endforeach
         </div>
     </div>
 

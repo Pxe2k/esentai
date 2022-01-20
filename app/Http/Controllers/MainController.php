@@ -93,11 +93,13 @@ class MainController extends Controller
         }
 
         $news = News::all()->translate(session('locale'));
+        $socials = Social::all();
         $contact = Contact::first()->translate(session('locale'));
 
         return view('news', compact(
             'news',
             'contact',
+            'socials',
             'locale'
 
         ));
