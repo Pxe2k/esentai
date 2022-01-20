@@ -22,7 +22,7 @@
         </div>
     </div>
     <video autoplay loop muted  class="bgvideo" id="bgvideo">
-        <source src="img/almaty_sunset.webm" type="video/webm">
+        <source src="img/almaty_sunset.mp4" type="video/mp4">
     </video>
 </div>
 
@@ -87,28 +87,28 @@
                     </p>
                 </div>
             </div>
-            <a class="infrast-btn infrast-btn-1 active" href=" {{$infrastructures[0]->link}}">
+            <a class="infrast-btn infrast-btn-1 active" href="{{$infrastructures[0]->link}}" target="_blank">
                 <img src="img/arrau.png" alt="">
             </a>
-            <a class="infrast-btn infrast-btn-3" href="{{$infrastructures[2]->link}}">
+            <a class="infrast-btn infrast-btn-3" href="{{$infrastructures[2]->link}}" target="_blank">
                 <img src="img/arrau.png" alt="">
             </a>
-            <a class="infrast-btn infrast-btn-4" href="{{$infrastructures[3]->link}}">
+            <a class="infrast-btn infrast-btn-4" href="{{$infrastructures[3]->link}}" target="_blank">
                 <img src="img/arrau.png" alt="">
             </a>
-            <a class="infrast-btn infrast-btn-5" href="{{$infrastructures[5]->link}}">
+            <a class="infrast-btn infrast-btn-5" href="{{$infrastructures[5]->link}}" target="_blank">
                 <img src="img/arrau.png" alt="">
             </a>
         </div>
     </div>
 
     <div class="container_pagi container_pagi-desktop">
-        <a class="button-slider button-slider-page1 active" href="javascript:void(false)"></a>
-        <a class="button-slider button-slider-page2" href="javascript:void(false)"></a>
-        <a class="button-slider button-slider-page3" href="javascript:void(false)"></a>
-        <a class="button-slider button-slider-page4" href="javascript:void(false)"></a>
-        <a class="button-slider button-slider-page5" href="javascript:void(false)"></a>
-        <a class="button-slider button-slider-page6" href="javascript:void(false)"></a>
+        <a class="button-slider button-slider-page1 active" href="javascript:void(false)" target="_blank"></a>
+        <a class="button-slider button-slider-page2" href="javascript:void(false)" target="_blank"></a>
+        <a class="button-slider button-slider-page3" href="javascript:void(false)" target="_blank"></a>
+        <a class="button-slider button-slider-page4" href="javascript:void(false)" target="_blank"></a>
+        <a class="button-slider button-slider-page5" href="javascript:void(false)" target="_blank"></a>
+        <a class="button-slider button-slider-page6" href="javascript:void(false)" target="_blank"></a>
     </div>
     <div class="container_pagi container_pagi-mobile">
         <button class="button-slider-second button-slider-page1 active"></button>

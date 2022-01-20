@@ -1988,21 +1988,21 @@ footer {
     z-index: 10;
 }
 
-.footer-social {
+footer .container .social {
     display: none !important;
 }
 
-.footer-social a img {
+footer .container .social a img {
     width: 20px;
     object-fit: cover;
 }
 
-.footer-social a:first-child {
+footer .container .social a:first-child {
     margin-right: 20px;
 }
 
 @media(max-width: 780px) {
-    .footer-social {
+    footer .container .social {
         display: flex !important;
         justify-content: center;
         text-align: center;
@@ -3778,6 +3778,10 @@ footer .container {
 }
 
 @media(max-width: 780px) {
+
+    .infr-title {
+        margin-top: -10%;
+    }
 
     .contact-us .contact-us__column .link3::before {
         top: 0;

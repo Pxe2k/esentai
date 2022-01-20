@@ -154,14 +154,13 @@
                 <div class="btn-contact_us">
                     <a href="#?">{{ __('content.contactUs')  }}</a>
                 </div>
-                <div class="footer-social">
-                    <a class="footer-soc" href="">
-                        <img src="img/in.png" alt="">
-                    </a>
-                    <a class="footer-soc" href="">
-                        <img src="img/insta.png" alt="">
+                @foreach ($socials as $social)
+                <div class="social">
+                    <a href="{{ $social->link }}" target="_blank">
+                        <img src="/storage/{{ $social->icon }}">
                     </a>
                 </div>
+                @endforeach
             </div>
             <div class="container2">
                 <p>© 2019-2021 Esentai tower</p>
@@ -212,8 +211,10 @@
                                 event.preventDefault();
                                 let id = parseInt(item.classList[1].split('-')[2].split('')[4])
                                 let current = commits.infrastructures.filter(item => {
-                                    return item.order == id
+                                    return item.order == id;
                                 })[0]
+                                console.log(current)
+                                console.log(id)
                                 if (current) {
                                     text.children[0].textContent = current.title
                                     text.children[1].textContent = current.text
@@ -225,6 +226,7 @@
                                         })
                                     }
                                 }
+
                             })
                         })
 
@@ -233,7 +235,7 @@
                                 event.preventDefault();
                                 let id = parseInt(item.classList[1].split('-')[2].split('')[4])
                                 let current = commits.infrastructures.filter(item => {
-                                    return item.order == id
+                                    return item.order == id;
                                 })[0]
                                 if (current) {
                                     text.children[0].textContent = current.title
@@ -416,11 +418,6 @@
                 $('a.button-slider-page6').addClass('active');
                 $('.infrast-btn').removeClass('active')
                 $('.infrast-btn-6').addClass('active')
-            });
-
-            $('.button-slider-page7').on('mouseover', function() {
-                $('a.button-slider').removeClass('active');
-                $('a.button-slider-page7').addClass('active');
             });
 
             const swiper = new Swiper('.swiper', {
