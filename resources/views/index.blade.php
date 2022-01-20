@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
 
-<div class="wrap animate__animated " data-in="animate__zoomIn" data-out="animate__zoomOut">
+<div class="wrap">
     <div class="soc">
         @foreach ($socials as $social)
         <div class="social">
@@ -21,6 +21,9 @@
             </div>
         </div>
     </div>
+    <video autoplay loop muted class="bgvideo" id="bgvideo" >
+        <source src="img/almaty_sunset.mp4" type="video/mp4">
+    </video>
 </div>
 
 
@@ -78,24 +81,24 @@
         <div class="slider" data-aos="fade-left">
             <div class="slider_src">
                 <div class="slider_src_text">
-<!--                <a class="text text-while text-bold  text-s25 button-slider" href=""></a> -->
+                    <!--                <a class="text text-while text-bold  text-s25 button-slider" href=""></a> -->
                     <h3 class="text text-while text-bold  text-s25"></h3>
                     <p class="text text-while text-s15">
                     </p>
                 </div>
             </div>
-                    <a class="infrast-btn infrast-btn-1 active" href=" {{$infrastructures[0]->link}}">
-                        <img src="img/arrau.png" alt="">
-                    </a>
-                    <a class="infrast-btn infrast-btn-3" href="{{$infrastructures[2]->link}}">
-                        <img src="img/arrau.png" alt="">
-                    </a>
-                    <a class="infrast-btn infrast-btn-4" href="{{$infrastructures[3]->link}}">
-                        <img src="img/arrau.png" alt="">
-                    </a>
-                    <a class="infrast-btn infrast-btn-5" href="{{$infrastructures[5]->link}}">
-                        <img src="img/arrau.png" alt="">
-                    </a>
+            <a class="infrast-btn infrast-btn-1 active" href=" {{$infrastructures[0]->link}}">
+                <img src="img/arrau.png" alt="">
+            </a>
+            <a class="infrast-btn infrast-btn-3" href="{{$infrastructures[2]->link}}">
+                <img src="img/arrau.png" alt="">
+            </a>
+            <a class="infrast-btn infrast-btn-4" href="{{$infrastructures[3]->link}}">
+                <img src="img/arrau.png" alt="">
+            </a>
+            <a class="infrast-btn infrast-btn-5" href="{{$infrastructures[5]->link}}">
+                <img src="img/arrau.png" alt="">
+            </a>
 
         </div>
     </div>
@@ -118,94 +121,97 @@
     </div>
 </div>
 
-<<<<<<< HEAD
-<div class="projects" id="projects">
-=======
-@if ($projects != null)
-<div class="projects">
->>>>>>> 02a0378e942b8d33e8deeae7a8427e4a2b9f3814
-    <div class="container projects_box">
-        <div class="projects-1">
-            <div class="projects-1__column">
-                <div class="project-1-title" data-aos="fade-right">
-                    <a href="/project/1"><h3 class="text text-s34">{{ __('content.projects')  }}</h3></a>
-                </div>
-                <div class="swiper">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        @foreach ($projects as $project)
-
-                        <div class="project-1-p swiper-slide" data-aos="fade-right">
-                            <div class="swiper-text">
-                                <h4 class="text text-s25">{{ $project->title }}</h4>
-                                {!! $project->text !!}
-                                <br><a class="project-read" href="/project/{{ $project->id }}">{{ __('content.readMore')  }} ></a>
-                            </div>
-                            <div class="slider_project_1">
-                                <img class="slider-1-img" src="/storage/{{ $project->image }}">
-                            </div>
-                        </div>
-                        @endforeach
-
+<<<<<<< HEAD <div class="projects" id="projects">
+    =======
+    @if ($projects != null)
+    <div class="projects">
+        >>>>>>> 02a0378e942b8d33e8deeae7a8427e4a2b9f3814
+        <div class="container projects_box">
+            <div class="projects-1">
+                <div class="projects-1__column">
+                    <div class="project-1-title" data-aos="fade-right">
+                        <a href="/project/1">
+                            <h3 class="text text-s34">{{ __('content.projects')  }}</h3>
+                        </a>
                     </div>
-                    <div class="swiper-button-prev button-prev"></div>
-                    <div class="swiper-button-next button-next"></div>
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            @foreach ($projects as $project)
+
+                            <div class="project-1-p swiper-slide" data-aos="fade-right">
+                                <div class="swiper-text">
+                                    <h4 class="text text-s25">{{ $project->title }}</h4>
+                                    {!! $project->text !!}
+                                    <br><a class="project-read" href="/project/{{ $project->id }}">{{ __('content.readMore')  }} ></a>
+                                </div>
+                                <div class="slider_project_1">
+                                    <img class="slider-1-img" src="/storage/{{ $project->image }}">
+                                </div>
+                            </div>
+                            @endforeach
+
+                        </div>
+                        <div class="swiper-button-prev button-prev"></div>
+                        <div class="swiper-button-next button-next"></div>
+                    </div>
                 </div>
+                <div class="projects-1__column">
+                    <div class="project-1-title" data-aos="fade-right">
+                        <a href="/news">
+                            <h3 class="press-project text text-s34">{{ __('content.press')  }}</h3>
+                        </a>
+                    </div>
+                    <div class="project-1-img" data-aos="fade-right">
+                        @foreach ($presses as $press)
+                        <img src="/storage/{{ $press->image }}">
+                        @endforeach
+                    </div>
+                </div>
+                @endif
+
             </div>
-            <div class="projects-1__column">
-                <div class="project-1-title" data-aos="fade-right">
-                   <a href="/news"><h3 class="press-project text text-s34">{{ __('content.press')  }}</h3></a>
-                </div>
-                <div class="project-1-img" data-aos="fade-right">
-                    @foreach ($presses as $press)
-                    <img src="/storage/{{ $press->image }}">
+            <!-- <div class="projects-2 animate__animated " data-in="animate__lightSpeedInRight" data-out="animate__lightSpeedOutRight">  -->
+
+
+            <!-- </div>  -->
+        </div>
+    </div>
+    <div class="slider-page">
+        <div class="container">
+            <div class="swiper" id="news">
+                <div class="swiper-wrapper swiper-wrapper-bottom">
+                    @foreach ($news as $news)
+                    <div class="project-1-p swiper-slide swiper-slide-second" style="flex-direction: column;padding: 0 5rem;" data-aos="fade-right">
+                        <div class="slider-content__title">{!! $news->title !!}</div>
+                        <div class="slider-content__data">
+                            <p>{{ $news->author }}</p>
+                        </div>
+                        <div class="slider-content__paragraf">
+                            <p>
+                                {{ $news->text }}
+                            </p>
+                            <br>
+                            <a href="/news" style="color:white">{{ __('content.readMore')  }}</a>
+                        </div>
+                    </div>
                     @endforeach
                 </div>
+                <div class="swiper-button-next swiper-slide-next"></div>
+                <div class="swiper-button-prev swiper-slide-prev"></div>
             </div>
-@endif
-
         </div>
-        <!-- <div class="projects-2 animate__animated " data-in="animate__lightSpeedInRight" data-out="animate__lightSpeedOutRight">  -->
-
-
-        <!-- </div>  -->
     </div>
-</div>
-<div class="slider-page">
-    <div class="container">
-        <div class="swiper"  id="news">
-            <div class="swiper-wrapper swiper-wrapper-bottom">
-                @foreach ($news as $news)
-                <div class="project-1-p swiper-slide swiper-slide-second" style="flex-direction: column;padding: 0 5rem;" data-aos="fade-right">
-                    <div class="slider-content__title">{!! $news->title !!}</div>
-                    <div class="slider-content__data">
-                        <p>{{ $news->author }}</p>
-                    </div>
-                    <div class="slider-content__paragraf">
-                        <p>
-                            {{ $news->text }}
-                        </p>
-                        <br>
-                        <a href="/news" style="color:white">{{ __('content.readMore')  }}</a>
-                    </div>
-                </div>
+    <div class="partners" id="partners">
+        <div class="container">
+            <div class="partners-title" data-aos="fade-right">
+                <h4 class="press-project text text-s34">{{ __('content.partners')  }}</h4>
+            </div>
+            <div class="partner-img" data-aos="fade-right">
+                @foreach ($partners as $partner)
+                <img src="/storage/{{ $partner->image }}">
                 @endforeach
             </div>
-            <div class="swiper-button-next swiper-slide-next"></div>
-            <div class="swiper-button-prev swiper-slide-prev"></div>
         </div>
     </div>
-</div>
-<div class="partners" id="partners">
-    <div class="container">
-        <div class="partners-title" data-aos="fade-right">
-            <h4 class="press-project text text-s34">{{ __('content.partners')  }}</h4>
-        </div>
-        <div class="partner-img" data-aos="fade-right">
-            @foreach ($partners as $partner)
-            <img src="/storage/{{ $partner->image }}">
-            @endforeach
-        </div>
-    </div>
-</div>
-@endsection
+    @endsection

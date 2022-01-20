@@ -613,7 +613,6 @@ header .btn-contact_us a:hover:after {
 .wrap {
     width: 100%;
     height: 56.2222rem;
-    background-image: url(/img/wrapback.png);
     background-repeat: no-repeat;
     padding-top: 52%;
     position: relative;
@@ -628,6 +627,17 @@ header .btn-contact_us a:hover:after {
     animation-name: zoomBackIn;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
+}
+
+.bgvideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: -10%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -9999;
 }
 
 .wrap::after {
@@ -666,6 +676,10 @@ header .btn-contact_us a:hover:after {
 @media screen and (max-width: 780px) {
     .wrap .soc {
         display: none;
+    }
+
+    .bgvideo {
+        transform: scale(2);
     }
 }
 
