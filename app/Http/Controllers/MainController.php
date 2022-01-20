@@ -33,7 +33,7 @@ class MainController extends Controller
         if (session()->has('locale')) {
             $locale = session('locale');
             App::setLocale($locale);
-        } else {            
+        } else {
         $locale = session(['locale' => 'ru']);
             App::setLocale('ru');
         }
@@ -49,7 +49,7 @@ class MainController extends Controller
         $socials = Social::all();
 
         return view('index', compact(
-            'abouts', 
+            'abouts',
             'advantages',
             'infrastructures',
             'projects',
@@ -67,11 +67,11 @@ class MainController extends Controller
         if (session()->has('locale')) {
             $locale = session('locale');
             App::setLocale($locale);
-        } else {            
+        } else {
         $locale = session(['locale' => 'ru']);
             App::setLocale('ru');
         }
-        
+
         $infrastructureDetail = InfrastructureDetail::first()->translate(session('locale'));
         $contact = Contact::first()->translate(session('locale'));
 
@@ -83,18 +83,18 @@ class MainController extends Controller
     }
 
     public function news()
-    {       
+    {
         if (session()->has('locale')) {
             $locale = session('locale');
             App::setLocale($locale);
-        } else {            
+        } else {
             $locale = session(['locale' => 'ru']);
             App::setLocale('ru');
         }
 
         $news = News::all()->translate(session('locale'));
         $contact = Contact::first()->translate(session('locale'));
-        
+
         return view('news', compact(
             'news',
             'contact',
@@ -108,7 +108,7 @@ class MainController extends Controller
         if (session()->has('locale')) {
             $locale = session('locale');
             App::setLocale($locale);
-        } else {            
+        } else {
             $locale = session(['locale' => 'ru']);
             App::setLocale('ru');
         }
@@ -130,7 +130,7 @@ class MainController extends Controller
         if (session()->has('locale')) {
             $locale = session('locale');
             App::setLocale($locale);
-        } else {            
+        } else {
             $locale = session(['locale' => 'ru']);
             App::setLocale('ru');
         }
@@ -140,7 +140,7 @@ class MainController extends Controller
         $photos = ProjectPhoto::where('project_id', $id)->get()->translate(session('locale'));
         $contact = Contact::first()->translate(session('locale'));
 
-        return view('projects', compact( 
+        return view('projects', compact(
             'project',
             'detail',
             'photos',
@@ -154,7 +154,7 @@ class MainController extends Controller
         if (session()->has('locale')) {
             $locale = session('locale');
             App::setLocale($locale);
-        } else {            
+        } else {
             $locale = session(['locale' => 'ru']);
             App::setLocale('ru');
         }

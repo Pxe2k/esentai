@@ -62,7 +62,6 @@ a:active {
 .modal-contact p input,
 .modal-contact p textarea {
     margin-top: 1rem;
-    border-radius: 10px;
     padding: 0.2rem;
     background: #e7e7e7;
 }
@@ -244,7 +243,7 @@ header {
 
 header.active {
     box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.3);
-    max-height: 5.0556rem;
+    max-height: 4rem;
 }
 
 header.active .language__body {
@@ -269,6 +268,11 @@ header .logo a:first-child img {
 header .logo a:last-child img {
     width: 133px;
     height: 40px;
+}
+
+header.active .logo a:last-child img {
+    width: 110px;
+    height: 35px;
 }
 
 @media(max-width: 1080px) {
@@ -323,7 +327,7 @@ header .menu li {
 
 header .menu a {
     color: #131831;
-    font-size: 0.7889rem;
+    font-size: 0.7rem;
     position: relative;
 }
 
@@ -531,6 +535,12 @@ header .btn-contact_us a:hover:after {
     top: -2px;
 }
 
+@media(max-width: 1100px) {
+    .language__header > img {
+        top: 0;
+    }
+}
+
 .menu__item a {
     white-space: nowrap;
 }
@@ -603,7 +613,6 @@ header .btn-contact_us a:hover:after {
 .wrap {
     width: 100%;
     height: 56.2222rem;
-    background-image: url(/img/wrapback.png);
     background-repeat: no-repeat;
     padding-top: 52%;
     position: relative;
@@ -618,6 +627,17 @@ header .btn-contact_us a:hover:after {
     animation-name: zoomBackIn;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
+}
+
+.bgvideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: -10%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -9999;
 }
 
 .wrap::after {
@@ -656,6 +676,10 @@ header .btn-contact_us a:hover:after {
 @media screen and (max-width: 780px) {
     .wrap .soc {
         display: none;
+    }
+
+    .bgvideo {
+        transform: scale(2);
     }
 }
 
@@ -730,6 +754,18 @@ header .btn-contact_us a:hover:after {
     z-index: 1001;
     position: relative;
     background: url(/img/Esentai.png) bottom repeat-x;
+}
+
+#about {
+    padding-top: 100px;
+    margin-top: -180px;
+}
+
+@media(max-width: 500px) {
+    #about {
+        padding-top: 65px;
+        margin-top: -130px;
+    }
 }
 
 .about .container {
@@ -949,7 +985,8 @@ header .btn-contact_us a:hover:after {
     /* 7 */
     padding-top: 69px;
     /* 9 */
-    padding-top: 3.83333333rem;
+    padding-top: 5.83333333rem;
+    margin-top: 3rem;
     /* 9 */
 }
 
@@ -1154,6 +1191,36 @@ header .btn-contact_us a:hover:after {
     cursor: pointer;
 }
 
+.infrast-btn {
+    display: none;
+    background-color: #23293F;
+    padding: 20px 25px 16px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+@media(max-width: 500px) {
+    .infrast-btn {
+        padding: 1rem 1.2rem 0.9rem;
+    }
+}
+
+.infrast-btn.active {
+    display: inline-block;
+}
+
+.infrast-btn img {
+    height: 10.7px;
+    width: 7px;
+
+}
+
+.button-slider-infrast::before,
+.button-slider-infrast::after {
+    display: none;
+}
+
 /*
 button.button-slider::after {
     display: none;
@@ -1201,7 +1268,7 @@ button.button-slider::after {
     opacity: 1;
 }
 
-.button-slider.active:after {
+.button-slider.active:after{
     visibility: visible;
     opacity: 1;
 }
@@ -1463,6 +1530,8 @@ button.button-slider::after {
     -ms-flex-pack: center;
     justify-content: center;
     padding-bottom: 3rem;
+    padding-top: 4rem;
+    margin-top: -4rem;
 }
 
 .projects .container {
@@ -1509,6 +1578,15 @@ button.button-slider::after {
     justify-content: center;
     width: 30%;
 }
+
+.swiper-text a {
+    color: #000 !important;
+}
+
+.swiper-text h4 {
+    font-size: 1.2rem !important;
+}
+
 
 .slider_project_1 {
     width: 50%;
@@ -1837,9 +1915,13 @@ button.button-slider::after {
 
 .contact-us .contact-us__column .link1::before {
     background-image: url(../img/contact-phone.svg);
+/*
     width: 14px;
     height: 15px;
-    left: 5px;
+*/
+    width: 1.2rem;
+    height: 1.2rem;
+    left: 0;
 }
 
 .contact-us .contact-us__column .link1 {
@@ -1852,8 +1934,12 @@ button.button-slider::after {
 
 .contact-us .contact-us__column .link2::before {
     background-image: url(../img/contact-sms.svg);
+/*
     width: 19px;
     height: 14px;
+*/
+    width: 1.5rem;
+    height: 1.1rem;
     top: 2px;
 }
 
@@ -1866,13 +1952,15 @@ button.button-slider::after {
 
 .contact-us .contact-us__column .link3::before {
     background-image: url(../img/contact-location.svg);
-    width: 12px;
+/*    width: 12px;*/
     left: 5px;
-    height: 16px;
+/*    height: 16px;*/
+    width: 1rem;
+    height: 1.4rem;
 }
 
 .contact-us .contact-us__column .link3 {
-    line-height: 1.3rem;
+    line-height: 1.5rem;
     padding-left: 2rem;
     margin-bottom: 2.444rem;
     margin-left: 1.111rem;
@@ -1898,6 +1986,15 @@ footer {
     padding-top: 1.2222rem;
     bottom: 0;
     z-index: 10;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__social a:first-child {
+    margin-right: 20px;
 }
 
 footer .logo {
@@ -2195,7 +2292,7 @@ footer .container {
 }
 
 .contain2 .contain2-column .contain2-column-title {
-    width: 33.2111rem;
+    width: 33.1rem;
     height: 20.5556rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2317,6 +2414,11 @@ footer .container {
     background-color: rgba(0, 0, 0, 0.2);
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
+}
+
+#news {
+    padding-top: 5rem;
+    margin-top: -5rem;
 }
 
 .newspage {
@@ -3540,6 +3642,36 @@ footer .container {
     padding: 0;
     cursor: pointer;
     z-index: 100;
+
+}
+
+@keyframes rotate360 {
+    0% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.burger-box {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 20;
+    height: 100vh;
+    display: none;
+}
+
+.burger-box.active {
+    display: block;
+}
+
+.burger.burger--active {
+    animation: rotate360 1s;
 }
 
 .burger.burger--active .burger-line {
@@ -3578,6 +3710,8 @@ footer .container {
     margin-left: auto;
 }
 
+
+
 .burger-line {
     background-color: #647688;
     width: 50px;
@@ -3610,23 +3744,36 @@ footer .container {
     }
 
     .contact-us .contact-us__column .link2::before {
-        width: 15px;
-        height: 12px;
+        width: 1.6rem;
+        height: 1.2rem;
         top: 1px;
     }
 
+/*
     .contact-us .contact-us__column .link1::before {
         left: 0;
         width: 16px;
         height: 12px;
     }
+*/
 
     .contact-us .contact-us__column .link3::before {
         left: 0;
+        width: 1.2rem;
+        height: 1.5rem;
     }
 }
 
 @media(max-width: 780px) {
+
+    .contact-us .contact-us__column .link3::before {
+        top: 0;
+    }
+
+    .contact-us .contact-us__column .link3 {
+        font-size: 1.3rem;
+        line-height: 1.4rem;
+    }
 
     .container_pagi-mobile {
         display: flex;
@@ -3689,7 +3836,7 @@ footer .container {
 
     .button-next,
     .button-prev {
-        top: 30px;
+        top: 90%;
     }
 
     .contact-us__column {
@@ -3740,6 +3887,7 @@ footer .container {
         left: 100%;
     }
 
+
     header .deskTop > div {
         flex-direction: column;
         align-items: center;
@@ -3750,6 +3898,7 @@ footer .container {
         line-height: 28px;
     }
 
+    /*
     .deskTop {
         position: absolute;
         display: block;
@@ -3760,6 +3909,78 @@ footer .container {
         bottom: 0;
         min-height: 100vh;
         overflow-y: scroll;
+    }
+*/
+
+    .deskTop {
+        position: absolute;
+        display: block;
+        background-color: #fff;
+        padding: 150px 20px 100px;
+        top: 0;
+        transition: border-radius 475ms ease-out;
+        width: 50px;
+        right: -150%;
+        bottom: 0;
+        transition: width 475ms ease-out, border-radius 475ms .1s ease, min-height 500ms .1s ease;
+        min-height: 50vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        border-bottom-left-radius: 50%;
+        z-index: 25;
+    }
+
+    .deskTop.active {
+        width: 50%;
+        right: 0% !important;
+        border-bottom-left-radius: 0;
+        min-height: 100vh;
+    }
+
+    .deskTop.active .header-menu__item,
+    .deskTop.active .btn-contact_us,
+    .deskTop.active .language {
+        transform: translatex(0);
+
+    }
+
+    .header-menu__item,
+    .btn-contact_us,
+    .language {
+        transform: translatex(-100vw);
+
+    }
+
+    .header-menu__item:nth-child(1) {
+        transition: transform 1s 0.09s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+    }
+
+    .header-menu__item:nth-child(2) {
+        transition: transform 1s 0.1s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+    }
+
+    .header-menu__item:nth-child(3) {
+        transition: transform 1s 0.12s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+    }
+
+    .header-menu__item:nth-child(4) {
+        transition: transform 1s 0.15s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+    }
+
+    .header-menu__item:nth-child(5) {
+        transition: transform 1s 0.2s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+    }
+
+    .header-menu__item:nth-child(6) {
+        transition: transform 1s 0.3s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+    }
+
+    header .btn-contact_us {
+        transition: transform 1s 0.35s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+    }
+
+    .language {
+        transition: transform 1s 0.4s cubic-bezier(0.29, 1.4, 0.44, 0.96);
     }
 
     header .menu {
@@ -3812,10 +4033,6 @@ footer .container {
 
     .deskTop .logo {
         display: none;
-    }
-
-    .deskTop.active {
-        left: 0% !important;
     }
 
     a.button-slider {
@@ -3909,6 +4126,10 @@ footer .container {
     header .logo a:last-child img {
         width: 100px;
     }
+
+    .deskTop.active {
+        width: 60%;
+    }
 }
 
 
@@ -3925,6 +4146,20 @@ footer .container {
         right: auto;
         left: 100%;
     }
+
+    header .menu a {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .menu__item {
+        margin-bottom: 10px;
+    }
+
+    header .btn-contact_us a {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
 }
 
 @media(max-width: 450px) {
@@ -3938,10 +4173,12 @@ footer .container {
         height: 13px;
     }
 
+/*
     .contact-us .contact-us__column .link2::before {
         width: 15px;
         height: 10px;
     }
+*/
 }
 
 @media(max-width: 400px) {

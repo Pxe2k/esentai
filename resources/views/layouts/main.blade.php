@@ -63,12 +63,12 @@
                     </div>
                     <nav>
                         <ul class="menu">
-                            <li class="menu__item"><a href="/infrastructure">{{ __('content.aboutUs')  }}</a></li>
-                            <li class="menu__item"><a href="/infrastructure">{{ __('content.infrastructure')  }}</a></li>
-                            <li class="menu__item"><a href="/project/1">{{ __('content.projects')  }}</a></li>
-                            <li class="menu__item"><a href="/news">{{ __('content.news')  }}</a></li>
-                            <li class="menu__item"><a href="/#partners">{{ __('content.partners')  }}</a></li>
-                            <li class="menu__item"><a href="/vacancies">{{ __('content.vacancies')  }}</a></li>
+                            <li class="menu__item header-menu__item"><a href="/#about">{{ __('content.aboutUs')  }}</a></li>
+                            <li class="menu__item header-menu__item"><a href="/#infrast">{{ __('content.infrastructure')  }}</a></li>
+                            <li class="menu__item header-menu__item"><a href="/#projects">{{ __('content.projects')  }}</a></li>
+                            <li class="menu__item header-menu__item"><a href="/#news">{{ __('content.news')  }}</a></li>
+                            <li class="menu__item header-menu__item"><a href="/#partners">{{ __('content.partners')  }}</a></li>
+                            <li class="menu__item header-menu__item"><a href="/vacancies">{{ __('content.vacancies')  }}</a></li>
                         </ul>
                     </nav>
                     <div class="btn-contact_us">
@@ -118,6 +118,7 @@
                     <button class="burger">
                         <span class="burger-line"></span>
                     </button>
+                    <div class="burger-box"></div>
                 </div>
             </div>
         </header>
@@ -142,11 +143,11 @@
                 <div class="logo"><img src="../img/logowhite.png"></div>
                 <nav class="menu">
                     <ul class="menu">
-                        <li class="menu__item"><a href="/infrastructure">{{ __('content.aboutUs')  }}</a></li>
-                        <li class="menu__item"><a href="/infrastructure">{{ __('content.infrastructure')  }}</a></li>
-                        <li class="menu__item"><a href="/project/1">{{ __('content.projects')  }}</a></li>
-                        <li class="menu__item"><a href="/news">{{ __('content.news')  }}</a></li>
-                        <li class="menu__item"><a href="#partners">{{ __('content.partners')  }}</a></li>
+                        <li class="menu__item"><a href="/#about">{{ __('content.aboutUs')  }}</a></li>
+                        <li class="menu__item"><a href="/#infrast">{{ __('content.infrastructure')  }}</a></li>
+                        <li class="menu__item"><a href="/#project">{{ __('content.projects')  }}</a></li>
+                        <li class="menu__item"><a href="/#news">{{ __('content.news')  }}</a></li>
+                        <li class="menu__item"><a href="/#partners">{{ __('content.partners')  }}</a></li>
                         <li class="menu__item"><a href="/vacancies">{{ __('content.vacancies')  }}</a></li>
                     </ul>
                 </nav>
@@ -174,6 +175,7 @@
             let formBg = document.querySelector('.modal-contact-bg')
             let form = document.querySelector('.modal-contact')
             let langChange = 'ru'
+            //            let infrastBtn = '<a class="infrast-btn" href=""><img src="img/arrau.png" alt=""></a>';
             let image = document.querySelector('.slider_src')
             let text = document.querySelector('.slider_src_text')
             let firstImage = ''
@@ -211,11 +213,13 @@
                                     if (current.link) {
                                         item.addEventListener('click', () => {
                                             window.location.replace(current.link)
+                                            //                                            $('.infrast-btn').href = current.link;
                                         })
                                     }
                                 }
                             })
                         })
+
                         btnsSecond.forEach(item => {
                             item.addEventListener('mouseover', () => {
                                 event.preventDefault();
@@ -265,16 +269,28 @@
             });
 
             $('.burger').on('click', function() {
+                event.stopPropagation();
                 $(this).toggleClass('burger--active');
                 $('.deskTop').toggleClass('active');
+                $('.burger-box').toggleClass('active')
                 $('body').toggleClass('no-scroll')
             });
 
             $('.menu__item').on('click', function() {
+                event.stopPropagation();
+                $('.burger').removeClass('burger--active');
+                $('.deskTop').removeClass('active');
+                $('.burger-box').removeClass('active');
+                $('body').removeClass('no-scroll')
+            });
+
+            $('.burger-box').on('click', function() {
+                $(this).removeClass('active')
                 $('.burger').removeClass('burger--active');
                 $('.deskTop').removeClass('active');
                 $('body').removeClass('no-scroll')
             });
+
 
             $(btn).on('click', function() {
                 event.preventDefault();
@@ -352,44 +368,56 @@
                 })
             })
 
-            $('button.button-slider-page1').on('mouseover', function() {
+            $('.button-slider-page1').on('mouseover', function() {
                 $('a.button-slider').removeClass('active');
                 $('a.button-slider-page1').addClass('active');
+                $('.infrast-btn').removeClass('active')
+                $('.infrast-btn-1').addClass('active')
             });
 
-            $('button.button-slider-page2').on('mouseover', function() {
+            $('.button-slider-page2').on('mouseover', function() {
                 $('a.button-slider').removeClass('active');
                 $('a.button-slider-page2').addClass('active');
+                $('.infrast-btn').removeClass('active')
+                $('.infrast-btn-2').addClass('active')
             });
 
-            $('button.button-slider-page3').on('mouseover', function() {
+            $('.button-slider-page3').on('mouseover', function() {
                 $('a.button-slider').removeClass('active');
                 $('a.button-slider-page3').addClass('active');
+                $('.infrast-btn').removeClass('active')
+                $('.infrast-btn-3').addClass('active')
             });
 
-            $('button.button-slider-page4').on('mouseover', function() {
+            $('.button-slider-page4').on('mouseover', function() {
                 $('a.button-slider').removeClass('active');
                 $('a.button-slider-page4').addClass('active');
+                $('.infrast-btn').removeClass('active')
+                $('.infrast-btn-4').addClass('active')
             });
 
-            $('button.button-slider-page5').on('mouseover', function() {
+            $('.button-slider-page5').on('mouseover', function() {
                 $('a.button-slider').removeClass('active');
                 $('a.button-slider-page5').addClass('active');
+                $('.infrast-btn').removeClass('active')
+                $('.infrast-btn-5').addClass('active')
             });
 
-            $('button.button-slider-page6').on('mouseover', function() {
+            $('.button-slider-page6').on('mouseover', function() {
                 $('a.button-slider').removeClass('active');
                 $('a.button-slider-page6').addClass('active');
+                $('.infrast-btn').removeClass('active')
+                $('.infrast-btn-6').addClass('active')
             });
 
-            $('button.button-slider-page7').on('mouseover', function() {
+            $('.button-slider-page7').on('mouseover', function() {
                 $('a.button-slider').removeClass('active');
                 $('a.button-slider-page7').addClass('active');
             });
 
             const swiper = new Swiper('.swiper', {
                 // Optional parameters
-                loop: true,
+                loop: false,
                 // If we need pagination
                 pagination: {
                     el: '.swiper-pagination',

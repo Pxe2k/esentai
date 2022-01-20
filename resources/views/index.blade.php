@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
 
-<div class="wrap animate__animated " data-in="animate__zoomIn" data-out="animate__zoomOut">
+<div class="wrap">
     <div class="soc">
         @foreach ($socials as $social)
         <div class="social">
@@ -21,18 +21,21 @@
             </div>
         </div>
     </div>
+    <video autoplay loop muted class="bgvideo" id="bgvideo">
+        <source src="img/almaty_sunset.webm" type="video/mp4">
+    </video>
 </div>
 
 
-<div class="about">
+<div class="about" id="about">
     <div class="container">
         <div>
-            <div class="about-title text text-s34 animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__zoomOut">
+            <div class="about-title text text-s34" data-aos="fade-right">
                 <a style="color: black" href="/infrastructure">{{ __('content.about')  }}</a>
             </div>
             <div class="about-top">
                 @foreach ($abouts as $about)
-                <div class="about-top__column animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
+                <div class="about-top__column" data-aos="zoom-in">
                     <img src="/storage/{{ $about->icon }}">
                     <h4 class="text text-s15">{{ $about->title }}</h4>
                     <p class="text text-s15">
@@ -42,13 +45,13 @@
                 @endforeach
             </div>
         </div>
-        <div class="about-bottom__title animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
+        <div class="about-bottom__title" data-aos="fade-right">
             <h2 class="text text-s99">ESENTAI </h2>
             <h3 class="text text-s42">TOWERS</h3>
         </div>
         <div class="about-bottom">
             @foreach ($advantages as $advantage)
-            <div class="about-bottom__column animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
+            <div class="about-bottom__column" data-aos="fade-right">
                 <div class="about-btm__title">
                     <img src="/storage/{{ $advantage->icon }}">
                     <h5 class="text text-s34">
@@ -63,27 +66,39 @@
             </div>
             @endforeach
         </div>
-        <div class="about-img animate__animated " data-in="animate__lightSpeedInRight" data-out="animate__lightSpeedOutRight">
+        <div class="about-img" data-aos="fade-left">
             <img src="../img/icons/about/about.png">
         </div>
     </div>
 </div>
 
 
-<div class="infrast">
+<div class="infrast" id="infrast">
     <div class="container">
-        <div class="infr-title animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
+        <a class="infr-title" data-aos="fade-right">
             {{ __('content.infrastructure')  }}
-        </div>
-        <div class="slider animate__animated " data-in="animate__lightSpeedInRight" data-out="animate__lightSpeedOutRight">
+        </a>
+        <div class="slider" data-aos="fade-left">
             <div class="slider_src">
                 <div class="slider_src_text">
-<!--                <a class="text text-while text-bold  text-s25 button-slider" href=""></a> -->
+                    <!--                <a class="text text-while text-bold  text-s25 button-slider" href=""></a> -->
                     <h3 class="text text-while text-bold  text-s25"></h3>
                     <p class="text text-while text-s15">
                     </p>
                 </div>
             </div>
+            <a class="infrast-btn infrast-btn-1 active" href=" {{$infrastructures[0]->link}}">
+                <img src="img/arrau.png" alt="">
+            </a>
+            <a class="infrast-btn infrast-btn-3" href="{{$infrastructures[2]->link}}">
+                <img src="img/arrau.png" alt="">
+            </a>
+            <a class="infrast-btn infrast-btn-4" href="{{$infrastructures[3]->link}}">
+                <img src="img/arrau.png" alt="">
+            </a>
+            <a class="infrast-btn infrast-btn-5" href="{{$infrastructures[5]->link}}">
+                <img src="img/arrau.png" alt="">
+            </a>
         </div>
     </div>
 
@@ -105,22 +120,25 @@
     </div>
 </div>
 
-<div class="projects">
+
+<div class="projects" id="projects">
     <div class="container projects_box">
         <div class="projects-1">
             <div class="projects-1__column">
-                <div class="project-1-title animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
-                    <a href="/project/1"><h3 class="text text-s34">{{ __('content.projects')  }}</h3></a>
+                <div class="project-1-title" data-aos="fade-right">
+                    <a href="/project/1">
+                        <h3 class="text text-s34">{{ __('content.projects')  }}</h3>
+                    </a>
                 </div>
                 <div class="swiper">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         @foreach ($projects as $project)
-                        <div class="project-1-p animate__animated swiper-slide" data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
+                        <div class="project-1-p swiper-slide" data-aos="fade-right">
                             <div class="swiper-text">
                                 <h4 class="text text-s25">{{ $project->title }}</h4>
                                 {!! $project->text !!}
-                                <br><a href="/project/{{ $project->id }}">{{ __('content.readMore')  }}</a>
+                                <br><a href="/project/{{ $project->id }}">{{ __('content.readMore')  }} ></a>
                             </div>
                             <div class="slider_project_1">
                                 <img class="slider-1-img" src="/storage/{{ $project->image }}">
@@ -134,10 +152,12 @@
                 </div>
             </div>
             <div class="projects-1__column">
-                <div class="project-1-title animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
-                   <a href="/news"><h3 class="press-project text text-s34">{{ __('content.press')  }}</h3></a> 
+                <div class="project-1-title" data-aos="fade-right">
+                    <a href="/news">
+                        <h3 class="press-project text text-s34">{{ __('content.press')  }}</h3>
+                    </a>
                 </div>
-                <div class="project-1-img animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
+                <div class="project-1-img" data-aos="fade-right">
                     @foreach ($presses as $press)
                     <img src="/storage/{{ $press->image }}">
                     @endforeach
@@ -154,10 +174,10 @@
 </div>
 <div class="slider-page">
     <div class="container">
-        <div class="swiper">
+        <div class="swiper" id="news">
             <div class="swiper-wrapper swiper-wrapper-bottom">
                 @foreach ($news as $news)
-                <div class="project-1-p animate__animated swiper-slide swiper-slide-second" style="flex-direction: column;padding: 0 5rem;" data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
+                <div class="project-1-p swiper-slide swiper-slide-second" style="flex-direction: column;padding: 0 5rem;" data-aos="fade-right">
                     <div class="slider-content__title">{!! $news->title !!}</div>
                     <div class="slider-content__data">
                         <p>{{ $news->author }}</p>
@@ -179,10 +199,10 @@
 </div>
 <div class="partners" id="partners">
     <div class="container">
-        <div class="partners-title animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
+        <div class="partners-title" data-aos="fade-right">
             <h4 class="press-project text text-s34">{{ __('content.partners')  }}</h4>
         </div>
-        <div class="partner-img animate__animated " data-in="animate__lightSpeedInLeft" data-out="animate__lightSpeedOutLeft">
+        <div class="partner-img" data-aos="fade-right">
             @foreach ($partners as $partner)
             <img src="/storage/{{ $partner->image }}">
             @endforeach
