@@ -12,7 +12,7 @@
 
         // Buttons
 
-        'contactUs' => 'БІЗ ХАБАРЛАУ ҮШІН',
+        'contactUs' => 'БІЗГЕ ХАБАРЛАСЫҢЫЗ',
         'readMore' => 'АРЫ ҚАРАЙ ОҚУ',
         'send' => 'Жіберу',
 
@@ -23,7 +23,7 @@
 
         // News
 
-        'author' => 'Автор',
+        'author' => 'Авторы',
 
         // Vacancies
 

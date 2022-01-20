@@ -73,10 +73,12 @@ class MainController extends Controller
         }
 
         $infrastructureDetail = InfrastructureDetail::first()->translate(session('locale'));
+        $socials = Social::all();
         $contact = Contact::first()->translate(session('locale'));
 
         return view('infrastructurepage', compact(
             'infrastructureDetail',
+            'socials',
             'contact',
             'locale',
         ));
@@ -116,11 +118,13 @@ class MainController extends Controller
         }
 
         $news = News::find($id)->translate(session('locale'));
+        $socials = Social::all();
         $detail = NewsDetail::where('news_id', $id)->first()->translate(session('locale'));
         $contact = Contact::first()->translate(session('locale'));
 
         return view('news_single', compact(
             'news',
+            'socials',
             'detail',
             'contact',
             'locale'
@@ -138,12 +142,14 @@ class MainController extends Controller
         }
 
         $project = Project::find($id)->translate(session('locale'));
+        $socials = Social::all();
         $detail = ProjectDetail::where('project_id', $id)->first()->translate(session('locale'));
         $photos = ProjectPhoto::where('project_id', $id)->get()->translate(session('locale'));
         $contact = Contact::first()->translate(session('locale'));
 
         return view('projects', compact(
             'project',
+            'socials',
             'detail',
             'photos',
             'contact',
@@ -162,6 +168,7 @@ class MainController extends Controller
         }
 
         $mission = VacancyMission::first()->translate(session('locale'));
+        $socials = Social::all();
         $values = VacancyValue::all()->translate(session('locale'));
         $vacancies = Vacancy::all()->translate(session('locale'));
         $contact = Contact::first()->translate(session('locale'));
@@ -169,6 +176,7 @@ class MainController extends Controller
         return view('vacancies', compact(
             'mission',
             'values',
+            'socials',
             'vacancies',
             'contact',
             'locale'
@@ -184,7 +192,7 @@ class MainController extends Controller
             'comment' => $request -> comment,
         ]);
 
-        // \Mail::to('abu.cleaning21@gmail.com')->send(new \App\Mail\CallBack($callback));
+        \Mail::to('info@esentaitower.com')->send(new \App\Mail\CallBack($callback));
         return redirect()->back();
     }
 

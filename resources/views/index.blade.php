@@ -87,10 +87,12 @@
                     </p>
                 </div>
             </div>
-            @foreach ($infrastructures as $infrastructure)
-                <a class="infrast-btn infrast-btn-1 active" href="{{$infrastructure->link}}" target="_blank">
-                    <img src="img/arrau.png" alt="">
-                </a>
+            @foreach($infrastructures as $infrastructure)
+                @if ($infrastructure->link != null)
+                    <a class="infrast-btn infrast-btn-{{$infrastructure->id}} active" href="{{$infrastructure->link}}" target="_blank">
+                        <img src="img/arrau.png" alt="">
+                    </a>
+                @endif
             @endforeach
         </div>
     </div>
@@ -127,16 +129,18 @@
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         @foreach ($projects as $project)
-                        <div class="project-1-p swiper-slide" data-aos="fade-right">
-                            <div class="swiper-text">
-                                <h4 class="text text-s25">{{ $project->title }}</h4>
-                                {!! $project->text !!}
-                                <br><a href="/project/{{ $project->id }}">{{ __('content.readMore')  }} ></a>
-                            </div>
-                            <div class="slider_project_1">
-                                <img class="slider-1-img" src="/storage/{{ $project->image }}">
-                            </div>
-                        </div>
+                            @if ($project->approved == 1);
+                                <div class="project-1-p swiper-slide" data-aos="fade-right">
+                                    <div class="swiper-text">
+                                        <h4 class="text text-s25">{{ $project->title }}</h4>
+                                        {!! $project->text !!}
+                                        <br><a href="/project/{{ $project->id }}">{{ __('content.readMore')  }} ></a>
+                                    </div>
+                                    <div class="slider_project_1">
+                                        <img class="slider-1-img" src="/storage/{{ $project->image }}">
+                                    </div>
+                                </div>
+                            @endif
                         @endforeach
 
                     </div>
