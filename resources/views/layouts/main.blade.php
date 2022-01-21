@@ -221,12 +221,12 @@
                                     text.children[0].textContent = current.title
                                     text.children[1].textContent = current.text
                                     image.style.background = current.image.includes("\\") ? `url(/storage/infrastructures/${current.image.includes("\\") ? current.image.split('\\')[1] + '/' + current.image.split('\\')[2] : current.image}) no-repeat` : `url(/storage/${current.image}) no-repeat`
-                                    if (current.link) {
-                                        item.addEventListener('click', () => {
-                                            window.location.replace(current.link)
-                                            //                                            $('.infrast-btn').href = current.link;
-                                        })
-                                    }
+//                                    if (current.link) {
+//                                        item.addEventListener('click', () => {
+//                                            window.location.replace(current.link)
+//                                            //                                            $('.infrast-btn').href = current.link;
+//                                        })
+//                                    }
                                 }
 
                             })
