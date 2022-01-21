@@ -87,13 +87,18 @@
                     </p>
                 </div>
             </div>
-            @foreach($infrastructures as $infrastructure)
-                @if ($infrastructure->link != null)
-                    <a class="infrast-btn infrast-btn-{{$infrastructure->id}} active" href="{{$infrastructure->link}}" target="_blank">
-                        <img src="img/arrau.png" alt="">
-                    </a>
-                @endif
-            @endforeach
+            <a class="infrast-btn infrast-btn-1 active" href="{{$infrastructures[0]->link}}" target="_blank">
+                <img src="img/arrau.png" alt="">
+            </a>
+            <a class="infrast-btn infrast-btn-3" href="{{$infrastructures[5]->link}}" target="_blank">
+                <img src="img/arrau.png" alt="">
+            </a>
+            <a class="infrast-btn infrast-btn-4" href="{{$infrastructures[7]->link}}" target="_blank">
+                <img src="img/arrau.png" alt="">
+            </a>
+            <a class="infrast-btn infrast-btn-5" href="{{$infrastructures[4]->link}}" target="_blank">
+                <img src="img/arrau.png" alt="">
+            </a>
         </div>
     </div>
 
