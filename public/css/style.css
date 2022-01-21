@@ -4062,6 +4062,7 @@ footer .container {
         display: none;
     }
 
+/*
     a.button-slider.active {
         display: block;
         border: none;
@@ -4078,6 +4079,7 @@ footer .container {
         opacity: 0;
         z-index: 100000000;
     }
+*/
 
     .wrap::after {
         top: 0;
