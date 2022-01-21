@@ -87,16 +87,16 @@
                     </p>
                 </div>
             </div>
-            <a class="infrast-btn infrast-btn-1 active" href="{{$infrastructures[0]->link}}" target="_blank">
+            <a class="infrast-btn infrast-btn-1 active" href="{{$infrastructures[0]->link}}">
                 <img src="img/arrau.png" alt="">
             </a>
-            <a class="infrast-btn infrast-btn-3" href="{{$infrastructures[5]->link}}" target="_blank">
+            <a class="infrast-btn infrast-btn-3" href="{{$infrastructures[5]->link}}">
                 <img src="img/arrau.png" alt="">
             </a>
-            <a class="infrast-btn infrast-btn-4" href="{{$infrastructures[2]->link}}" target="_blank">
+            <a class="infrast-btn infrast-btn-4" href="{{$infrastructures[2]->link}}">
                 <img src="img/arrau.png" alt="">
             </a>
-            <a class="infrast-btn infrast-btn-5" href="{{$infrastructures[4]->link}}" target="_blank">
+            <a class="infrast-btn infrast-btn-5" href="{{$infrastructures[4]->link}}">
                 <img src="img/arrau.png" alt="">
             </a>
         </div>
