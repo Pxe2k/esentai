@@ -96,7 +96,7 @@
             <a class="infrast-btn infrast-btn-4" href="{{$infrastructures[1]->link}}" target="_blank">
                 <img src="img/arrau.png" alt="">
             </a>
-            <a class="infrast-btn infrast-btn-5" href="{{$infrastructures[3]->link}}" target="_blank">
+            <a class="infrast-btn infrast-btn-5" href="{{$infrastructures[2]->link}}" target="_blank">
                 <img src="img/arrau.png" alt="">
             </a>
         </div>
