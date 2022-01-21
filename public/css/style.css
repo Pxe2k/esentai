@@ -246,6 +246,12 @@ header.active {
     max-height: 4rem;
 }
 
+@media(max-width: 780px) {
+    header.active {
+        max-height: 6rem;
+    }
+}
+
 header.active .language__body {
     bottom: -70%;
 }
@@ -383,6 +389,7 @@ header .btn-contact_us a {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     position: relative;
+    text-align: center;
     line-height: 145%;
 }
 
@@ -465,7 +472,12 @@ header .btn-contact_us a:hover:after {
     }
 
     header.active .language__body {
-        bottom: -21%;
+/*        bottom: -21%;*/
+        bottom: -90px;
+    }
+
+    header .language__body {
+        bottom: -85px;
     }
 }
 
@@ -4209,6 +4221,10 @@ footer .container {
 @media(max-width: 400px) {
     .contain2 .contain2-column .contain2-column-title {
         width: 31.3111rem;
+    }
+
+    header .deskTop > div {
+
     }
 }
 
