@@ -72,8 +72,8 @@
     </div>
 </div>
 
-
-<div class="infrast" id="infrast">
+<div id="infrast"></div>
+<div class="infrast">
     <div class="container">
         <a class="infr-title" data-aos="fade-right">
             {{ __('content.infrastructure')  }}

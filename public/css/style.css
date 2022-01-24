@@ -977,6 +977,12 @@ header .btn-contact_us a:hover:after {
     }
 }
 
+#infrast {
+    padding-top: 65px;
+    margin-top: -65px;
+}
+
+
 .infrast {
     background: url(/img/slid.png);
     height: 55.6rem;
@@ -995,10 +1001,9 @@ header .btn-contact_us a:hover:after {
     /* 6 */
     /* 6 */
     /* 7 */
-    padding-top: 69px;
+    padding-top: 40px;
     /* 9 */
-    padding-top: 5.83333333rem;
-    margin-top: 3rem;
+
     /* 9 */
 }
 
@@ -1010,6 +1015,11 @@ header .btn-contact_us a:hover:after {
         -ms-flex-direction: column;
         flex-direction: column;
         padding-bottom: 2rem;
+    }
+
+    #infrast {
+        padding-top: 50px;
+        margin-top: -50px;
     }
 
     .infrast .container {
@@ -3951,7 +3961,7 @@ footer .container {
     .deskTop {
         position: absolute;
         display: block;
-        background-color: #fff;
+        background-color: #f1f3fa;
         padding: 150px 20px 100px;
         top: 0;
         transition: border-radius 475ms ease-out;

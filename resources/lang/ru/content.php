@@ -8,7 +8,7 @@
         'projects' => 'ПРОЕКТЫ',
         'news' => 'НОВОСТИ',
         'partners' => 'ПАРТНЕРЫ',
-        'vacancies' => 'ВАКСАНСИИ',
+        'vacancies' => 'ВАКАНСИИ',
 
         // Buttons
 
