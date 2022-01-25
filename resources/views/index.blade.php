@@ -103,12 +103,12 @@
     </div>
 
     <div class="container_pagi container_pagi-desktop">
-        <a class="button-slider button-slider-page1 active" href="javascript:void(false)" target="_blank"></a>
-        <a class="button-slider button-slider-page2" href="javascript:void(false)" target="_blank"></a>
-        <a class="button-slider button-slider-page3" href="javascript:void(false)" target="_blank"></a>
-        <a class="button-slider button-slider-page4" href="javascript:void(false)" target="_blank"></a>
-        <a class="button-slider button-slider-page5" href="javascript:void(false)" target="_blank"></a>
-        <a class="button-slider button-slider-page6" href="javascript:void(false)" target="_blank"></a>
+        <button class="button-slider button-slider-page1 active"></button>
+        <button class="button-slider button-slider-page2"></button>
+        <button class="button-slider button-slider-page3"></button>
+        <button class="button-slider button-slider-page4"></button>
+        <button class="button-slider button-slider-page5"></button>
+        <button class="button-slider button-slider-page6"></button>
     </div>
     <div class="container_pagi container_pagi-mobile">
         <button class="button-slider-second button-slider-page1 active"></button>
@@ -134,7 +134,7 @@
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         @foreach ($projects as $project)
-                            @if ($project->approved == 1);
+                            @if ($project->approved == 1)
                                 <div class="project-1-p swiper-slide" data-aos="fade-right">
                                     <div class="swiper-text">
                                         <h4 class="text text-s25">{{ $project->title }}</h4>

@@ -285,7 +285,6 @@
                 $(this).toggleClass('burger--active');
                 $('.deskTop').toggleClass('active');
                 $('.burger-box').toggleClass('active')
-                $('body').toggleClass('no-scroll')
             });
 
             $('.menu__item').on('click', function() {
@@ -293,14 +292,12 @@
                 $('.burger').removeClass('burger--active');
                 $('.deskTop').removeClass('active');
                 $('.burger-box').removeClass('active');
-                $('body').removeClass('no-scroll')
             });
 
             $('.burger-box').on('click', function() {
                 $(this).removeClass('active')
                 $('.burger').removeClass('burger--active');
                 $('.deskTop').removeClass('active');
-                $('body').removeClass('no-scroll')
             });
 
 
