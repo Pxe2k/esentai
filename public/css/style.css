@@ -3811,8 +3811,8 @@ footer .container {
     }
 
     .swiper-slide {
-        max-width: 500px;
-        overflow-y: auto;
+        max-width: 500px !important;
+        overflow-y: auto !important;
     }
 
     header.active .logo a:last-child img {
