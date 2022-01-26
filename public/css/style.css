@@ -3812,9 +3812,10 @@ footer .container {
 
     .swiper-slide .swiper-text{
         padding-top: 20px;
-        max-width: 500px;
+        max-width: 350px;
         overflow-y: auto;
         margin-bottom: 50px;
+        justify-content: flex-start;
     }
 
     header.active .logo a:last-child img {
