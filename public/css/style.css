@@ -3810,11 +3810,9 @@ footer .container {
         font-size: 1.6rem !important;
     }
 
-    .swiper-slide .swiper-text{
-        padding-top: 20px;
+    .swiper-slide {
         max-width: 500px;
         overflow-y: auto;
-        margin-bottom: 50px;
     }
 
     header.active .logo a:last-child img {
@@ -4098,7 +4096,7 @@ footer .container {
         display: none;
     }
 
-    a.button-slider {
+    .button-slider {
         display: none;
     }
 
