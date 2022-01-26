@@ -3812,7 +3812,7 @@ footer .container {
 
     .swiper-slide .swiper-text{
         padding-top: 20px;
-        max-width: 350px;
+        max-height: 350px;
         overflow-y: auto;
         margin-bottom: 50px;
         justify-content: flex-start;
