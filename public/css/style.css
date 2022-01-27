@@ -333,10 +333,6 @@ header .menu a {
     position: relative;
 }
 
-header .menu a:hover {
-    color: #e0c00a;
-}
-
 header .menu a::after {
     position: absolute;
     content: "";
@@ -345,8 +341,7 @@ header .menu a::after {
     right: 0;
     bottom: 0;
     margin-top: 1rem;
-    margin-left: 0.5rem;
-    width: 80%;
+    width: 100%;
     border-bottom: 5px solid #968461;
     opacity: 0;
     -webkit-transition: 0.3s;
@@ -662,7 +657,7 @@ header .btn-contact_us a:hover:after {
 
 .wrap::before {
     content: "";
-    top: 36.3889rem;
+    top: 47.3889rem;
     left: 0;
     bottom: -3px;
     right: 0;
