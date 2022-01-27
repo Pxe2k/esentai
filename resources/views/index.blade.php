@@ -136,7 +136,6 @@
                         @foreach ($projects as $project)
 
                             @if ($project->approved == 1)
-  wqweqweqweqewq
                                 <div class="project-1-p swiper-slide" data-aos="fade-right">
                                     <div class="swiper-text">
                                         <h4 class="text text-s25">{{ $project->title }}</h4>

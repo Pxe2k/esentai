@@ -342,7 +342,7 @@ header .menu a::after {
     bottom: 0;
     margin-top: 1rem;
     width: 100%;
-    border-bottom: 5px solid #968461;
+    border-bottom: 2px solid #968461;
     opacity: 0;
     -webkit-transition: 0.3s;
     transition: 0.3s;
@@ -356,8 +356,6 @@ header .btn-contact_us {
     width: 9.7778rem;
     height: 2.6667rem;
 }
-
-
 
 header .btn-contact_us a {
     width: 100%;
@@ -657,13 +655,19 @@ header .btn-contact_us a:hover:after {
 
 .wrap::before {
     content: "";
-    top: 47.3889rem;
+    top: 37.3889rem;
     left: 0;
     bottom: -3px;
     right: 0;
     position: absolute;
     z-index: 1000;
     background: linear-gradient(360deg, #F1F3FA 51.03%, rgba(244, 246, 253, 0) 62.95%)
+}
+
+@media(min-width: 1400px) {
+    .wrap::before {
+        top: 47.3889rem;
+    }
 }
 
 .wrap .soc {
