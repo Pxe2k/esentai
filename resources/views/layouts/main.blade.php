@@ -134,7 +134,7 @@
                     <div class="contact-us__column">
                         <h2>{{ __('content.contactUs')  }}</h2>
                         <a class="link1" href="#">{{ $contact->phoneNumber }}</a>
-                        <a class="link2" href="#">{{ $contact->email }}</a>
+                        <a class="link2" href="mailto:hr@esentaitower.com">{{ $contact->email }}</a>
                         <a class="link3" href="#">{{ $contact->address }}</a>
                     </div>
                 </div>
@@ -171,7 +171,7 @@
                 <p>© 2019-2021 Esentai tower</p>
             </div>
             <div class="a-lux">
-                <a href="https://www.a-lux.kz"><p>{{ __('content.alux')  }}</p><img src="/img/logo-alux.png" alt=""></a>
+                <a href="https://www.a-lux.kz"><p>{{ __('content.alux')}}</p><img src="/img/logo-alux.svg" alt=""></a>
             </div>
 
         </footer>

@@ -38,8 +38,7 @@
                         <div class="vacancy-part2" data-aos="fade-left">
                             <h3>{{ $vacancy->title }}</h3>
                             {!! $vacancy->text !!}
-                            <a href="#"><b>hr@esentaitower.com</b></a>
-
+                            <a href="mailto:hr@esentaitower.com"><b>hr@esentaitower.com</b></a>
                         </div>
 
                     </div>

@@ -64,6 +64,8 @@ a:active {
     margin-top: 1rem;
     padding: 0.2rem;
     background: #e7e7e7;
+    height: 25px;
+    font-family: "vArialCAn";
 }
 
 .modal-contact {
@@ -353,7 +355,7 @@ header .menu a::after {
     bottom: 0;
     margin-top: 1rem;
     width: 100%;
-    border-bottom: 2px solid #968461;
+    border-bottom: 2px solid #131930;
     opacity: 0;
     -webkit-transition: 0.3s;
     transition: 0.3s;
@@ -391,10 +393,6 @@ header .btn-contact_us a {
     position: relative;
     text-align: center;
     line-height: 145%;
-}
-
-header .btn-contact_us a:hover {
-    color: #e0c00a;
 }
 
 header .btn-contact_us a:before {
@@ -472,7 +470,7 @@ header .btn-contact_us a:hover:after {
     }
 
     header.active .language__body {
-/*        bottom: -21%;*/
+        /*        bottom: -21%;*/
         bottom: -90px;
     }
 
@@ -642,14 +640,14 @@ header .btn-contact_us a:hover:after {
 }
 
 .bgvideo {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  top: -10%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -9999;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -9999;
 }
 
 .wrap::after {
@@ -703,6 +701,7 @@ header .btn-contact_us a:hover:after {
 
 .wrap .soc .mail {
     color: white;
+        display: block;
     font-size: 1.2222rem;
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
@@ -719,7 +718,7 @@ header .btn-contact_us a:hover:after {
     padding-bottom: 17.6667rem;
 }
 
-.message img  {
+.message img {
     width: 1.5rem;
     height: 1rem
 }
@@ -1306,7 +1305,7 @@ button.button-slider::after {
     opacity: 1;
 }
 
-.button-slider.active:after{
+.button-slider.active:after {
     visibility: visible;
     opacity: 1;
 }
@@ -1610,7 +1609,7 @@ button.button-slider::after {
     font-size: 1rem !important;
 }
 
-.projects .swiper-text *{
+.projects .swiper-text * {
     font-size: 0.833333rem !important;
 }
 
@@ -1840,6 +1839,7 @@ button.button-slider::after {
     border-radius: 10px;
 
 }
+
 .slider-page .slider-content__paragraf p::-webkit-scrollbar-thumb {
     background-color: gray;
     border-radius: 10px;
@@ -1971,7 +1971,7 @@ button.button-slider::after {
 
 .contact-us .contact-us__column .link1::before {
     background-image: url(../img/contact-phone.svg);
-/*
+    /*
     width: 14px;
     height: 15px;
 */
@@ -1990,7 +1990,7 @@ button.button-slider::after {
 
 .contact-us .contact-us__column .link2::before {
     background-image: url(../img/contact-sms.svg);
-/*
+    /*
     width: 19px;
     height: 14px;
 */
@@ -2008,9 +2008,9 @@ button.button-slider::after {
 
 .contact-us .contact-us__column .link3::before {
     background-image: url(../img/contact-location.svg);
-/*    width: 12px;*/
+    /*    width: 12px;*/
     left: 5px;
-/*    height: 16px;*/
+    /*    height: 16px;*/
     width: 1rem;
     height: 1.4rem;
 }
@@ -2042,6 +2042,31 @@ footer {
     padding-top: 1.2222rem;
     bottom: 0;
     z-index: 10;
+}
+
+footer .menu a {
+    color: #131831;
+    font-size: 0.7rem;
+    position: relative;
+}
+
+footer .menu a::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 1.1rem;
+    width: 100%;
+    border-bottom: 2px solid #ffff;
+    opacity: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+footer .menu a:hover::after {
+    opacity: 1;
 }
 
 .footer__social {
@@ -3822,7 +3847,7 @@ footer .container {
         top: 1px;
     }
 
-/*
+    /*
     .contact-us .contact-us__column .link1::before {
         left: 0;
         width: 16px;
@@ -3843,7 +3868,7 @@ footer .container {
         font-size: 1.6rem !important;
     }
 
-    .swiper-slide .swiper-text{
+    .swiper-slide .swiper-text {
         padding-top: 20px;
         max-height: 350px;
         overflow-y: auto;
@@ -4136,7 +4161,7 @@ footer .container {
         display: none;
     }
 
-/*
+    /*
     a.button-slider.active {
         display: block;
         border: none;
@@ -4272,7 +4297,7 @@ footer .container {
         height: 13px;
     }
 
-/*
+    /*
     .contact-us .contact-us__column .link2::before {
         width: 15px;
         height: 10px;
@@ -4285,9 +4310,7 @@ footer .container {
         width: 31.3111rem;
     }
 
-    header .deskTop > div {
-
-    }
+    header .deskTop > div {}
 }
 
 @media(max-width: 380px) {
@@ -4302,7 +4325,7 @@ footer .container {
 }
 
 
-.a-lux a{
+.a-lux a {
     display: flex;
     color: #fff;
     font-size: 18px;

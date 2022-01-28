@@ -10,7 +10,7 @@
             </a>
         </div>
         @endforeach
-        <div class="mail">{{ $contact->email }}</div>
+        <a class="mail" href="mailto:hr@esentaitower.com">{{ $contact->email }}</a>
         <div class="message"><img src="../img/icons/message.png"></div>
     </div>
     <div class="wrap-title">
