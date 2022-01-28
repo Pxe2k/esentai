@@ -4328,14 +4328,14 @@ footer .container {
 .a-lux a {
     display: flex;
     color: #fff;
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
     align-items: center;
     padding-bottom: 20px;
 }
 
 .a-lux img {
     margin-left: 10px;
-    width: 80px;
+    width: 8rem;
     object-fit: contain;
 }
