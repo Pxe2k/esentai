@@ -81,6 +81,17 @@ a:active {
     left: 50%;
 }
 
+.modal-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: none;
+    border: none;
+    outline: none;
+    width: 15px;
+    height: 15px;
+}
+
 /*
 @media (min-width:300px) and (max-width: 400px) {
     .modal-contact {
@@ -812,7 +823,6 @@ header .btn-contact_us a:hover:after {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding-left: 1rem;
 }
 
 .about-top__column img {
@@ -826,6 +836,11 @@ header .btn-contact_us a:hover:after {
     text-transform: uppercase;
 }
 
+.about-top__column {
+    max-width: 15rem;
+}
+
+/*
 .about-top__column:nth-child(1) {
     max-width: 16.1111rem;
 }
@@ -841,6 +856,7 @@ header .btn-contact_us a:hover:after {
 .about-top__column:nth-child(4) {
     max-width: 14.4444rem;
 }
+*/
 
 @media screen and (max-width: 780px) {
     .about-top__column {
@@ -1594,6 +1610,10 @@ button.button-slider::after {
     font-size: 1rem !important;
 }
 
+.projects .swiper-text {
+    font-size: 0.833333rem;
+}
+
 .swiper-text {
     display: flex;
     flex-direction: column;
@@ -1809,6 +1829,20 @@ button.button-slider::after {
     line-height: 130.7%;
     max-height: 160px;
     overflow-y: auto;
+}
+
+.slider-page .slider-content__paragraf p::-webkit-scrollbar {
+    width: 5px;
+}
+
+.slider-page .slider-content__paragraf p::-webkit-scrollbar-track {
+    background-color: #000;
+    border-radius: 10px;
+
+}
+.slider-page .slider-content__paragraf p::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 10px;
 }
 
 .partners {
@@ -4268,7 +4302,7 @@ footer .container {
 }
 
 
-.a-lux {
+.a-lux a{
     display: flex;
     color: #fff;
     font-size: 18px;

@@ -20,8 +20,8 @@
             <div class="container">
                 <h2 data-aos="fade-down">{{  __('content.values')  }}:</h2>
                 <div class="values-column-top">
-                    @foreach ($values as $value)    
-                        <div class="values-column">
+                    @foreach ($values as $value)
+                        <div class="values-column" data-aos="zoom-in">
                             <img src="/storage/{{ $value->image }}">
                             {!! $value->text !!}
                         </div>
@@ -32,7 +32,7 @@
         </div>
         <div class="vacancy-block">
             <div class="container">
-                @foreach ($vacancies as $vacancy)    
+                @foreach ($vacancies as $vacancy)
                     <div class="vacancy-column">
                         <div class="vacancy-part1" data-aos="fade-right"><img src="/storage/{{ $vacancy->image }}"></div>
                         <div class="vacancy-part2" data-aos="fade-left">

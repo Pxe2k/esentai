@@ -23,17 +23,20 @@
         <div class="modal-contact-bg">
         </div>
         <form class="modal-contact" action="/callback" method="POST"> @csrf
+            <button class="modal-btn">
+                <img src="img/icons/x.svg" alt="">
+            </button>
             <p>
                 <label for="">
                     {{ __('content.name')  }}
                 </label>
-                <input type="text" name="name">
+                <input class="input-words" type="text" name="name">
             </p>
             <p>
                 <label for="">
                     {{ __('content.phone')  }}
                 </label>
-                <input type="text" name="phone">
+                <input id="phone" type="text" name="phone">
             </p>
             <p>
                 <label for="">
@@ -168,13 +171,13 @@
                 <p>© 2019-2021 Esentai tower</p>
             </div>
             <div class="a-lux">
-                <p>{{ __('content.alux')  }}</p>
-                <a href="https://www.a-lux.kz"><img src="/img/logo-alux.png" alt=""></a>
+                <a href="https://www.a-lux.kz"><p>{{ __('content.alux')  }}</p><img src="/img/logo-alux.png" alt=""></a>
             </div>
 
         </footer>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 
         <script>
             let commits
@@ -183,6 +186,7 @@
             let btn = document.querySelectorAll('.btn-contact_us')
             let formBg = document.querySelector('.modal-contact-bg')
             let form = document.querySelector('.modal-contact')
+            let formBtn = document.querySelector('.modal-btn')
             let langChange = 'ru'
             //            let infrastBtn = '<a class="infrast-btn" href=""><img src="img/arrau.png" alt=""></a>';
             let image = document.querySelector('.slider_src')
@@ -221,12 +225,12 @@
                                     text.children[0].textContent = current.title
                                     text.children[1].textContent = current.text
                                     image.style.background = current.image.includes("\\") ? `url(/storage/infrastructures/${current.image.includes("\\") ? current.image.split('\\')[1] + '/' + current.image.split('\\')[2] : current.image}) no-repeat` : `url(/storage/${current.image}) no-repeat`
-//                                    if (current.link) {
-//                                        item.addEventListener('click', () => {
-//                                            window.location.replace(current.link)
-//                                            //                                            $('.infrast-btn').href = current.link;
-//                                        })
-//                                    }
+                                    //                                    if (current.link) {
+                                    //                                        item.addEventListener('click', () => {
+                                    //                                            window.location.replace(current.link)
+                                    //                                            //                                            $('.infrast-btn').href = current.link;
+                                    //                                        })
+                                    //                                    }
                                 }
 
                             })
@@ -311,6 +315,12 @@
                 formBg.style.display = 'none'
                 form.style.display = 'none'
             })
+
+            formBtn.addEventListener('click', () => {
+                formBg.style.display = 'none'
+                form.style.display = 'none'
+            })
+
             AOS.init({
                 delay: 200,
                 duration: 600,
@@ -438,6 +448,16 @@
                     el: '.swiper-scrollbar',
                 },
             });
+
+            $('.modal-contact').on('input', '.input-words', function() {
+                this.value = this.value.replace(/[^a-zа-яё\s]/gi, '');
+            });
+
+            $("#phone").mask('+7 (999) 999-99-99');
+            $('#phone').focus(function() {
+                $(this).val('+7');
+            });
+            document.querySelector('video').playbackRate = 0.4;
 
         </script>
 
