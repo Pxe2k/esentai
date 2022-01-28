@@ -1610,8 +1610,8 @@ button.button-slider::after {
     font-size: 1rem !important;
 }
 
-.projects .swiper-text {
-    font-size: 0.833333rem;
+.projects .swiper-text *{
+    font-size: 0.833333rem !important;
 }
 
 .swiper-text {
