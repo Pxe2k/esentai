@@ -30,25 +30,25 @@
                 <label for="">
                     {{ __('content.name')  }}
                 </label>
-                <input class="input-words" type="text" name="name">
+                <input class="input-words" type="text" name="name" required>
             </p>
             <p>
                 <label for="">
                     {{ __('content.phone')  }}
                 </label>
-                <input id="phone" type="text" name="phone">
+                <input id="phone" type="number" name="phone" required>
             </p>
             <p>
                 <label for="">
                     E-Mail
                 </label>
-                <input type="text" name="email">
+                <input type="email" name="email" required>
             </p>
             <p>
                 <label for="">
                     {{ __('content.comment')  }}
                 </label>
-                <input type="text" name="comment">
+                <input type="text" name="comment" required>
             </p>
             <button class="send-contact-btn">{{ __('content.send')  }}</button>
         </form>
