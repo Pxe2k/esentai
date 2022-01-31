@@ -36,7 +36,7 @@
                 <label for="">
                     {{ __('content.phone')  }}
                 </label>
-                <input id="phone" type="number" name="phone" required>
+                <input id="phone" type="phone" name="phone" required>
             </p>
             <p>
                 <label for="">
