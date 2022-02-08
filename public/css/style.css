@@ -275,18 +275,18 @@ header .logo {
 }
 
 header .logo a:first-child img {
-    width: 1.25rem;
+    width: 0.8rem;
     height: 5.8125rem;
     margin-right: 0.875rem;
 }
 
 header .logo a:last-child img {
-    width: 8.3125rem;
+    width: 6.3125rem;
     height: 2.5rem;
 }
 
 header.active .logo a:last-child img {
-    width: 6.875rem;
+    width: 5.875rem;
     height: 2.1875rem;
 }
 

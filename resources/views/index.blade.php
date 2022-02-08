@@ -47,7 +47,7 @@
         </div>
         <div class="about-bottom__title" data-aos="fade-right">
             <h2 class="text text-s99">ESENTAI </h2>
-            <h3 class="text text-s42">TOWERS</h3>
+            <h3 class="text text-s42">TOWER</h3>
         </div>
         <div class="about-bottom">
             @foreach ($advantages as $advantage)
