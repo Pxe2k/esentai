@@ -190,7 +190,7 @@
                             {{ $news->text }}
                         </p>
                         <br>
-                        <a href="/news" style="color:white">{{ __('content.readMore')  }}</a>
+                        <a href="/news/{{ $news->id }}" style="color:white">{{ __('content.readMore')  }}</a>
                     </div>
                 </div>
                 @endforeach
