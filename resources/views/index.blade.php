@@ -31,7 +31,7 @@
     <div class="container">
         <div>
             <div class="about-title title-bottom text text-s34" data-aos="fade-right">
-                <a style="color: black" href="/infrastructure">{{ __('content.about')  }}</a>
+                <a href="/infrastructure">{{ __('content.about')  }}</a>
             </div>
             <div class="about-top">
                 @foreach ($abouts as $about)
@@ -75,7 +75,7 @@
 <div id="infrast"></div>
 <div class="infrast">
     <div class="container">
-        <a class="infr-title title-bottom" data-aos="fade-right">
+        <a class="infr-title" data-aos="fade-right">
             {{ __('content.infrastructure')  }}
         </a>
         <div class="slider" data-aos="fade-left">
@@ -154,27 +154,8 @@
                     <div class="swiper-button-next button-next"></div>
                 </div>
             </div>
-            <!--
-            <div class="projects-1__column">
-                <div class="project-1-title title-bottom" data-aos="fade-right">
-                    <a href="/news">
-                        <h3 class="press-project text text-s34">{{ __('content.press')  }}</h3>
-                    </a>
-                </div>
-                <div class="project-1-img" data-aos="fade-right">
-                    @foreach ($presses as $press)
-                    <img src="/storage/{{ $press->image }}">
-                    @endforeach
-                </div>
-            </div>
--->
-
 
         </div>
-        <!-- <div class="projects-2 animate__animated " data-in="animate__lightSpeedInRight" data-out="animate__lightSpeedOutRight">  -->
-
-
-        <!-- </div>  -->
     </div>
 </div>
 
@@ -211,7 +192,7 @@
 <div class="partners" id="partners">
     <div class="container">
         <div class="partners-title" data-aos="fade-right">
-            <h4 class="press-project text text-s34 title-bottom">{{ __('content.partners')  }}</h4>
+            <h4 class="press-project text text-s34">{{ __('content.partners')  }}</h4>
         </div>
         <div class="partner-img" data-aos="fade-right">
             @foreach ($partners as $partner)

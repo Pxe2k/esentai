@@ -172,8 +172,7 @@
             </div>
             <div class="a-lux">
                 <a href="https://www.a-lux.kz">
-                    <p>{{ __('content.alux')}}</p>
-                    <p class="a-lux--logo">A-Lux</p>
+                    <p>{{ __('content.alux')}} A-Lux</p>
                 </a>
             </div>
 
@@ -301,11 +300,18 @@
                 $('.burger-box').removeClass('active');
             });
 
+            $('.btn-contact_us').on('click', function() {
+                $(this).removeClass('active')
+                $('.burger').removeClass('burger--active');
+                $('.deskTop').removeClass('active');
+            });
+
             $('.burger-box').on('click', function() {
                 $(this).removeClass('active')
                 $('.burger').removeClass('burger--active');
                 $('.deskTop').removeClass('active');
             });
+
 
 
             $(btn).on('click', function() {

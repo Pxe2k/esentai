@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
-
 @font-face {
     font-family: "futurabookc";
     src: url("/fonts/futurabookc.eot");
@@ -433,6 +431,10 @@ header .btn-contact_us a:hover:after {
     transform: scaleX(0.9) scaleY(0.7);
 }
 
+a {
+    color: inherit;
+}
+
 @media screen and (max-width: 780px) {
     .deskTop {
         display: none;
@@ -458,11 +460,16 @@ header .btn-contact_us a:hover:after {
     bottom: 0;
     margin-top: 1rem;
     width: 85%;
-    border-bottom: 2px solid #131930;
-    opacity: 1;
+    border-bottom: 2px solid #23293f;
+    opacity: 0;
     -webkit-transition: 0.3s;
     transition: 0.3s;
     z-index: -1;
+    transition: all .2s linear;
+}
+
+.title-bottom:hover::after {
+    opacity: 1;
 }
 
 .infr-title.title-bottom::after {
@@ -478,6 +485,7 @@ header .btn-contact_us a:hover:after {
 
 .project-1-title.title-bottom::after {
     width: 88%;
+    z-index: -1;
 }
 
 
@@ -843,6 +851,7 @@ header .btn-contact_us a:hover:after {
 .about-title {
     font-size: 1.8889rem;
     margin-bottom: 2.3333rem;
+    color: #23293f !important;
     padding-left: 1rem;
     min-height: 2.5rem;
     display: -webkit-box;
@@ -853,6 +862,8 @@ header .btn-contact_us a:hover:after {
     align-items: center;
     border-left: 2px solid #23293F;
 }
+
+
 
 .about-top {
     display: -webkit-box;
@@ -1642,6 +1653,10 @@ button.button-slider::after {
     font-size: 1.8889rem;
 }
 
+.project-1-title h3 {
+    color: #23293f !important;
+}
+
 .projects .project-1-p {
     padding-top: 1.7778rem;
     max-width: 65rem !important;
@@ -1708,17 +1723,18 @@ button.button-slider::after {
 }
 
 .slider-page .container {
-    flex-direction: column;
+    position: relative;
 }
 
 .press-project {
-    color: #fff !important;
+    color: #23293f !important;
     font-weight: normal;
     padding-left: 10px;
     border-left: 2px solid #23293F;
 }
 
 .press-project-news {
+    color: #fff !important;
     border-left-color: #fff;
 }
 
@@ -1734,6 +1750,8 @@ button.button-slider::after {
 
 .slider-page-title {
     z-index: 100;
+    position: absolute;
+    top: 10px;
 }
 
 @media screen and (max-width: 780px) {
@@ -1872,7 +1890,7 @@ button.button-slider::after {
 
 .slider-page .slider-content__title p {
     font-size: 1.8889rem;
-    max-width: 370px;
+    max-width: 400px;
     font-weight: 400;
 }
 
@@ -1927,6 +1945,10 @@ button.button-slider::after {
     padding-top: 8.856rem;
     padding-bottom: 3.111rem;
     margin-top: -5.856rem;
+}
+
+.partners-title {
+    color: #23293f !important;
 }
 
 .partners .container {
@@ -3987,7 +4009,7 @@ footer .container {
     }
 
     .slider-page .slider-content__paragraf p {
-        max-height: 100px;
+        max-height: 120px;
     }
 
     .swiper-slide-next,
@@ -4001,7 +4023,7 @@ footer .container {
     }
 
     .slider-page .slider-content__title p {
-        max-width: 250px;
+        max-width: 400px;
     }
 
     .infrast {
@@ -4405,9 +4427,3 @@ footer .container {
     padding-bottom: 20px;
 }
 
-.a-lux--logo {
-    font-family: 'Quintessential', cursive;
-    margin-left: 10px;
-    font-size: 24px;
-    line-height: 26px;
-}
