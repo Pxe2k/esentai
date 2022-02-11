@@ -1129,6 +1129,7 @@ a {
     padding-left: 0.94444444rem;
     /* 9 */
     border-left: 2px solid #fff;
+    margin-left: 1rem;
 
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1144,7 +1145,17 @@ a {
 @media screen and (max-width: 780px) {
     .infr-title {
         position: relative;
+        margin-left: 0;
     }
+
+    .project-1-title {
+        margin-left: 4px;
+    }
+
+    .press-project-news {
+        left: 12px;
+    }
+
 }
 
 @media screen and (max-width: 780px) {
@@ -1752,6 +1763,7 @@ button.button-slider::after {
     z-index: 100;
     position: absolute;
     top: 10px;
+    left: 10px;
 }
 
 @media screen and (max-width: 780px) {

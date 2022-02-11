@@ -4,10 +4,10 @@
     <div class="infrastpage">
         <div class="container">
             <div class="infrast1page">
-                <div class="infrastpage-abzac1 animate__fadeInDown">
+                <div class="infrastpage-abzac1">
                     {!! $infrastructureDetail->title !!}
                 </div>
-                <div class="infrastpage-abzac2" data-aos="fade-right">
+                <div class="infrastpage-abzac2">
                     {!! $infrastructureDetail->text !!}
                 </div>
                 <div class="infrastpage-abzac3">
