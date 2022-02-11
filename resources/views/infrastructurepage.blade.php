@@ -10,7 +10,7 @@
                 <div class="infrastpage-abzac2" data-aos="fade-right">
                     {!! $infrastructureDetail->text !!}
                 </div>
-                <div class="infrastpage-abzac3" data-aos="fade-right">
+                <div class="infrastpage-abzac3">
                     {!! $infrastructureDetail->text2 !!}
                 </div>
             </div>

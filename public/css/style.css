@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+
 @font-face {
     font-family: "futurabookc";
     src: url("/fonts/futurabookc.eot");
@@ -442,6 +444,44 @@ header .btn-contact_us a:hover:after {
     width: 100%;
 }
 
+
+.title-bottom {
+    position: relative;
+    display: inline-block !important;
+}
+
+.title-bottom::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 1rem;
+    width: 85%;
+    border-bottom: 2px solid #131930;
+    opacity: 1;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    z-index: -1;
+}
+
+.infr-title.title-bottom::after {
+    border-bottom-color: #fff;
+    width: 95%;
+}
+
+/*
+.about-title.title-bottom {
+    width: 85%;
+}
+*/
+
+.project-1-title.title-bottom::after {
+    width: 88%;
+}
+
+
+
 @media screen and (max-width: 780px) {
     .mobailTop {
         display: -webkit-box;
@@ -701,7 +741,7 @@ header .btn-contact_us a:hover:after {
 
 .wrap .soc .mail {
     color: white;
-        display: block;
+    display: block;
     font-size: 1.2222rem;
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
@@ -871,7 +911,10 @@ header .btn-contact_us a:hover:after {
 .about-bottom__title {
     font-size: 5.5rem;
     margin-top: 6.1111rem;
-    padding-left: 1rem;
+}
+
+.about-bottom__title h2 {
+    font-size: 4.5rem;
 }
 
 .about-bottom__title h3 {
@@ -885,7 +928,6 @@ header .btn-contact_us a:hover:after {
     margin-top: 2.9444rem;
     max-width: 41.5556rem;
     margin-bottom: 5.5556rem;
-    padding-left: 1rem;
 }
 
 @media screen and (max-width: 780px) {
@@ -1049,8 +1091,10 @@ header .btn-contact_us a:hover:after {
     position: absolute;
     top: 0;
     left: 0;
+    /*
     bottom: 0;
     right: 0;
+*/
     font-size: 1.8889rem;
     color: white;
     /* 3 */
@@ -1073,7 +1117,8 @@ header .btn-contact_us a:hover:after {
     /* 9 */
     padding-left: 0.94444444rem;
     /* 9 */
-    border-left: 1px solid #fff;
+    border-left: 2px solid #fff;
+
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1081,6 +1126,9 @@ header .btn-contact_us a:hover:after {
     -ms-flex-align: center;
     align-items: center;
 }
+
+
+
 
 @media screen and (max-width: 780px) {
     .infr-title {
@@ -1647,10 +1695,6 @@ button.button-slider::after {
     padding-top: 0.8333rem;
 }
 
-.projects .project-1-title {
-    padding-top: 3rem;
-}
-
 .projects .project-1-title > * {
     padding-left: 1rem;
     border-left: 2px solid #23293F;
@@ -1663,6 +1707,34 @@ button.button-slider::after {
     align-items: center;
 }
 
+.slider-page .container {
+    flex-direction: column;
+}
+
+.press-project {
+    color: #fff !important;
+    font-weight: normal;
+    padding-left: 10px;
+    border-left: 2px solid #23293F;
+}
+
+.press-project-news {
+    border-left-color: #fff;
+}
+
+.press-project-news.title-bottom::after {
+    width:
+}
+
+
+.press-project.title-bottom::after {
+    width: 90%;
+    border-bottom-color: #fff;
+}
+
+.slider-page-title {
+    z-index: 100;
+}
 
 @media screen and (max-width: 780px) {
     .projects-1 {
@@ -1759,7 +1831,7 @@ button.button-slider::after {
     padding-right: 0.4rem;
 }
 
-.slider-page a::after {
+.slider-page a::after:not(.slider-page-news) {
     content: '';
     position: absolute;
     top: 1px;
@@ -4324,7 +4396,6 @@ footer .container {
     }
 }
 
-
 .a-lux a {
     display: flex;
     color: #fff;
@@ -4334,8 +4405,9 @@ footer .container {
     padding-bottom: 20px;
 }
 
-.a-lux img {
+.a-lux--logo {
+    font-family: 'Quintessential', cursive;
     margin-left: 10px;
-    width: 8rem;
-    object-fit: contain;
+    font-size: 24px;
+    line-height: 26px;
 }

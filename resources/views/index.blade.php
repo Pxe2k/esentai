@@ -30,7 +30,7 @@
 <div class="about" id="about">
     <div class="container">
         <div>
-            <div class="about-title text text-s34" data-aos="fade-right">
+            <div class="about-title title-bottom text text-s34" data-aos="fade-right">
                 <a style="color: black" href="/infrastructure">{{ __('content.about')  }}</a>
             </div>
             <div class="about-top">
@@ -75,7 +75,7 @@
 <div id="infrast"></div>
 <div class="infrast">
     <div class="container">
-        <a class="infr-title" data-aos="fade-right">
+        <a class="infr-title title-bottom" data-aos="fade-right">
             {{ __('content.infrastructure')  }}
         </a>
         <div class="slider" data-aos="fade-left">
@@ -125,7 +125,7 @@
     <div class="container projects_box">
         <div class="projects-1">
             <div class="projects-1__column">
-                <div class="project-1-title" data-aos="fade-right">
+                <div class="project-1-title title-bottom" data-aos="fade-right">
                     <a href="/project/1">
                         <h3 class="text text-s34">{{ __('content.projects')  }}</h3>
                     </a>
@@ -135,18 +135,18 @@
                     <div class="swiper-wrapper">
                         @foreach ($projects as $project)
 
-                            @if ($project->approved == 1)
-                                <div class="project-1-p swiper-slide" data-aos="fade-right">
-                                    <div class="swiper-text">
-                                        <h4 class="text text-s25">{{ $project->title }}</h4>
-                                        {!! $project->text !!}
-                                        <br><a href="/project/{{ $project->id }}">{{ __('content.readMore')  }} ></a>
-                                    </div>
-                                    <div class="slider_project_1">
-                                        <img class="slider-1-img" src="/storage/{{ $project->image }}">
-                                    </div>
-                                </div>
-                            @endif
+                        @if ($project->approved == 1)
+                        <div class="project-1-p swiper-slide" data-aos="fade-right">
+                            <div class="swiper-text">
+                                <h4 class="text text-s25">{{ $project->title }}</h4>
+                                {!! $project->text !!}
+                                <br><a href="/project/{{ $project->id }}">{{ __('content.readMore')  }} ></a>
+                            </div>
+                            <div class="slider_project_1">
+                                <img class="slider-1-img" src="/storage/{{ $project->image }}">
+                            </div>
+                        </div>
+                        @endif
                         @endforeach
 
                     </div>
@@ -154,8 +154,9 @@
                     <div class="swiper-button-next button-next"></div>
                 </div>
             </div>
+            <!--
             <div class="projects-1__column">
-                <div class="project-1-title" data-aos="fade-right">
+                <div class="project-1-title title-bottom" data-aos="fade-right">
                     <a href="/news">
                         <h3 class="press-project text text-s34">{{ __('content.press')  }}</h3>
                     </a>
@@ -166,6 +167,7 @@
                     @endforeach
                 </div>
             </div>
+-->
 
 
         </div>
@@ -175,8 +177,14 @@
         <!-- </div>  -->
     </div>
 </div>
+
 <div class="slider-page">
     <div class="container">
+        <div class="slider-page-title" data-aos="fade-right">
+            <a class="slider-page-news" href="/news">
+                <h3 class="press-project press-project-news title-bottom text text-s34">Новости</h3>
+            </a>
+        </div>
         <div class="swiper" id="news">
             <div class="swiper-wrapper swiper-wrapper-bottom">
                 @foreach ($news as $news)
@@ -203,7 +211,7 @@
 <div class="partners" id="partners">
     <div class="container">
         <div class="partners-title" data-aos="fade-right">
-            <h4 class="press-project text text-s34">{{ __('content.partners')  }}</h4>
+            <h4 class="press-project text text-s34 title-bottom">{{ __('content.partners')  }}</h4>
         </div>
         <div class="partner-img" data-aos="fade-right">
             @foreach ($partners as $partner)

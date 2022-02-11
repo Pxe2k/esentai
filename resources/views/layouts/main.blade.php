@@ -75,7 +75,7 @@
                         </ul>
                     </nav>
                     <div class="btn-contact_us header-btn-contact_us">
-                        <a href="#">{{ __('content.contactUs')  }}</a>
+                        <a href="#btn-click">{{ __('content.contactUs')  }}</a>
                     </div>
                     <div class="language">
                         <div class="language__header">
@@ -154,7 +154,7 @@
                         <li class="menu__item"><a href="/vacancies">{{ __('content.vacancies')  }}</a></li>
                     </ul>
                 </nav>
-                <div class="btn-contact_us">
+                <div class="btn-click btn-contact_us" id="btn-click">
                     <a href="#?">{{ __('content.contactUs')  }}</a>
                 </div>
                 <div class="footer__social">
@@ -171,7 +171,10 @@
                 <p>© 2019-2021 Esentai tower</p>
             </div>
             <div class="a-lux">
-                <a href="https://www.a-lux.kz"><p>{{ __('content.alux')}}</p><img src="/img/a-lux.png" alt=""></a>
+                <a href="https://www.a-lux.kz">
+                    <p>{{ __('content.alux')}}</p>
+                    <p class="a-lux--logo">A-Lux</p>
+                </a>
             </div>
 
         </footer>
@@ -183,7 +186,7 @@
             let commits
             let btns = document.querySelectorAll('.button-slider')
             let btnsSecond = document.querySelectorAll('.button-slider-second')
-            let btn = document.querySelectorAll('.btn-contact_us')
+            let btn = document.querySelectorAll('.btn-click')
             let formBg = document.querySelector('.modal-contact-bg')
             let form = document.querySelector('.modal-contact')
             let formBtn = document.querySelector('.modal-btn')
