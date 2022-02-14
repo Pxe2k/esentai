@@ -22,7 +22,7 @@
         </div>
     </div>
     <video autoplay loop muted playsinline class="bgvideo" id="bgvideo">
-        <source src="img/almaty_sunset.mp4" type="video/mp4">
+        <source src="img/almaty_sunset.mov" type="video/mp4">
     </video>
 </div>
 
@@ -71,8 +71,7 @@
             </div>
         </div>
     </div>
-@endif    
-
+@endif
 @if ($module->infrastructure = 1)
     <div id="infrast"></div>
     <div class="infrast">
@@ -122,7 +121,6 @@
         </div>
     </div>
 @endif
-
 @if ($module->project = 1)
     <div class="projects" id="projects">
         <div class="container projects_box">
@@ -162,13 +160,12 @@
         </div>
     </div>
 @endif
-
 @if ($module->news = 1)
     <div class="slider-page">
         <div class="container">
             <div class="slider-page-title" data-aos="fade-right">
                 <a class="slider-page-news" href="/news">
-                    <h3 class="press-project press-project-news title-bottom text text-s34">Новости</h3>
+                    <h3 class="press-project press-project-news title-bottom text text-s34">{{ __('content.news')  }}</h3>
                 </a>
             </div>
             <div class="swiper" id="news">
@@ -195,7 +192,6 @@
         </div>
     </div>
 @endif
-
 @if ($module->partner = 1)
     <div class="partners" id="partners">
         <div class="container">
@@ -210,5 +206,4 @@
         </div>
     </div>
 @endif
-
 @endsection

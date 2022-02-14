@@ -148,7 +148,7 @@
                     <ul class="menu">
                         <li class="menu__item"><a href="/#about">{{ __('content.aboutUs')  }}</a></li>
                         <li class="menu__item"><a href="/#infrast">{{ __('content.infrastructure')  }}</a></li>
-                        <li class="menu__item"><a href="/#project">{{ __('content.projects')  }}</a></li>
+                        <li class="menu__item"><a href="/#projects">{{ __('content.projects')  }}</a></li>
                         <li class="menu__item"><a href="/#news">{{ __('content.news')  }}</a></li>
                         <li class="menu__item"><a href="/#partners">{{ __('content.partners')  }}</a></li>
                         <li class="menu__item"><a href="/vacancies">{{ __('content.vacancies')  }}</a></li>

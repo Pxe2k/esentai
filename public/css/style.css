@@ -377,7 +377,7 @@ header .btn-contact_us a {
     max-width: 9.7778rem;
     max-height: 2.6667rem;
     background-color: #131930;
-    font-size: 0.6889rem;
+    font-size: 1rem;
     color: white;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -580,7 +580,7 @@ a {
 .language__body {
     padding: 5px;
     position: absolute;
-    bottom: -10px;
+    bottom: -20%;
     border-radius: 4px;
     display: block;
     background: white;
@@ -1747,6 +1747,7 @@ button.button-slider::after {
 .press-project-news {
     color: #fff !important;
     border-left-color: #fff;
+    left: 20px;
 }
 
 .press-project-news.title-bottom::after {
@@ -2254,7 +2255,7 @@ footer .menu a {
 footer .btn-contact_us {
     width: 100%;
     height: 100%;
-    max-width: 9.7778rem;
+    max-width: 10.7778rem;
     max-height: 2.6667rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2266,7 +2267,7 @@ footer .btn-contact_us {
 footer .btn-contact_us a {
     width: 100%;
     height: 100%;
-    max-width: 9.7778rem;
+    max-width: 10.7778rem;
     height: 2.6667rem;
     background-color: #131930;
     font-size: 0.8889rem;
@@ -2282,7 +2283,47 @@ footer .btn-contact_us a {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    position: relative;
 }
+
+footer .btn-contact_us a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid #4490c3;
+    -webkit-transition: .4s all;
+    transition: .1s all;
+    opacity: 0;
+}
+
+footer .btn-contact_us a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid #4490c3;
+    -webkit-transition: .4s all;
+    transition: .1s all;
+    opacity: 0;
+}
+
+footer .btn-contact_us a:hover:before {
+    -webkit-transform: scaleX(1.1) scaleY(1.4);
+    transform: scaleX(1.1) scaleY(1.4);
+    opacity: .4;
+}
+
+footer .btn-contact_us a:hover:after {
+    -webkit-transform: scaleX(0.9) scaleY(0.7);
+    transform: scaleX(0.9) scaleY(0.7);
+    opacity: .4;
+}
+
 
 header .deskTop > div {
     -webkit-box-align: center;
@@ -2419,7 +2460,7 @@ footer .container {
     align-items: center;
     color: white;
     margin-top: 2.2778rem;
-    margin-bottom: 2.2778rem;
+    margin-bottom: 1rem;
 }
 
 .page-projects {
@@ -4433,8 +4474,8 @@ footer .container {
 .a-lux a {
     display: flex;
     color: #fff;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
+    font-size: 1rem;
+    line-height: 1rem;
     align-items: center;
     padding-bottom: 20px;
 }
