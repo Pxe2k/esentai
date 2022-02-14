@@ -26,7 +26,6 @@
     </video>
 </div>
 
-@if ($module->about == 1)
     <div class="about" id="about">
         <div class="container">
             <div>
@@ -71,8 +70,7 @@
             </div>
         </div>
     </div>
-@endif
-@if ($module->infrastructure = 1)
+
     <div id="infrast"></div>
     <div class="infrast">
         <div class="container">
@@ -120,8 +118,7 @@
             <button class="button-slider-second button-slider-page6"></button>
         </div>
     </div>
-@endif
-@if ($module->project = 1)
+
     <div class="projects" id="projects">
         <div class="container projects_box">
             <div class="projects-1">
@@ -159,8 +156,7 @@
             </div>
         </div>
     </div>
-@endif
-@if ($module->news = 1)
+
     <div class="slider-page">
         <div class="container">
             <div class="slider-page-title" data-aos="fade-right">
@@ -191,8 +187,7 @@
             </div>
         </div>
     </div>
-@endif
-@if ($module->partner = 1)
+
     <div class="partners" id="partners">
         <div class="container">
             <div class="partners-title" data-aos="fade-right">
@@ -205,5 +200,4 @@
             </div>
         </div>
     </div>
-@endif
 @endsection
