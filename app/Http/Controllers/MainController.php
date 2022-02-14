@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App;
 use App\Models\{
     About,
     Advantage,
@@ -22,9 +23,8 @@ use App\Models\{
     VacancyMission,
     VacancyValue,
     Callback,
+    Module,
 };
-
-use App;
 
 class MainController extends Controller
 {
@@ -47,6 +47,7 @@ class MainController extends Controller
         $partners = Partner::all();
         $contact = Contact::first()->translate(session('locale'));
         $socials = Social::all();
+        $module = Module::first();
 
         return view('index', compact(
             'abouts',
@@ -58,6 +59,7 @@ class MainController extends Controller
             'partners',
             'contact',
             'socials',
+            'module',
             'locale'
         ));
     }
@@ -192,7 +194,7 @@ class MainController extends Controller
             'comment' => $request -> comment,
         ]);
 
-        \Mail::to('info@esentaitower.com')->send(new \App\Mail\CallBack($callback));
+        \Mail::to('info@esentaitower.com')->send(new \App\Mail\Callback($callback));
         return redirect()->back();
     }
 

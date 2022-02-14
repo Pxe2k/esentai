@@ -75,7 +75,7 @@
                         </ul>
                     </nav>
                     <div class="btn-contact_us header-btn-contact_us">
-                        <a href="#btn-click">{{ __('content.contactUs')  }}</a>
+                        <a href="#btn-click">{{ __('content.contacts')  }}</a>
                     </div>
                     <div class="language">
                         <div class="language__header">

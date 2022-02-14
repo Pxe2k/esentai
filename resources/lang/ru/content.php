@@ -9,6 +9,7 @@
         'news' => 'НОВОСТИ',
         'partners' => 'ПАРТНЕРЫ',
         'vacancies' => 'ВАКАНСИИ',
+        'contacts' => 'Контакты',
 
         // Buttons
 
