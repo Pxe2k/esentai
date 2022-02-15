@@ -372,6 +372,7 @@ header .menu a:hover::after {
 header .btn-contact_us {
     width: 9.7778rem;
     height: 2.6667rem;
+    text-transform: uppercase;
 }
 
 header .btn-contact_us a {
