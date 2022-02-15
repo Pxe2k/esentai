@@ -4484,3 +4484,8 @@ footer .container {
     padding-bottom: 20px;
 }
 
+@media(min-width: 1600px) {
+    .wrap {
+        height: 72rem;
+    }
+}
