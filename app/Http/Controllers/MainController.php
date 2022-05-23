@@ -34,22 +34,42 @@ class MainController extends Controller
             $locale = session('locale');
             App::setLocale($locale);
         } else {
-        $locale = session(['locale' => 'ru']);
+            $locale = session(['locale' => 'ru']);
             App::setLocale('ru');
         }
 
-        $abouts = About::all()->translate(session('locale'));
-        $advantages = Advantage::all()->translate(session('locale'));
-        $infrastructures = Infrastructure::all()->translate(session('locale'));
-        $projects = Project::all()->translate(session('locale'));
-        $presses = Press::all();
-        $news = News::all()->translate(session('locale'));
-        $partners = Partner::all();
-        $contact = Contact::first()->translate(session('locale'));
-        $socials = Social::all();
-        $module = Module::first();
+        $abouts          = About::all()
+                                ->translate(session('locale'))
+        ;
+        $advantages      = Advantage::all()
+                                    ->translate(session('locale'))
+        ;
+        $infrastructures = Infrastructure::all()
+                                         ->translate(session('locale'))
+        ;
+        $projects        = Project::all()
+                                  ->translate(session('locale'))
+        ;
+        $presses         = Press::all();
+        $news            = News::all()
+                               ->translate(session('locale'))
+        ;
+        $partners        = Partner::all();
+        $contact         = Contact::first()
+                                  ->translate(session('locale'))
+        ;
+        $socials         = Social::all();
+        $module          = Module::first();
 
-        return view('index', compact(
+
+        foreach ($partners as $partner) {
+            if (json_decode($partner->image, true)) {
+                $partner->image = json_decode($partner->image, true)[0]['download_link'];
+            }
+        }
+
+        return view(
+            'index', compact(
             'abouts',
             'advantages',
             'infrastructures',
@@ -61,7 +81,8 @@ class MainController extends Controller
             'socials',
             'module',
             'locale'
-        ));
+        )
+        );
     }
 
     public function getInfrastructure()
@@ -70,20 +91,26 @@ class MainController extends Controller
             $locale = session('locale');
             App::setLocale($locale);
         } else {
-        $locale = session(['locale' => 'ru']);
+            $locale = session(['locale' => 'ru']);
             App::setLocale('ru');
         }
 
-        $infrastructureDetail = InfrastructureDetail::first()->translate(session('locale'));
-        $socials = Social::all();
-        $contact = Contact::first()->translate(session('locale'));
+        $infrastructureDetail = InfrastructureDetail::first()
+                                                    ->translate(session('locale'))
+        ;
+        $socials              = Social::all();
+        $contact              = Contact::first()
+                                       ->translate(session('locale'))
+        ;
 
-        return view('infrastructurepage', compact(
+        return view(
+            'infrastructurepage', compact(
             'infrastructureDetail',
             'socials',
             'contact',
             'locale',
-        ));
+        )
+        );
     }
 
     public function news()
@@ -96,17 +123,23 @@ class MainController extends Controller
             App::setLocale('ru');
         }
 
-        $news = News::all()->translate(session('locale'));
+        $news    = News::all()
+                       ->translate(session('locale'))
+        ;
         $socials = Social::all();
-        $contact = Contact::first()->translate(session('locale'));
+        $contact = Contact::first()
+                          ->translate(session('locale'))
+        ;
 
-        return view('news', compact(
+        return view(
+            'news', compact(
             'news',
             'contact',
             'socials',
             'locale'
 
-        ));
+        )
+        );
     }
 
     public function getNews($id)
@@ -119,18 +152,27 @@ class MainController extends Controller
             App::setLocale('ru');
         }
 
-        $news = News::find($id)->translate(session('locale'));
+        $news    = News::find($id)
+                       ->translate(session('locale'))
+        ;
         $socials = Social::all();
-        $detail = NewsDetail::where('news_id', $id)->first()->translate(session('locale'));
-        $contact = Contact::first()->translate(session('locale'));
+        $detail  = NewsDetail::where('news_id', $id)
+                             ->first()
+                             ->translate(session('locale'))
+        ;
+        $contact = Contact::first()
+                          ->translate(session('locale'))
+        ;
 
-        return view('news_single', compact(
+        return view(
+            'news_single', compact(
             'news',
             'socials',
             'detail',
             'contact',
             'locale'
-        ));
+        )
+        );
     }
 
     public function getProject($id)
@@ -143,20 +185,32 @@ class MainController extends Controller
             App::setLocale('ru');
         }
 
-        $project = Project::find($id)->translate(session('locale'));
+        $project = Project::find($id)
+                          ->translate(session('locale'))
+        ;
         $socials = Social::all();
-        $detail = ProjectDetail::where('project_id', $id)->first()->translate(session('locale'));
-        $photos = ProjectPhoto::where('project_id', $id)->get()->translate(session('locale'));
-        $contact = Contact::first()->translate(session('locale'));
+        $detail  = ProjectDetail::where('project_id', $id)
+                                ->first()
+                                ->translate(session('locale'))
+        ;
+        $photos  = ProjectPhoto::where('project_id', $id)
+                               ->get()
+                               ->translate(session('locale'))
+        ;
+        $contact = Contact::first()
+                          ->translate(session('locale'))
+        ;
 
-        return view('projects', compact(
+        return view(
+            'projects', compact(
             'project',
             'socials',
             'detail',
             'photos',
             'contact',
             'locale'
-        ));
+        )
+        );
     }
 
     public function vacancies()
@@ -169,32 +223,45 @@ class MainController extends Controller
             App::setLocale('ru');
         }
 
-        $mission = VacancyMission::first()->translate(session('locale'));
-        $socials = Social::all();
-        $values = VacancyValue::all()->translate(session('locale'));
-        $vacancies = Vacancy::all()->translate(session('locale'));
-        $contact = Contact::first()->translate(session('locale'));
+        $mission   = VacancyMission::first()
+                                   ->translate(session('locale'))
+        ;
+        $socials   = Social::all();
+        $values    = VacancyValue::all()
+                                 ->translate(session('locale'))
+        ;
+        $vacancies = Vacancy::all()
+                            ->translate(session('locale'))
+        ;
+        $contact   = Contact::first()
+                            ->translate(session('locale'))
+        ;
 
-        return view('vacancies', compact(
+        return view(
+            'vacancies', compact(
             'mission',
             'values',
             'socials',
             'vacancies',
             'contact',
             'locale'
-        ));
+        )
+        );
     }
 
     public function callback(Request $request)
     {
         $callback = Callback::create([
-            'name' => $request -> name,
-            'phone' => $request -> phone,
-            'email' => $request -> email,
-            'comment' => $request -> comment,
-        ]);
+                                         'name'    => $request->name,
+                                         'phone'   => $request->phone,
+                                         'email'   => $request->email,
+                                         'comment' => $request->comment,
+                                     ]);
 
-        \Mail::to('info@esentaitower.com')->send(new \App\Mail\Callback($callback));
+        \Mail::to('info@esentaitower.com')
+             ->send(new \App\Mail\Callback($callback))
+        ;
+
         return redirect()->back();
     }
 
@@ -202,11 +269,14 @@ class MainController extends Controller
     {
         $language = $request->header('accept-language');
 
-        $infrastructures = Infrastructure::orderBy('order', 'asc')->get()->translate($language);
+        $infrastructures = Infrastructure::orderBy('order', 'asc')
+                                         ->get()
+                                         ->translate($language)
+        ;
 
         return response([
-            'infrastructures' => $infrastructures
-        ]);
+                            'infrastructures' => $infrastructures,
+                        ]);
     }
 
 }
