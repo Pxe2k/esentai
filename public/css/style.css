@@ -3863,7 +3863,9 @@ footer .container {
     background-image: none;
     display: none;
 }
-
+.swiper-button-disabled{
+    top: 50%
+}
 .main {
     max-width: 100%;
     overflow-x: hidden;
