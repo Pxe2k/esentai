@@ -1755,9 +1755,9 @@ button.button-slider::after {
     left: 20px;
 }
 
-.press-project-news.title-bottom::after {
+/* .press-project-news.title-bottom::after {
     width:
-}
+} */
 
 
 .press-project.title-bottom::after {
@@ -1994,25 +1994,10 @@ button.button-slider::after {
 
 .partners .partner-img img {
     display: block;
+    width: 100%;
+    height: 100%;
 }
 
-.partners .partner-img img:nth-child(1) {
-    margin-right: 5.167rem;
-    width: 11.444rem;
-    height: 3.444rem;
-}
-
-.partners .partner-img img:nth-child(2) {
-    margin-right: 5.167rem;
-    width: 9.333rem;
-    height: 4.722rem;
-}
-
-.partners .partner-img img:nth-child(3) {
-    padding-right: 0;
-    width: 5.556rem;
-    height: 5.556rem;
-}
 
 .contact-us {
     background-repeat: no-repeat;
