@@ -1994,25 +1994,11 @@ button.button-slider::after {
 
 .partners .partner-img img {
     display: block;
+    width: 150px;
+    height: 100px;
 }
 
-.partners .partner-img img:nth-child(1) {
-    margin-right: 5.167rem;
-    width: 11.444rem;
-    height: 3.444rem;
-}
 
-.partners .partner-img img:nth-child(2) {
-    margin-right: 5.167rem;
-    width: 9.333rem;
-    height: 4.722rem;
-}
-
-.partners .partner-img img:nth-child(3) {
-    padding-right: 0;
-    width: 5.556rem;
-    height: 5.556rem;
-}
 
 .contact-us {
     background-repeat: no-repeat;
