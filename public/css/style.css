@@ -1990,14 +1990,52 @@ button.button-slider::after {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding-bottom: 3rem;
 }
 
 .partners .partner-img img {
     display: block;
-    width: 150px;
-    height: 100px;
+    width: 100%;
 }
 
+.partners .partner-slide {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 3rem;
+    height: 200px;
+}
+
+#partners {
+    overflow: hidden;
+}
+
+.partners .swiper-button-next, .swiper-button-prev {
+    top: auto;
+    bottom: 0;
+}
+
+.partners .swiper-button-prev {
+   left: 42%;
+}
+
+.partners .swiper-button-next {
+   right: 42% !important;
+}
+
+@media (max-width: 570px) {
+   .partners .swiper-button-prev {
+        top: auto;
+   }
+   .partners .partner-slide {
+        height: 150px;
+   }
+   .partners .partner-img img {
+        padding: 3rem;
+   }
+   .partners .partner-img {
+        padding-bottom: 8rem;
+   }
+}
 
 
 .contact-us {
