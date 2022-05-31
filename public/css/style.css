@@ -2010,7 +2010,7 @@ button.button-slider::after {
 }
 
 .partners .swiper-button-next, .swiper-button-prev {
-    top: auto;
+    /* top: auto; */
     bottom: 0;
 }
 
