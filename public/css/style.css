@@ -3193,6 +3193,7 @@ footer .container {
     line-height: 1.2778rem;
 }
 
+
 .vacancy-page .container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3249,7 +3250,9 @@ footer .container {
     height: 13.444rem;
     z-index: -1;
 }
-
+.vacancy-page  p:last-of-type{
+    background: none !important;
+ }
 @media screen and (max-width: 780px) {
     .vacancy-page .mission-block__column::before {
         display: none;
