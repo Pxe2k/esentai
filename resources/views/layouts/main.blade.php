@@ -79,7 +79,7 @@
                     <div class="language">
                         <div class="language__header">
                                                         <span class="language__current">
-                                EN
+                                {{$locale}}
                             </span>
                                                         <img style="transition: 0.2s" src="../img/arrow-down.png" alt="">
                         </div>
