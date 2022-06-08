@@ -3250,7 +3250,7 @@ footer .container {
     height: 13.444rem;
     z-index: -1;
 }
-.vacancy-page  p:last-of-type{
+.vacancy-page  p:last-of-type, .vacancy-page p:first-of-type{
     background: none !important;
  }
 @media screen and (max-width: 780px) {
