@@ -65,12 +65,12 @@
                     </div>
                     <nav>
                         <ul class="menu">
-                            <li class="menu__item header-menu__item"><a href="/#about">О НАС</a></li>
-                            <li class="menu__item header-menu__item"><a href="/#infrast">ИНФРАСТРУКТУРА</a></li>
-                            <li class="menu__item header-menu__item"><a href="/#projects">ПРОЕКТЫ</a></li>
-                            <li class="menu__item header-menu__item"><a href="/#news">НОВОСТИ</a></li>
-                            <li class="menu__item header-menu__item"><a href="/#partners">ПАРТНЕРЫ</a></li>
-                            <li class="menu__item header-menu__item"><a href="/vacancies">ВАКАНСИИ</a></li>
+                        <li class="menu__item header-menu__item"><a href="/#about">{{ __('content.aboutUs')  }}</a></li>
+                        <li class="menu__item header-menu__item"><a href="/#infrast">{{ __('content.infrastructure')  }}</a></li>
+                        <li class="menu__item header-menu__item"><a href="/#projects">{{ __('content.projects')  }}</a></li>
+                        <li class="menu__item header-menu__item"><a href="/#news">{{ __('content.news')  }}</a></li>
+                        <li class="menu__item header-menu__item"><a href="/#partners">{{ __('content.partners')  }}</a></li>
+                        <li class="menu__item header-menu__item"><a href="/vacancies">{{ __('content.vacancies')  }}</a></li>
                         </ul>
                     </nav>
                     <div class="btn-contact_us header-btn-contact_us">
@@ -115,7 +115,7 @@
             </div>
         </header>
 
-        
+        @yield('content')
 <div class="wrap">
     <div class="soc">
                 <div class="social">
@@ -430,12 +430,12 @@
                 <div class="logo"><img src="../img/logowhite.png"></div>
                 <nav class="menu">
                     <ul class="menu">
-                        <li class="menu__item"><a href="/#about">О НАС</a></li>
-                        <li class="menu__item"><a href="/#infrast">ИНФРАСТРУКТУРА</a></li>
-                        <li class="menu__item"><a href="/#projects">ПРОЕКТЫ</a></li>
-                        <li class="menu__item"><a href="/#news">НОВОСТИ</a></li>
-                        <li class="menu__item"><a href="/#partners">ПАРТНЕРЫ</a></li>
-                        <li class="menu__item"><a href="/vacancies">ВАКАНСИИ</a></li>
+                    <li class="menu__item"><a href="/#about">{{ __('content.aboutUs')  }}</a></li>
+                        <li class="menu__item"><a href="/#infrast">{{ __('content.infrastructure')  }}</a></li>
+                        <li class="menu__item"><a href="/#projects">{{ __('content.projects')  }}</a></li>
+                        <li class="menu__item"><a href="/#news">{{ __('content.news')  }}</a></li>
+                        <li class="menu__item"><a href="/#partners">{{ __('content.partners')  }}</a></li>
+                        <li class="menu__item"><a href="/vacancies">{{ __('content.vacancies')  }}</a></li>
                     </ul>
                 </nav>
                 <div class="btn-click btn-contact_us" id="btn-click">
