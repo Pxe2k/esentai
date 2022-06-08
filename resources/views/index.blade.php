@@ -188,15 +188,21 @@
         </div>
     </div>
 
-    <div class="partners" id="partners">
-        <div class="  container">
+    <div class="partners">
+        <div class="container">
             <div class="partners-title" data-aos="fade-right">
-                <h4 class="press-project text text-s34">{{ __('content.partners')  }}</h4>
+                <h4 class="press-project text text-s34">ПАРТНЕРЫ</h4>
             </div>
-            <div class="  swiper-wrapper partner-img " data-aos="fade-right">
+            <div id="partners">
+            	<div class="swiper-wrapper partner-img">
                 @foreach ($partners as $partner)
-                <img src="/storage/{{ $partner->image }}" class="swiper-slide">
+                <div class="swiper-slide partner-slide">
+                    <img src="/storage/{{ $partner->image }}" >
+                </div>
                 @endforeach
+                </div>
+                <div class="swiper-button-prev button-prev"></div>
+                <div class="swiper-button-next button-next"></div>
             </div>
         </div>
     </div>
