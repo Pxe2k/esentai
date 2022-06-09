@@ -121,7 +121,7 @@
             <div class="container">
                 <div class="contact-us__content">
                     <div class="contact-us__column">
-                        <h2>СВЯЗАТЬСЯ С НАМИ</h2>
+                        <h2>{{__('content.contactUs')}}</h2>
                         <a class="link1" href="#">8 (727) 330 22-22</a>
                         <a class="link2" href="mailto:hr@esentaitower.com">info@esentaitower.com</a>
                         <a class="link3" href="#">Аль-Фараби 77/7, город Алматы, Казахстан</a>
@@ -144,7 +144,7 @@
                     </ul>
                 </nav>
                 <div class="btn-click btn-contact_us" id="btn-click">
-                    <a href="#?">СВЯЗАТЬСЯ С НАМИ</a>
+                    <a href="#?">{{__('content.contactUs')}}</a>
                 </div>
                 <div class="footer__social">
                                         <div class="social">
