@@ -164,6 +164,7 @@ textarea {
     font-family: inherit;
 }
 
+
 input::-ms-clear {
     display: none;
 }
@@ -928,7 +929,11 @@ a {
     font-size: 5.5rem;
     margin-top: 6.1111rem;
 }
-
+@media (max-width: 700px) {
+    .about-bottom__title{
+        margin-top: 1.5rem;
+    }
+}
 .about-bottom__title h2 {
     font-size: 4.5rem;
 }
@@ -1844,7 +1849,7 @@ button.button-slider::after {
 }
 
 .slider-page {
-    background: url(/img/projects/caferest.png) 100% 100% no-repeat;
+    background: url(/img/projects/caferest.png) 100% no-repeat;
     background-size: cover;
     width: 100%;
     min-height: 33.1111rem;
@@ -3824,6 +3829,9 @@ footer .container {
         /* 9 */
         font-size: 1.11111111rem;
         /* 9 */
+    }
+    .text-s25{
+        font-size: 1.6rem;
     }
 }
 

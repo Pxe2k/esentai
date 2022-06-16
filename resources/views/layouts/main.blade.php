@@ -78,9 +78,14 @@
                     </div>
                     <div class="language">
                         <div class="language__header">
-                                                        <span class="language__current">
-                                {{$locale}}
-                            </span>
+                        @if ($locale != null)
+                        <span class="language__current">{{$locale}}</span>
+                        @else
+                        <span class="language__current">ru</span>
+                        @endif
+                                                        
+                                
+
                                                         <img style="transition: 0.2s" src="../img/arrow-down.png" alt="">
                         </div>
                         <div class="language__body">
@@ -124,7 +129,7 @@
                         <h2>{{__('content.contactUs')}}</h2>
                         <a class="link1" href="#">8 (727) 330 22-22</a>
                         <a class="link2" href="mailto:hr@esentaitower.com">info@esentaitower.com</a>
-                        <a class="link3" href="#">Аль-Фараби 77/7, город Алматы, Казахстан</a>
+                        <a class="link3" href="#">{{__('content.contactUsAddress')}}</a>
                     </div>
                 </div>
             </div>
@@ -144,7 +149,7 @@
                     </ul>
                 </nav>
                 <div class="btn-click btn-contact_us" id="btn-click">
-                    <a href="#?">{{__('content.contactUs')}}</a>
+                    <a href="#?">{{ __('content.contactUs')}}</a>
                 </div>
                 <div class="footer__social">
                                         <div class="social">

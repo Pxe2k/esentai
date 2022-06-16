@@ -141,7 +141,7 @@
                                     <br><a href="/project/{{ $project->id }}">{{ __('content.readMore')  }} ></a>
                                 </div>
                                 <div class="slider_project_1">
-                                    <img class="slider-1-img" src="/storage/{{ $project->image }}">
+                                    <img class="slider-1-img"  src="/storage/{{ $project->image }}">
                                 </div>
                             </div>
                             @endif

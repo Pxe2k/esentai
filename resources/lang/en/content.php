@@ -14,6 +14,7 @@
         // Buttons
 
         'contactUs' => 'CONTACT US',
+        'contactUsAddress' => 'Al-Farabi 77/7, Almaty, Kazakhstan',
         'readMore' => 'READ MORE',
         'send' => 'Send',
 

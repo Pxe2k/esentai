@@ -34,8 +34,8 @@ class MainController extends Controller
             $locale = session('locale');
             App::setLocale($locale);
         } else {
-            $locale = session(['locale' => 'ru']);
             App::setLocale('ru');
+            $locale = session(['locale' => 'ru']);
         }
 
         $abouts          = About::all()
